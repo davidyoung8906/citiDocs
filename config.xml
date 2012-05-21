@@ -4,10 +4,10 @@
 	id		= "com.phonegap.getting.started"
 	version 	= "1.0.0">
 
-	<name>PhoneGap: Getting Started</name>
+	<name>citiDocs</name>
 
 	<description>
-		A template for getting started with PhoneGap development and build.phonegap.com
+		iPad application to access documents
 	</description>
 
 	<author href="http://www.jackthorsen.org"
