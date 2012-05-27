@@ -23,7 +23,17 @@
 		
 	</head>
 	<body>
- 		<div id="title_bar">citi<strong>Docs</strong></div>
+ 		<div id="title_bar">
+ 			<form id="city_selection">
+ 				citi<strong>Docs</strong>
+ 				<input 	type="text" 
+ 					name="city" 
+ 					title="Enter a city and state 'PORTSMOUTH NH'" 
+ 					value="PORTSMOUTH NH" 
+ 					onfocus="if(this.value==this.defaultValue){this.value='';}" 
+ 					onblur="if(this.value==''){this.value=this.defaultValue;}">
+ 			</form>
+ 		</div>
 
 		<div id="welcome" class="view">
 		  <div class="app_button" id="map_button">Show My Location</div>
