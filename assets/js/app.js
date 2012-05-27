@@ -9,7 +9,8 @@ run(function () {
         } else {
             
         };
-        x$('input#city_input').attr('value', 'test');
+        store.save({city: 'Portsmouth NJ'})
+        x$('input#city_input').attr('', 'Portsmouth NH');
     })();
     
     // a little inline controller
