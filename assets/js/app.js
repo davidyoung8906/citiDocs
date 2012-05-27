@@ -9,7 +9,7 @@ run(function () {
         } else {
             
         };
-        store.save({city: 'Portsmouth NJ'});
+        store.save({city:'Portsmouth NJ'});
         x$('input#city_input').attr('placeholder', store.get('city'));
     })();
     
