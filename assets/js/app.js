@@ -18,7 +18,7 @@ run(function () {
     			if (saved) {
     				x$('#title_bar').after('Got something: ' + saved);
     			} else {
-    				x$('#title_bar').after('Got nothing');
+    				x$('#title_bar').after('Got nothing' + saved + saved.city);
     			}
     			x$('input#city_input').attr('value', saved.city)});
     		});
