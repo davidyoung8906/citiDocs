@@ -16,9 +16,9 @@ run(function () {
     when('#welcome', function() {
     		store.get('city', function(saved) {
     			if (saved) {
-    				x$('#title_bar').after('Got something: ' + saved.toString());
+    				x$('#title_bar').after('Got something: ');
     			} else {
-    				x$('#title_bar').after('Got nothing' + saved.toString() + saved.city.toString());
+    				x$('#title_bar').after('Got nothing');
     			}
     			x$('input#city_input').attr('value', saved.city)});
     		});
