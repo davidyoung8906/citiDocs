@@ -23,6 +23,12 @@ body {
   box-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
 
+#title_bar input {
+  -webkit-border-radius: 20px;
+  text-align: center;
+  
+}
+
 .app_button, button {
   -webkit-border-radius: 10px;
   border-radius: 20px;
