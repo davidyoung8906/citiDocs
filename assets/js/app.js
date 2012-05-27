@@ -9,7 +9,7 @@ run(function () {
         } else {
             
         };
-        x$('input#city_input')[0].attr('value', 'test');
+        x$('input#city_input').attr('value', 'test');
     })();
     
     // a little inline controller
@@ -20,7 +20,7 @@ run(function () {
     			} else {
     				x$('#title_bar').after('Got nothing');
     			}
-    			x$('input#city_input').attr('value', saved.city)});
+    			x$('input#city_input').attr('name', saved.city)});
     		});
     when('#settings', function() {
 		// load settings from store and make sure we persist radio buttons.
