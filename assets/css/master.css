@@ -25,6 +25,7 @@ body {
 
 #title_bar input {
   -webkit-border-radius: 20px;
+  font-size: 20px;
   text-align: center;
   
 }
