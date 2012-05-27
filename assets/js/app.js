@@ -9,10 +9,7 @@ run(function () {
         } else {
             
         };
-        store.get('city', function(saved) {
-			if (!saved){store.save({city: "Portsmouth NJ"});}; 
-	});
-	x$('#city_selection input').attr('value', store.get('city'));
+        store.exists('city', function(exists) {x$('#city_selection input').attr('value', exists)});
     })();
     
     // a little inline controller
