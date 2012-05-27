@@ -14,8 +14,14 @@ run(function () {
     
     // a little inline controller
     when('#welcome', function() {
-    	store.exists('city', function(city) {x$('#city_selection input').attr('value', city)});
-    	});
+    		store.get('city', function(saved) {
+    			if (saved) {
+    				x$('#city_selection').append('Got something: ' + saved);
+    			} else {
+    				x$('#city_selection').append('Got nothing');
+    			}
+    			x$('#city_selection input').attr('value', city)});
+    		});
     when('#settings', function() {
 		// load settings from store and make sure we persist radio buttons.
 		store.get('config', function(saved) {
