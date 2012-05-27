@@ -24,7 +24,7 @@ body {
 }
 
 .app_button, button {
-  -webkit-border-radius: 20px;
+  -webkit-border-radius: 10px;
   border-radius: 20px;
   display: inline-block;
   padding: 0 20px;
