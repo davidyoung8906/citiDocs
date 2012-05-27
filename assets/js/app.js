@@ -8,7 +8,11 @@ run(function () {
             alert("No internet connection - cannot access remote documents");
         } else {
             
-        }
+        };
+        store.get('city', function(saved) {
+			if (!saved){store.save({city: "Portsmouth NJ"});}; 
+	});
+	x$('#city_selection input').attr('value', store.get('city'));
     })();
     
     // a little inline controller
