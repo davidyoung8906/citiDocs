@@ -9,7 +9,7 @@ run(function () {
         } else {
             
         };
-        
+        x$('input#city_input').value='test';
     })();
     
     // a little inline controller
