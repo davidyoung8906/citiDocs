@@ -10,7 +10,7 @@ run(function () {
             
         };
         
-        x$('input#city_input').attr('placeholder', 'Enter city and state');
+        x$('input#city_input').attr('placeholder', 'Enter city and state, ok?');
     })();
     
     // a little inline controller
@@ -18,12 +18,13 @@ run(function () {
     		store.get('config', function(saved) {
     			if (saved) {
     				if (saved.city) {
-    					x$('#title_bar').after('Got something: ' + saved.city);
+    					x$('#title_bar').after('Got something: ');
+    					x$('input#city_input').attr('placeholder', saved.city)});
     				} else {
     				x$('#title_bar').after('Got nothing');
     				}
     			}
-    			x$('input#city_input').attr('placeholder', saved.city)});
+    		
     		});
     when('#settings', function() {
 		// load settings from store and make sure we persist radio buttons.
@@ -62,7 +63,7 @@ run(function () {
             key:'config',
             map:ui('map'),
             zoom:ui('zoom'),
-            city:ui_city()
+            city:city_ui()
         });
         display('#welcome');
     });
