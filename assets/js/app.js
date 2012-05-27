@@ -16,11 +16,11 @@ run(function () {
     when('#welcome', function() {
     		store.get('city', function(saved) {
     			if (saved) {
-    				x$('#city_selection').append('Got something: ' + saved);
+    				x$('#title_bar').after('Got something: ' + saved);
     			} else {
-    				x$('#city_selection').append('Got nothing');
+    				x$('#title_bar').after('Got nothing');
     			}
-    			x$('#city_selection input').attr('value', city)});
+    			x$('input#city_input').attr('value', saved.city)});
     		});
     when('#settings', function() {
 		// load settings from store and make sure we persist radio buttons.
