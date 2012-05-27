@@ -9,19 +9,21 @@ run(function () {
         } else {
             
         };
-        store.save({city:'Portsmouth NJ'});
-        x$('input#city_input').attr('placeholder', store.get('city'));
+        
+        x$('input#city_input').attr('placeholder', 'Enter city and state');
     })();
     
     // a little inline controller
     when('#welcome', function() {
-    		store.get('city', function(saved) {
+    		store.get('config', function(saved) {
     			if (saved) {
-    				x$('#title_bar').after('Got something: ');
-    			} else {
+    				if (saved.city) {
+    					x$('#title_bar').after('Got something: ' + saved.city);
+    				} else {
     				x$('#title_bar').after('Got nothing');
+    				}
     			}
-    			x$('input#city_input').attr('name', saved.city)});
+    			x$('input#city_input').attr('placeholder', saved.city)});
     		});
     when('#settings', function() {
 		// load settings from store and make sure we persist radio buttons.
