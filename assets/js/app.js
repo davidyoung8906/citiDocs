@@ -63,8 +63,7 @@ run(function () {
         store.save({
             key:'config',
             map:ui('map'),
-            zoom:ui('zoom'),
-            city:city_ui()
+            zoom:ui('zoom')
         });
         display('#welcome');
     });
