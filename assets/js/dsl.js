@@ -41,11 +41,11 @@ var run = function(application) {
 }
 
 // gets the value of the city input field from the ui
-, city_ui = function() {
-    return "city: " + x$('input#city_form').attr('city');
-}
+//, city_ui = function() {
+//    return "city: " + x$('input#city_form').attr('city');
+//}
 
-, citySave = function() {
-    store.save(city:'xxxxxx');
-    x$('input#city_input').after('citySave: ');
-};
+//, citySave = function() {
+//    store.save(city:'xxxxxx');
+//    x$('input#city_input').after('citySave: ');
+//};
