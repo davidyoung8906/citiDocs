@@ -17,7 +17,7 @@ run(function () {
     when('#welcome', function() {
 //                x$('#welcome').after('Contents of store ' + store.each(function(record, index){
 //                        '<li>' + index + ' ' + record});
-                x$('#title_bar').after('in front');
+                x$('#title_bar').after(function(n){return n});
     		store.get('config', function(saved) {
     			if (saved) {
     				if (saved.city) {
