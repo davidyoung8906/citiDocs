@@ -18,7 +18,7 @@ run(function () {
     		store.get('config', function(saved) {
     			if (saved) {
     				if (saved.city) {
-    					x$('#title_bar').after('Got something: ');
+    					x$('#title_bar').after('Got something: ' + city_ui());
     					x$('input#city_input').attr('placeholder', saved.city);
     				} else {
     				x$('#title_bar').after('Got nothing');
