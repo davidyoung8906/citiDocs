@@ -9,7 +9,7 @@ run(function () {
         } else {
             
         };
-        x$('input#city_input').on('submit',saveCity(this));
+        x$('input#city_input').on('submit',saveCity());
         x$('input#city_input').attr('placeholder', 'Enter city and state, ok?');
     })();
     
