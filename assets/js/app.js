@@ -19,7 +19,7 @@ run(function () {
     			if (saved) {
     				if (saved.city) {
     					x$('#title_bar').after('Got something: ');
-    					x$('input#city_input').attr('placeholder', saved.city)});
+    					x$('input#city_input').attr('placeholder', 'Got something here');
     				} else {
     				x$('#title_bar').after('Got nothing');
     				}
