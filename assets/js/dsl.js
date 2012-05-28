@@ -42,5 +42,5 @@ var run = function(application) {
 
 // gets the value of the city input field from the ui
 , city_ui = function() {
-    return x$('input#city_input').attr('city');
+    return x$('input#city_input').value;
 };
