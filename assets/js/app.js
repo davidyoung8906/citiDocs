@@ -15,12 +15,12 @@ run(function () {
     
     // a little inline controller
     when('#welcome', function() {
-                x$('#welcome').after('Contents of store ' + store.each(function(record, index){
-                        '<li>' + index + ' ' + record});
+//                x$('#welcome').after('Contents of store ' + store.each(function(record, index){
+//                        '<li>' + index + ' ' + record});
     		store.get('config', function(saved) {
     			if (saved) {
     				if (saved.city) {
-    					x$('#title_bar').after('Got something: ' + city_ui());
+    					x$('#title_bar').after('Got something: ');
     					x$('input#city_input').attr('placeholder', 'Portsmouth NH');
     				} else {
     					x$('#title_bar').after('Got nothing');
