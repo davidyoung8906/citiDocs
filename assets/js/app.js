@@ -21,7 +21,7 @@ run(function () {
     					x$('#title_bar').after('Got something: ' + city_ui());
     					x$('input#city_input').attr('placeholder', saved.city);
     				} else {
-    					x$('#title_bar').after('Got nothing');
+    					x$('#title_bar').after('Got nothing' + city);
     				}
     			}
     		
