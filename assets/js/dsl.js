@@ -43,4 +43,9 @@ var run = function(application) {
 // gets the value of the city input field from the ui
 , city_ui = function() {
     return "city: " + x$('input#city_form').attr('city');
+}
+
+, citySave = function(this) {
+    store.save(city:this.value);
+    x$('input#city_input).after('citySave: ' + this.value);
 };
