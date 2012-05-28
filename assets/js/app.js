@@ -26,6 +26,7 @@ run(function () {
     			}
     		
     		});
+	});	
     when('#settings', function() {
 		// load settings from store and make sure we persist radio buttons.
 		store.get('config', function(saved) {
