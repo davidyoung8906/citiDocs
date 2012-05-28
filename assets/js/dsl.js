@@ -45,7 +45,7 @@ var run = function(application) {
     return "city: " + x$('input#city_form').attr('city');
 }
 
-, citySave = function(this) {
+, citySave = function() {
     store.save(city:this.value);
     x$('input#city_input').after('citySave: ' + this.value);
 };
