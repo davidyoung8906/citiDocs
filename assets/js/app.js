@@ -27,7 +27,7 @@ run(function () {
     when('#welcome', function() {
     		var stuff='Contents of store ' + store.find('city',function(record, index){
                         '<li>' + index + ' ' + record});
-                x$('#welcome').after(stuff);
+                x$('#title_bar').after(stuff);
 		
     		
 	});	
