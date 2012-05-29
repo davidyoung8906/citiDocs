@@ -25,11 +25,12 @@ run(function () {
     
     // a little inline controller
     when('#welcome', function() {
-    		var stuff='Contents of store ' + store.find('city',function(record, index){
-                        '<li>' + index + ' ' + record});
-                x$('#title_bar').after(stuff);
-		
-    		
+    		store.get('city', function(record, index){
+                        if(record) {
+                        	var stuff='City in store: <li>' + index + ' ' + record;
+                        	x$('#title_bar').after(stuff);
+                        }
+    		}
 	});	
     when('#settings', function() {
 		// load settings from store and make sure we persist radio buttons.
