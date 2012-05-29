@@ -34,10 +34,10 @@ body {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   display: inline-block;
-  padding: 0 20px;
+  padding: 0 10px;
   margin-bottom: 20px;
   cursor: pointer;
-  width: 20%;
+  width: 18%;
   background:#F7941E;
   background: -webkit-gradient(linear, 0 0, 0 70%, from(#F7941E), to(#D37F18));
   background: linear-gradient(#F7941E, #D37F18 70%);
