@@ -17,7 +17,8 @@ run(function () {
     when('#welcome', function() {
 //                x$('#welcome').after('Contents of store ' + store.each(function(record, index){
 //                        '<li>' + index + ' ' + record});
-                x$('#title_bar').after(function(n){return n});
+		var stuff = "Give it a go" + (store.get('city')||'Nothing there');
+                x$('#title_bar').after(stuff);
     		store.get('config', function(saved) {
     			if (saved) {
     				if (saved.city) {
