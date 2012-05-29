@@ -26,24 +26,20 @@ run(function () {
     })();
     
     // a little inline controller
-    when('#welcome', function() {
-    		
-	});	
-    when('#settings', function() {
-		// load settings from store and make sure we persist radio buttons.
-		store.get('config', function(saved) {
-			if (saved) {
-				if (saved.map) {
-					x$('input[value=' + saved.map + ']').attr('checked',true);
-				}
-				if (saved.zoom) {
-					x$('input[name=zoom][value="' + saved.zoom + '"]').attr('checked',true);
-				}
-			}
-		});
-	});
+    when('#welcome', function() {});
+    when('#documents', function() {});
+    when('#pages', function() {});
+    when('#people', function() {});
     when('#map', function () {
         store.get('config', function (saved) {
+        	if (saved) {
+			if (saved.map) {
+				x$('input[value=' + saved.map + ']').attr('checked',true);
+			}
+			if (saved.zoom) {
+				x$('input[name=zoom][value="' + saved.zoom + '"]').attr('checked',true);
+			}
+		};
             // construct a gmap str
             var map  = saved ? saved.map || ui('map') : ui('map')
             ,   zoom = saved ? saved.zoom || ui('zoom') : ui('zoom')
@@ -67,6 +63,6 @@ run(function () {
             map:ui('map'),
             zoom:ui('zoom')
         });
-        display('#welcome');
+        display('#map');
     });
 });
