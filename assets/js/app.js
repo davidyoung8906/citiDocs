@@ -9,7 +9,7 @@ run(function () {
         } else {
             
         };
-        x$('#city_form').on('submit',store.save({key:'city', value:'FormcitySave'}));
+        
         
         
     })();
