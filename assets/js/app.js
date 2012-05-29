@@ -24,7 +24,7 @@ run(function () {
     			if (saved) {
     				if (saved.value) {
     					x$('#title_bar').after('Got something: '+saved.value);
-    					x$('input#city_input').attr('placeholder', 'Portsmouth NH');
+    					x$('input#city_input').attr('placeholder', saved.value);
     				} else {
     					x$('#title_bar').after('Got nothing');
     				}
