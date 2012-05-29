@@ -20,9 +20,9 @@ run(function () {
 //                        '<li>' + index + ' ' + record});
 		var stuff = "Give it a go" + (store.get('city')||'Nothing there');
                 x$('#title_bar').after(stuff);
-    		store.get('config', function(saved) {
+    		store.get('city', function(saved) {
     			if (saved) {
-    				if (saved.city) {
+    				if (saved.value) {
     					x$('#title_bar').after('Got something: ');
     					x$('input#city_input').attr('placeholder', 'Portsmouth NH');
     				} else {
