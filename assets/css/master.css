@@ -97,7 +97,10 @@ body {
   
   input {
     margin-bottom: 8px;
+    align:left;
   }
+  
+  
 
 #welcome_msg {color: blue;}
 
@@ -113,6 +116,5 @@ table {
 	margin-right: auto;
 }
 
-radio {align:left;}
 
-#welcome, #pages, #documents,#people, #map {height:auto;}
+
