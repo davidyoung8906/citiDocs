@@ -16,7 +16,7 @@ body {
   color: #444;
   text-shadow: 0 1px 0 #fff;
   border-bottom: 1px solid #999;
-  height: 88px;
+  height: 66px;
   line-height: 44px;
   padding: 0;
   -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
@@ -99,15 +99,18 @@ body {
     margin-bottom: 8px;
   }
 
-#welcome_msg {
-	color: blue;
-}
+#welcome_msg {color: blue;}
 
 #welcome_msg h1, h2 {
 	font-weight: bold;
 	font-size: 80px;
 }
 
-#welcome_msg h2 {
-	font-size: 50px;
+#welcome_msg h2 {font-size: 50px;}
+
+table { 
+	margin-left: auto;
+	margin-right: auto;
 }
+
+td {align:left;}
