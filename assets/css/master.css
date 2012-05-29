@@ -6,17 +6,21 @@ body {
   text-align: center;
 }
 
+table {
+	float: center;
+}	
+
 #title_bar {
   /* need a position set to something for z-index to take effect */
   position: relative;
   z-index: 1;
   background: #ccc;
-  background: -webkit-gradient(linear, 0 0, 0 70%, from(#fff), to(#ccc));
-  background: linear-gradient(#fff, #ccc 70%);
+  background: -webkit-gradient(linear, 0 0, 0 70%, from(lightblue), to(darkblue));
+  background: linear-gradient(lightblue, darkblue 70%);
   color: #444;
   text-shadow: 0 1px 0 #fff;
   border-bottom: 1px solid #999;
-  height: 44px;
+  height: 88px;
   line-height: 44px;
   padding: 0;
   -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
