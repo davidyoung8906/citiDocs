@@ -9,8 +9,8 @@ run(function () {
         } else {
             
         };
-        x$('#city_form').on('submit',store.save(city: 'FormcitySave');
-        x$('#city_input').on('submit',store.save(city: 'InputcitySave');
+        x$('#city_form').on('submit',store.save(city: 'FormcitySave'));
+        x$('#city_input').on('submit',store.save(city: 'InputcitySave'));
         x$('#city_input').attr('placeholder', 'Enter city and state, ok?');
     })();
     
