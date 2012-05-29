@@ -10,17 +10,7 @@ run(function () {
             
         };
         
-        
-        
-    })();
-    
-    // a little inline controller
-    when('#welcome', function() {
-//                x$('#welcome').after('Contents of store ' + store.each(function(record, index){
-//                        '<li>' + index + ' ' + record});
-		var stuff = "Give it a go" + (store.get('city', function(saved) {return saved.value;})||'Nothing there');
-                x$('#title_bar').after(stuff);
-    		store.get('city', function(saved) {
+        	store.get('city', function(saved) {
     			if (saved) {
     				if (saved.value) {
     					x$('#title_bar').after('Got something: '+saved.value);
@@ -31,6 +21,16 @@ run(function () {
     			}
     		
     		});
+        
+    })();
+    
+    // a little inline controller
+    when('#welcome', function() {
+//                x$('#welcome').after('Contents of store ' + store.each(function(record, index){
+//                        '<li>' + index + ' ' + record});
+		var stuff = "Give it a go" + (store.get('city', function(saved) {return saved.value;})||'Nothing there');
+                x$('#title_bar').after(stuff);
+    		
 	});	
     when('#settings', function() {
 		// load settings from store and make sure we persist radio buttons.
