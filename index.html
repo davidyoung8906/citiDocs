@@ -24,19 +24,23 @@
  					title="Enter a city and state 'PORTSMOUTH NH'"
  					oninput="store.save({key:'city', value: this.value})"/>
  			</form>
+ 			<div class="app_button" id="map_button">Location</div>
+  	      	  	<div class="app_button" id="documents_button">Documents</div>
+  	      	  	<div class="app_button" id="pages_button">Pages</div>
+  	      	  	<div class="app_button" id="people_button">People</div>	
  		</div>
 
 		<div id="welcome" class="view">
-		  <div class="app_button" id="map_button">Location</div>
-  	      	  <div class="app_button" id="documents_button">Documents</div>
-  	      	  <div class="app_button" id="pages_button">Pages</div>
-  	      	  <div class="app_button" id="people_button">People</div>
+		  
 		  	      	  
 		</div>
 		
 		<div id="wrapper">
 		  <div id="content_header">This is the wrapper header</div>
 		  <div id="content">This is the wrapper content</div>
+		  <div id="content_footer">
+		  	<div class="app_button" id="welcome_button">Go Back</div>
+		  </div>
 		</div>
 		
 		<div id="documents" class="view">Document View</div>
@@ -48,7 +52,6 @@
               		<img id="static_map" src="assets/img/staticmap.png">
 		  </div>
 		  <p>This is where you are</p>
-		  <div class="app_button" id="welcome_button">Go Back</div>
 		  <form id="settings_form">
 		    <fieldset>
 		      <legend>Map Type</legend>
