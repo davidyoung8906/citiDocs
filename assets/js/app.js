@@ -29,7 +29,7 @@ run(function () {
     when('#welcome', function() {});
     when('#documents', function() {});
     when('#pages', function() {
-    	x$('#pages').xhr('inner', 'http://www.cityofportsmouth.com')
+    	x$('#pages').xhr('inner', 'http://cnn.com')
     });
     when('#people', function() {});
     when('#map', function () {
