@@ -11,7 +11,7 @@ run(function () {
         };
         x$('#city_form').on('submit',store.save({key:'city', value:'FormcitySave'}));
         x$('#city_input').on('submit',store.save({key:'city', value:'InputcitySave'}));
-        x$('#city_input').attr('placeholder', 'Enter city and state, ok?');
+        
     })();
     
     // a little inline controller
