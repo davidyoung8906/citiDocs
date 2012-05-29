@@ -13,7 +13,11 @@ run(function () {
         	store.get('city', function(saved) {
     			if (saved) {
     				if (saved.value) {
+    					var stuff="City store: " + saved.value;
+    					x$('#title_bar').after(stuff);
     					x$('input#city_input').attr('placeholder', saved.value);
+    					
+    					x$('#title_bar').after('Got nothing');
     				} else {
     					x$('#title_bar').after('Got nothing');
     				}
@@ -25,12 +29,7 @@ run(function () {
     
     // a little inline controller
     when('#welcome', function() {
-    		store.get('city', function(record, index){
-                        if(record) {
-                        	var stuff='City in store: <li>' + index + ' ' + record;
-                        	x$('#title_bar').after(stuff);
-                        }
-    		}
+    		
 	});	
     when('#settings', function() {
 		// load settings from store and make sure we persist radio buttons.
