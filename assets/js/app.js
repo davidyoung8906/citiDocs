@@ -23,7 +23,7 @@ run(function () {
     		store.get('city', function(saved) {
     			if (saved) {
     				if (saved.value) {
-    					x$('#title_bar').after('Got something: ');
+    					x$('#title_bar').after('Got something: '+saved.value);
     					x$('input#city_input').attr('placeholder', 'Portsmouth NH');
     				} else {
     					x$('#title_bar').after('Got nothing');
