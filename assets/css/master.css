@@ -98,3 +98,17 @@ body {
   input {
     margin-bottom: 8px;
   }
+
+#welcome_msg {
+	color: grey;
+	background-color: yellow;
+}
+
+#welcome_msg h1, h2 {
+	font-weight: bold;
+	font-size: 80px;
+}
+
+#welcome_msg h2 {
+	font-size: 50px;
+}
