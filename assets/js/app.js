@@ -18,7 +18,7 @@ run(function () {
     // a little inline controller
     when('#welcome', function() {});
     when('#documents', function() {});
-    when('#pages', function() {x$('#pages').xhr('inner', 'http://www.cnn.com')
+    when('#pages', function() {x$('#pages').inner(now());
     });
     when('#people', function() {});
     when('#map', function () {
