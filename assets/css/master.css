@@ -113,6 +113,6 @@ table {
 	margin-right: auto;
 }
 
-td {align:left;}
+select {align:left;}
 
-#welcome, #pages, #documents,#people, #map {height:100%;}
+#welcome, #pages, #documents,#people, #map {height:auto;}
