@@ -11,18 +11,8 @@ run(function () {
         };
         
         	store.get('city', function(saved) {
-    			if (saved) {
-    				if (saved.value) {
-    					var stuff="City store: " + saved.value;
-    					x$('#title_bar').after(stuff);
-    					x$('input#city_input').attr('placeholder', saved.value);
-    				} else {
-    					x$('#title_bar').after('Got nothing');
-    				}
-    			}
-    		
-    		});
-        
+    			if (saved.value) {x$('input#city_input').attr('placeholder', saved.value);}    		
+    		});        
     })();
     
     // a little inline controller
