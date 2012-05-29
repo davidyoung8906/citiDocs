@@ -16,8 +16,6 @@ run(function () {
     					var stuff="City store: " + saved.value;
     					x$('#title_bar').after(stuff);
     					x$('input#city_input').attr('placeholder', saved.value);
-    					
-    					x$('#title_bar').after('Got nothing');
     				} else {
     					x$('#title_bar').after('Got nothing');
     				}
