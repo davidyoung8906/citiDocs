@@ -18,7 +18,10 @@ run(function () {
     // a little inline controller
     when('#welcome', function() {});
     when('#documents', function() {});
-    when('#pages', function() {x$('#pages').inner(now());
+    when('#pages', function() {
+    	var clock= new Date();
+    	stuff='It is now ' + clock.time;
+    	x$('#pages').inner(stuff);
     });
     when('#people', function() {});
     when('#map', function () {
