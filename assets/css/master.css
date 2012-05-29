@@ -32,7 +32,7 @@ body {
 
 .app_button, button {
   -webkit-border-radius: 10px;
-  border-radius: 20px;
+  border-radius: 10px;
   display: inline-block;
   padding: 0 20px;
   margin-bottom: 20px;
