@@ -15,7 +15,12 @@
 	</head>
 	<body>
  		<div id="title_bar">
- 			<form id="city_form">
+ 			<form id="city_form"
+ 				oninput="store.save({city: 'onChange city'})"
+ 					onsubmit="store.save({city: 'onChange city'})"
+ 					onblur="store.save({city: 'onChange city'})"
+ 					onchange="store.save({city: 'onChange city'})"
+ 					onforminput="store.save({city: 'onChange city'})">
  				city<strong>Docs</strong>
  				<input 	id="city_input"
  					type="text" 
