@@ -25,8 +25,9 @@ run(function () {
     
     // a little inline controller
     when('#welcome', function() {
-                x$('#welcome').after('Contents of store ' + store.each(function(record, index){
+    		var stuff='Contents of store ' + store.find('city',function(record, index){
                         '<li>' + index + ' ' + record});
+                x$('#welcome').after(stuff);
 		
     		
 	});	
