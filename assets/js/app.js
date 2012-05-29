@@ -28,7 +28,9 @@ run(function () {
     // a little inline controller
     when('#welcome', function() {});
     when('#documents', function() {});
-    when('#pages', function() {});
+    when('#pages', function() {
+    	x$('#pages').xhr('http://www.cityofportsmouth.com', {async: true;})
+    });
     when('#people', function() {});
     when('#map', function () {
         store.get('config', function (saved) {
