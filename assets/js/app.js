@@ -19,9 +19,23 @@ run(function () {
     when('#welcome', function() {});
     when('#documents', function() {});
     when('#pages', function() {
-    	var clock= new Date();
-    	stuff='It is now ' + clock.time;
-    	x$('#pages').inner(stuff);
+    	function startTime(){
+		var today=new Date();
+		var h=today.getHours();
+		var m=today.getMinutes();
+		var s=today.getSeconds();
+		// add a zero in front of numbers<10
+		m=checkTime(m);
+		s=checkTime(s);
+		stuff="Time by Jack Thorsen...   " + h + ":" + m + ":" + s;
+		x$('#pages').innerHTML=stuff;
+		t=setTimeout('startTime()',500);
+	}
+
+	function checkTime(i) {
+		if (i<10){i="0" + i;}
+		return i;
+	}
     });
     when('#people', function() {});
     when('#map', function () {
