@@ -19,7 +19,7 @@ run(function () {
     when('#welcome', function() {});
     when('#documents', function() {});
     when('#pages', function() {
-        x$('content').xhr('inner', 'http://www.google.com/#hl=en&gs_nf=1&cp=6&gs_id=n&xhr=t&q=phonegap&pf=p&sclient=tablet-gws&tbo=d&site=&source=hp&oq=phoneg&aq=0&aqi=g3&aql=&gs_l=&pbx=1&bav=on.2,or.r_gc.r_pw.,cf.osb&fp=66966f4d70652205&biw=1024&bih=660');
+        x$('#content').xhr('inner', 'http://www.google.com/#hl=en&gs_nf=1&cp=6&gs_id=n&xhr=t&q=phonegap&pf=p&sclient=tablet-gws&tbo=d&site=&source=hp&oq=phoneg&aq=0&aqi=g3&aql=&gs_l=&pbx=1&bav=on.2,or.r_gc.r_pw.,cf.osb&fp=66966f4d70652205&biw=1024&bih=660');
     });
     when('#people', function() {});
     when('#map', function () {
