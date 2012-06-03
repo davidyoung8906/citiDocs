@@ -27,14 +27,15 @@ run(function () {
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
     		     var el=x$('.row_button');
-    		     for (i=0; el.length; i++) {
+    		     x$('#looking').inner(el);
+ //   		     for (i=0; el.length; i++) {
 //    		     	var e=el[i];
   //  		     	e.on('firsttouch', function () {
     //		     		var ls="http://dev.budgetblogs.com:3000/city_docs/" + e.id;
     //		     		x$('#looking').xhr(ls);
     //		     		display('#looking');
     //		     	});
-   		     };    		     
+   //		     };    		     
                 }
              });
         };
