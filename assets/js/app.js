@@ -18,7 +18,7 @@ run(function () {
     // a little inline controller
     when('#welcome', function() {});
     when('#documents', function() {
-    	x$('#documents').xhrjson('http://dev.budgetblogs.com:3000/city_docs');
+    	x$('#documents').xhr('http://dev.budgetblogs.com:3000/city_docs');
     });
     when('#pages', function() {});
     when('#people', function() {});
