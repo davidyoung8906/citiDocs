@@ -33,7 +33,7 @@ run(function () {
     		     for (var i=0; i<el.length; i++) {
     		     	var e=el[i];
     		     	var tc="<p>" + e.id;
-    		     	x$('#looking').html(tc);
+    		     	x$('#looking').bottom(tc);
     		     	display('#looking');
   //  		     	e.on('touchstart', function () {
   //		     		var ls="http://dev.budgetblogs.com:3000/city_docs/" + e.id;
