@@ -21,10 +21,21 @@ run(function () {
   					+ row.doctype + "</td><td>"
   					+ row.title + "</td><td>"
   					+ row.description + "</td><td>"
-  					+ "<button id='look_button'>Open</button></td></tr>"; 
+  					+ "<button class='row_button' id='" 
+  					+ row.id + "'>Open</button></td></tr>"; 
  		     };
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
+    		     var el=x$('.row_button');
+    		     for (i=0; el.length; i++) {
+    		     	var e=el[i];
+    		     	e.on('firsttouch', function () {
+    		     		var ls="http://dev.budgetblogs.com:3000/city_docs/" + e.id;
+    		     		x$('#looking').xhr(ls);
+    		     		display('#looking')
+    		     		})
+    		     	})
+    		     }
                 }
              });
         };
