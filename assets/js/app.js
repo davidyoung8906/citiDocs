@@ -29,7 +29,7 @@ run(function () {
     		     var el=x$('.row_button');
     		     x$('.row_button').on('touchstart',function () {
     		     	var tu="http://dev.budgetblogs.com:3000/citi_docs/";
-    		     	x$('#looking').xhr(tu);
+    		     	x$('#looking').inner(tu);
     		     	alert("Why can't this work?" + this.id);
     		     	display('#looking');
     		     });
