@@ -12,8 +12,8 @@ run(function () {
        	var cityDocs = x$('#documents').xhr('http://dev.budgetblogs.com:3000/city_docs.json');
      	var stuffing = "City Documents<table>";
     		for (var i=0; i<cityDocs.length; i++){
-  			row = cityDocs[i].CitiDoc;
-  			stuffing += "<tr><td>id: " + row.id + "</td><td>title:" + row.title + "</td><td>type:" + row.doctype + "</td></tr>"; 
+  			row = cityDocs[i];
+  			stuffing += "" + cityDocs.length + "<tr><td>id: " + row.id + "</td><td>title:" + row.title + "</td><td>type:" + row.doctype + "</td></tr>"; 
   		};
   		stuffing += "</table>end of table";
     		x$('#documents').inner(stuffing);
