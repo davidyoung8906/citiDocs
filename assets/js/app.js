@@ -9,19 +9,16 @@ run(function () {
         if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");
         } else {
-       	var cityDocs = x$('#documents').xhr('http://dev.budgetblogs.com:3000/city_docs.json',{
+       	x$('#documents').xhr('http://dev.budgetblogs.com:3000/city_docs.json',{
                 callback: function(){
                      var stuffing = "City Documents<table>";
                      var cities = eval("("+this.responseText+")").CityDocs; /* this should be an array */
     		     for (var i=0; i<cities.length; i++){
-  			row = cites[i];
+  			var row = cites[i];
   			stuffing += "" + cites.length + "<tr><td>id: " + row.id + "</td><td>title:" + row.title + "</td><td>type:" + row.doctype + "</td></tr>"; 
-  		};
-  		stuffing += "</table>end of table";
-    		x$('#documents').inner(stuffing);
-    
-    //		x$('#documents').after(cityDocs);
-    //		x$('#documents').after(cityDocs[0]);
+  		     };
+  		     stuffing += "</table>end of table";
+    		     x$('#documents').inner(stuffing);
                 };
         };
         
