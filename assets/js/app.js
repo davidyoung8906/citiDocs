@@ -27,11 +27,14 @@ run(function () {
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
     		     var el=x$('.row_button');
-    		     var tc="<p>" + el.length;
-    		     x$('#looking').html(tc);
-    		     display('#looking');
+    //		     var tc="<p>" + el.length;
+   // 		     x$('#looking').html(tc);
+ //   		     display('#looking');
     		     for (var i=0; i<el.length; i++) {
     		     	var e=el[i];
+    		     	var tc="<p>" + e.id;
+    		     	x$('#looking').html(tc);
+    		     	display('#looking');
   //  		     	e.on('touchstart', function () {
   //		     		var ls="http://dev.budgetblogs.com:3000/city_docs/" + e.id;
   //		     		x$('#looking').xhr(ls);
