@@ -35,11 +35,11 @@ run(function () {
     		     	var tc="<p>" + e.id;
     		     	x$('#looking').bottom(tc);
     		     	display('#looking');
-    		     	e.on('touchstart', function () {
-  		     		var ls="http://dev.budgetblogs.com:3000/city_docs/" + e.id;
-  		     		x$('#looking').xhr(ls);
-  		     		display('#looking');
-  		     	});
+  //  		     	e.touchstart(function () {
+  //		     		var ls="http://dev.budgetblogs.com:3000/city_docs/" + e.id;
+  //		     		x$('#looking').xhr(ls);
+  //		     		display('#looking');
+  //		     	});
    		     };    		     
                 }
              });
