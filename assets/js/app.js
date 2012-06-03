@@ -28,6 +28,7 @@ run(function () {
     		     x$('#documents').inner(stuffing);
     		     var el=x$('.row_button');
     		     x$('#looking').inner(el);
+    		     display('#looking');
  //   		     for (i=0; el.length; i++) {
 //    		     	var e=el[i];
   //  		     	e.on('firsttouch', function () {
