@@ -16,9 +16,13 @@ run(function () {
                      var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Cities: " + cities.length + " <table> ";
    		     for (var i=0; i<cities.length; i++){
   			var row = cities[i];
-  			stuffing += "<tr><td>" + row.id + "</td><td>" + row.doctype + "</td><td>" + row.title + "</td></tr>"; 
+  			stuffing += "<tr><td>" 
+  					+ row.id + "</td><td>" 
+  					+ row.doctype + "</td><td>"
+  					+ row.title + "</td><td>"
+  					+ row.description + "</td></tr>"; 
  		     };
-  		     stuffing += "</table>end of table</div><p>";
+  		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
                 }
              });
