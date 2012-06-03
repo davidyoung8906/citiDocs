@@ -32,7 +32,7 @@ run(function () {
     		     display('#looking');
     		     for (var i=0; i<el.length; i++) {
     		     	var e=el[i];
-    		     	e.on('firsttouch', function () {
+    		     	e.on('touchstart', function () {
   		     		var ls="http://dev.budgetblogs.com:3000/city_docs/" + e.id;
   		     		x$('#looking').xhr(ls);
   		     		display('#looking');
