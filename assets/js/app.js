@@ -27,7 +27,8 @@ run(function () {
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
     		     var el=x$('.row_button');
-    		     x$('#looking').html('this is a check');
+    		     var tc="<p>" + el;
+    		     x$('#looking').html(tc);
     		     display('#looking');
  //   		     for (i=0; el.length; i++) {
 //    		     	var e=el[i];
