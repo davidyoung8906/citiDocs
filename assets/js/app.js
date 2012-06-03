@@ -38,6 +38,7 @@ run(function () {
     when('#documents', function() {});
     when('#pages', function() {});
     when('#people', function() {});
+    when('#look', function() {});
     when('#map', function () {
         store.get('config', function (saved) {
         	if (saved) {
