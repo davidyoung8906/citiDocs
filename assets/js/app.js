@@ -16,7 +16,7 @@ run(function () {
                      var stuffing = "City Documents... length:" + cities.length + " <table> ";
    		     for (var i=0; i<cities.length; i++){
   			var row = cites[i];
-  			stuffing += "<tr><td>" + row + "</td><td>" + row.length + "</td></tr>"; 
+  			stuffing += "<tr><td>" + row + "</td><td>" + row.keys + "</td></tr>"; 
   //			stuffing += <tr><td>id: " + row.id + "</td><td>title:" + row.title + "</td><td>type:" + row.doctype + "</td></tr>"; 
  		     };
   		     stuffing += "</table>end of table<p>" + cities + "<p>" + cities;
