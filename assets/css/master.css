@@ -114,8 +114,8 @@ body {
 #welcome_msg h2 {font-size: 50px;}
 
 #docContent h1 {
-	font-size: 20px
-	text-shadow: 0 0 0 0.5em lightblue;
+	font-size: 20px;
+	text-shadow: 0 0 0 24px lightblue;
 }
 
 table { 
