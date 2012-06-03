@@ -17,7 +17,7 @@ run(function () {
    		     for (var i=0; i<cities.length; i++){
   			var row = cities[i];
  			stuffing += "<tr><td>" + row.id + "</td></tr>"; 
-  //			stuffing += <tr><td>id: " + row.id + "</td><td>title:" + row.title + "</td><td>type:" + row.doctype + "</td></tr>"; 
+  			stuffing += "<tr><td>id: " + row.id + "</td><td>title:" + row.title + "</td><td>type:" + row.doctype + "</td></tr>"; 
  		     };
   		     stuffing += "</table>end of table<p>" + cities + "<p>" + cities;
     		     x$('#documents').inner(stuffing);
