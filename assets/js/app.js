@@ -38,7 +38,7 @@ run(function () {
     when('#documents', function() {});
     when('#pages', function() {});
     when('#people', function() {});
-    when('#look', function() {});
+    when('#looking', function() {});
     when('#map', function () {
         store.get('config', function (saved) {
         	if (saved) {
@@ -76,7 +76,7 @@ run(function () {
     });
     when('#look', function () {
     	loc="http://dev.budgetblogs.com:3000/city_docs/";
-    	x$("#documents").xhr(loc);
-    	display('#documents');
+    	x$("#looking").xhr(loc);
+    	display('#looking');
     });
 });
