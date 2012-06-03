@@ -16,8 +16,7 @@ run(function () {
     			stuffing += "<tr><td>" + row.id + "</td><td>" + row.title + "</td><td>" + row.type + "</td></tr>"; 
     		};
     		stuffing += "</table>";
-    		x$('#documents').inner(stuffing);
-    		stuffing="";
+    		
         };
         
         store.get('city', function(saved) {
@@ -28,7 +27,8 @@ run(function () {
     // a little inline controller
     when('#welcome', function() {});
     when('#documents', function() {
-    	
+    	x$('#documents').inner(stuffing);
+    	stuffing="";
     });
     when('#pages', function() {});
     when('#people', function() {});
