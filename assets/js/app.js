@@ -10,7 +10,7 @@ run(function () {
             alert("No internet connection - cannot access remote documents");
         } else {
        	var cityDocs = x$('#documents').xhr('http://dev.budgetblogs.com:3000/city_docs.json');
-       	cityDocs = citiDocs.values;
+       
      	var stuffing = "City Documents<table>";
     		for (var i=0; i<cityDocs.length; i++){
   			row = cityDocs[i];
