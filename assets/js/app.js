@@ -14,7 +14,7 @@ run(function () {
     		stuff += "<tr><td>" + row.id + "</td><td>" + row.title + "</td><td>" + row.type + "</td></tr>"; 
     	};
     	stuff += "</table>";
-    	x$('#documents').inner(stuff)
+    	x$('#documents').inner(stuff);
         };
         
         	store.get('city', function(saved) {
@@ -24,12 +24,7 @@ run(function () {
     
     // a little inline controller
     when('#welcome', function() {});
-    when('#documents', function() {
-    	var stuff="<table>";
-    	for (var i=0; i<cityDocs.length; i++){
-    		row=cityDocs[i];
-    		stuff += "<tr><td>" + row.id + "</td><td>" + row.title + "</td><td>" + row.type + "</td></tr>"; 
-    	};
+    when('#documents', function() {};
     	stuff += "</table>";
     	x$('#documents').inner(stuff);
     });
