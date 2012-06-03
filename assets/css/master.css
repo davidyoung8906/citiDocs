@@ -51,6 +51,10 @@ body {
   text-align: center;
 }
 
+#look_button {
+  width:auto;
+}  
+
 #back_button {
   background: grey;
 }
