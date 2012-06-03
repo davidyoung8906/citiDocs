@@ -36,7 +36,7 @@ run(function () {
   //		     		var ls="http://dev.budgetblogs.com:3000/city_docs/" + e.id;
   //		     		x$('#looking').xhr(ls);
   //		     		display('#looking');
-  		     	});
+  //		     	});
    		     };    		     
                 }
              });
