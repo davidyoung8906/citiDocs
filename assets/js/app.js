@@ -30,7 +30,7 @@ run(function () {
     		     var tc="<p>" + el.length;
     		     x$('#looking').html(tc);
     		     display('#looking');
-    		     for (var i=0; el.length; i++) {
+    		     for (var i=0; i<el.length; i++) {
     		     	var e=el[i];
   //  		     	e.on('firsttouch', function () {
     //		     		var ls="http://dev.budgetblogs.com:3000/city_docs/" + e.id;
