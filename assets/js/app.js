@@ -17,7 +17,7 @@ run(function () {
   //			var row = cites[i];
   //			stuffing += <tr><td>id: " + row.id + "</td><td>title:" + row.title + "</td><td>type:" + row.doctype + "</td></tr>"; 
  //		     };
-  		     stuffing += "</table>end of table<p>" + cities + "<p>" + cities.length;
+  		     stuffing += "</table>end of table<p>" + cities + "<p>" + cities;
     		     x$('#documents').inner(stuffing);
                 }
              });
