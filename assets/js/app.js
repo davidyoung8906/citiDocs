@@ -21,8 +21,8 @@ run(function () {
   					+ row.doctype + "</td><td>"
   					+ row.title + "</td><td>"
   					+ row.description + "</td>"
-  					+ "<td><a href='http://dev.budgetblogs.com:3000/city_docs/'>"
-  					+ row.id + "Open</a></td>"
+  					+ "<td><a href='http://dev.budgetblogs.com:3000/city_docs/'"
+  					+ row.id + ">Open</a></td>"
   					+ </tr>"; 
  		     };
   		     stuffing += "</table></div><p>";
