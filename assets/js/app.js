@@ -21,8 +21,7 @@ run(function () {
   					+ row.doctype + "</td><td>"
   					+ row.title + "</td><td>"
   					+ row.description + "</td>"
-  					+ "<td><button onclick='look("
-  					+ row.id + ") /></td></tr>"; 
+  					+ "<td><button id='look_button'>Open</button>"; 
  		     };
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
@@ -74,4 +73,8 @@ run(function () {
         });
         display('#map');
     });
+    when('#look', function () {
+    	loc="http://dev.budgetblogs.com:3000/city_docs/" + row.id
+    	x$("#documents").xhr(loc)
+    })
 });
