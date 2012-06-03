@@ -2,19 +2,21 @@
 //  --- our app behavior logic ---
 //
 run(function () {
+
+    
     // immediately invoked on first run
     var init = (function () {
         if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");
         } else {
         	var cityDocs = x$('').xhr('http://dev.budgetblogs.com:3000/city_docs.json');
-        	var stuff="<table>";
+        	var stuffing="<table>";
     		for (var i=0; i<cityDocs.length; i++){
     			row=cityDocs[i];
-    			stuff += "<tr><td>" + row.id + "</td><td>" + row.title + "</td><td>" + row.type + "</td></tr>"; 
+    			stuffing += "<tr><td>" + row.id + "</td><td>" + row.title + "</td><td>" + row.type + "</td></tr>"; 
     		};
-    		stuff += "</table>";
-    		x$('#documents').inner(stuff);
+    		stuffing += "</table>";
+    		x$('#documents').inner(stuffing);
         };
         
         store.get('city', function(saved) {
@@ -24,7 +26,9 @@ run(function () {
     
     // a little inline controller
     when('#welcome', function() {});
-    when('#documents', function() {});
+    when('#documents', function() {
+    	
+    });
     when('#pages', function() {});
     when('#people', function() {});
     when('#map', function () {
