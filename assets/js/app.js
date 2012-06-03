@@ -34,8 +34,7 @@ run(function () {
     		     		x$('#looking').xhr(ls);
     		     		display('#looking');
     		     	});
-    		     };
-    		     }
+    		     };    		     
                 }
              });
         };
