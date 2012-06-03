@@ -116,7 +116,7 @@ body {
 #docContent h1 {
 	color: darkblue;
 	font-size: 25px;
-	text-shadow: 0 0 0 0.5em lightblue;
+	text-shadow: 0 0 1em lightblue;
 }
 
 table { 
