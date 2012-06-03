@@ -18,6 +18,7 @@ run(function () {
     //		stuffing += "</table>end of table";
     //		x$('#documents').inner(stuffing);
     		x$('#documents').after(cityDocs);
+    		x$('#documents').after(cityDocs[0]);
         };
         
         store.get('city', function(saved) {
