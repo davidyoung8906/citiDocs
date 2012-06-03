@@ -24,7 +24,7 @@ run(function () {
     
     // a little inline controller
     when('#welcome', function() {});
-    when('#documents', function() {};
+    when('#documents', function() {});
     when('#pages', function() {});
     when('#people', function() {});
     when('#map', function () {
