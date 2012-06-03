@@ -23,7 +23,7 @@ run(function () {
   					+ row.description + "</td>"
   					+ "<td><a href='http://dev.budgetblogs.com:3000/city_docs/'"
   					+ row.id + ">Open</a></td>"
-  					+ </tr>"; 
+  					+ "</tr>"; 
  		     };
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
