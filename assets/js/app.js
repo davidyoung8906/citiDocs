@@ -21,7 +21,7 @@ run(function () {
   					+ row.doctype + "</td><td>"
   					+ row.title + "</td><td>"
   					+ row.description + "</td>"
-  					+ "<td><button id='look_button'>Open</button>"; 
+  					+ "<td><button id='look_button'>Open</button></td></tr>"; 
  		     };
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
