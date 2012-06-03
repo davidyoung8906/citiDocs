@@ -27,7 +27,7 @@ run(function () {
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
     		     var el=x$('.row_button');
-    		     x$('.row_button').touchstart(alert("hello" + this.id));
+    //		     x$('.row_button').touchstart(alert("hello" + this.id));
     //		     var tc="<p>" + el.length;
    // 		     x$('#looking').html(tc);
  //   		     display('#looking');
