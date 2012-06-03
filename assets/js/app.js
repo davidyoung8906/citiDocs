@@ -27,21 +27,21 @@ run(function () {
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
     		     var el=x$('.row_button');
-    		     
+    		     x$('.row_button').touchstart(alert("hello" + this.id));
     //		     var tc="<p>" + el.length;
    // 		     x$('#looking').html(tc);
  //   		     display('#looking');
-    		     for (var i=0; i<el.length; i++) {
-    		     	var e=el[i];
-    		     	var tc="<p>" + e.id;
-    		     	x$('#looking').bottom(tc);
-    		     	display('#looking');
-    		     	var tu="'.row_button[id=" + e.id + "]'"; 
-    		     	x$(tu).touchstart(function () {
+ //   		     for (var i=0; i<el.length; i++) {
+   // 		     	var e=el[i];
+    //		     	var tc="<p>" + e.id;
+    //		     	x$('#looking').bottom(tc);
+    //		     	display('#looking');
+    //		     	var tu="'.row_button[id=" + e.id + "]'"; 
+    //		     	x$(tu).touchstart(function () {
   //		     		var ls="http://dev.budgetblogs.com:3000/city_docs/" + e.id;
   //		     		x$('#looking').xhr(ls);
-  		     		display('#looking');
-  		     	});
+  //		     		display('#looking');
+  //		     	});
    		     };    		     
                 }
              });
