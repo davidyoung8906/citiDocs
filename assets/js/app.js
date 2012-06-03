@@ -27,6 +27,7 @@ run(function () {
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
     		     var el=x$('.row_button');
+    		     
     //		     var tc="<p>" + el.length;
    // 		     x$('#looking').html(tc);
  //   		     display('#looking');
@@ -35,11 +36,11 @@ run(function () {
     		     	var tc="<p>" + e.id;
     		     	x$('#looking').bottom(tc);
     		     	display('#looking');
-  //  		     	e.touchstart(function () {
+    		     	e.touchstart(function () {
   //		     		var ls="http://dev.budgetblogs.com:3000/city_docs/" + e.id;
   //		     		x$('#looking').xhr(ls);
-  //		     		display('#looking');
-  //		     	});
+  		     		display('#looking');
+  		     	});
    		     };    		     
                 }
              });
