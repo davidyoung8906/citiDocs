@@ -21,9 +21,9 @@ run(function () {
     	var stuff="<table>";
     	for (var i=0; i<cityDocs.length; i++){
     		row=cityDocs[i];
-    		stuff << "<tr><td>" + row.id + "</td><td>" + row.title + "</td><td>" + row.type + "</td><td></td></tr>"; 
+    		stuff += "<tr><td>" + row.id + "</td><td>" + row.title + "</td><td>" + row.type + "</td></tr>"; 
     	};
-    	stuff << "</table>";
+    	stuff += "</table>";
     	x$('#documents').inner(stuff);
     });
     when('#pages', function() {});
