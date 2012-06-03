@@ -28,8 +28,11 @@ run(function () {
     		     x$('#documents').inner(stuffing);
     		     var el=x$('.row_button');
     		     x$('.row_button').on('touchstart',function () {
-    		     	var tu="http://dev.budgetblogs.com:3000/citi_docs/"
-    		     		+ x$('#looking').xhr('inner', tu);
+    		     	var tu="http://dev.budgetblogs.com:3000/citi_docs/";
+    		     	x$('#looking').xhr('inner', function () {
+    		     		x$('#looking').html(this.responseText);
+    		     	});
+    		     		
     		     	alert("Why can't this work?" + this.id);
     		     	display('#looking');
     		     });
