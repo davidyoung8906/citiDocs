@@ -13,11 +13,11 @@ run(function () {
                 callback: function(){
                      var stuffing = "City Documents <table> " + cities.length;
                      var cities = eval("("+this.responseText+")"); /* this should be an array */
-   		     for (var i=0; i<cities.length; i++){
-  			var row = cites[i];
-  			stuffing += <tr><td>id: " + row.id + "</td><td>title:" + row.title + "</td><td>type:" + row.doctype + "</td></tr>"; 
- 		     };
-  		     stuffing += "</table>end of table<p>" + cities;
+//   		     for (var i=0; i<cities.length; i++){
+  //			var row = cites[i];
+  //			stuffing += <tr><td>id: " + row.id + "</td><td>title:" + row.title + "</td><td>type:" + row.doctype + "</td></tr>"; 
+ //		     };
+  		     stuffing += "</table>end of table<p>" + cities + "<p>" + cities.length;
     		     x$('#documents').inner(stuffing);
                 }
              });
