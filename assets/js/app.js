@@ -11,8 +11,8 @@ run(function () {
         } else {
        	var cityDocs = x$('#documents').xhr('http://dev.budgetblogs.com:3000/city_docs.json');
      	var stuffing = "City Documents<table>";
-    		for (var i=0; i<cityDocs.length; i++){
-  			row = cityDocs[i];
+    		for (var i=0; i<cityDocs.documents.length; i++){
+  			row = cityDocs.documents[i];
   			stuffing += "<tr><td>id: " + row.id + "</td><td>title:" + row.title + "</td><td>type:" + row.doctype + "</td></tr>"; 
   		};
   		stuffing += "</table>end of table";
