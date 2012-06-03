@@ -75,8 +75,8 @@ run(function () {
         display('#map');
     });
     when('#look', function () {
-    	loc="http://dev.budgetblogs.com:3000/city_docs/";
-    	x$("#looking").xhr(loc);
+    	locate="http://dev.budgetblogs.com:3000/city_docs/";
+    	x$("#looking").xhr(locate);
     	display('#looking');
     });
 });
