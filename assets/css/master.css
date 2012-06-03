@@ -11,7 +11,7 @@ body {
   position: relative;
   z-index: 1;
   background: #ccc;
-  background: -webkit-gradient(linear, 0 0, 0 70%, from(white), to(lightblue));
+  background: -webkit-gradient(linear, 0 0, 0 70%, from(lightgrey), to(lightblue));
   background: linear-gradient(white, lightblue 70%);
   color: #444;
   text-shadow: 0 1px 0 #fff;
