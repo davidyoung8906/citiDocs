@@ -118,5 +118,8 @@ table {
 	margin-right: auto;
 }
 
-td {valign:top;}
+td {
+	valign:top;
+	padding:5px;
+}
 
