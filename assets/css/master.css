@@ -1,6 +1,6 @@
 body {
   background: #fff;
-  background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(grey), color-stop(0.47, white), to(grey));
+  background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(lightgrey), color-stop(0.47, white), to(lightgrey));
   margin: 0;
   font: 18px Helvetica;
   text-align: center;
@@ -108,7 +108,7 @@ body {
 #welcome_msg h1, h2 {
 	font-weight: bold;
 	font-size: 80px;
-	text-shadow: 0 10px 0 #fff;	
+	text-shadow: 0 5px 0 #fff;	
 }
 
 #welcome_msg h2 {font-size: 50px;}
@@ -118,5 +118,5 @@ table {
 	margin-right: auto;
 }
 
-td (valign:top;}
+td {valign:top;}
 
