@@ -18,6 +18,7 @@ run(function () {
     // a little inline controller
     when('#welcome', function() {});
     when('#documents', function() {
+    	cityDocs.each()
     	x$('#documents').inner(cityDocs);
     });
     when('#pages', function() {});
