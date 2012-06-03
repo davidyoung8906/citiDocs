@@ -31,9 +31,10 @@ run(function () {
     		     	var tu="http://dev.budgetblogs.com:3000/citi_docs/";
     		     	x$('#looking').xhr('inner', function () {
     		     		x$('#looking').html(this.responseText);
+    		     		alert("Why can't this work?" + this.id);
     		     	});
     		     		
-    		     	alert("Why can't this work?" + this.id);
+    		     	
     		     	display('#looking');
     		     });
     //		     var tc="<p>" + el.length;
