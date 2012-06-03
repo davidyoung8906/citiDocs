@@ -30,6 +30,7 @@ run(function () {
     		     x$('.row_button').on('touchstart',function () {
     		     	var tu="http://dev.budgetblogs.com:3000/citi_docs/";
     		     	x$('#looking').xhr(tu);
+    		     	alert("Why can't this work?" + this.id);
     		     	display('#looking');
     		     });
     //		     var tc="<p>" + el.length;
