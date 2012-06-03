@@ -7,7 +7,7 @@ run(function () {
         if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");
         } else {
-            
+        var cityDocs = x$('#documents').xhr('http://dev.budgetblogs.com:3000/city_docs.json');    
         };
         
         	store.get('city', function(saved) {
@@ -18,7 +18,7 @@ run(function () {
     // a little inline controller
     when('#welcome', function() {});
     when('#documents', function() {
-    	x$('#documents').xhr('http://dev.budgetblogs.com:3000/city_docs');
+    	x$('#documents').inner(cityDocs);
     });
     when('#pages', function() {});
     when('#people', function() {});
