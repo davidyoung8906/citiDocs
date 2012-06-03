@@ -7,27 +7,24 @@ run(function () {
         if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");
         } else {
-        var cityDocs = x$('').xhr('http://dev.budgetblogs.com:3000/city_docs.json');
-        var stuff="<table>";
-    	for (var i=0; i<cityDocs.length; i++){
-    		row=cityDocs[i];
-    		stuff += "<tr><td>" + row.id + "</td><td>" + row.title + "</td><td>" + row.type + "</td></tr>"; 
-    	};
-    	stuff += "</table>";
-    	x$('#documents').inner(stuff);
+        	var cityDocs = x$('').xhr('http://dev.budgetblogs.com:3000/city_docs.json');
+        	var stuff="<table>";
+    		for (var i=0; i<cityDocs.length; i++){
+    			row=cityDocs[i];
+    			stuff += "<tr><td>" + row.id + "</td><td>" + row.title + "</td><td>" + row.type + "</td></tr>"; 
+    		};
+    		stuff += "</table>";
+    		x$('#documents').inner(stuff);
         };
         
-        	store.get('city', function(saved) {
-    			if (saved) {if (saved.value) {x$('input#city_input').attr('placeholder', saved.value);};}    		
-    		});        
+        store.get('city', function(saved) {
+    		if (saved) {if (saved.value) {x$('input#city_input').attr('placeholder', saved.value);};}    		
+    	});        
     })();
     
     // a little inline controller
     when('#welcome', function() {});
     when('#documents', function() {};
-    	stuff += "</table>";
-    	x$('#documents').inner(stuff);
-    });
     when('#pages', function() {});
     when('#people', function() {});
     when('#map', function () {
