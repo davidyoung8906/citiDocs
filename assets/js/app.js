@@ -13,13 +13,12 @@ run(function () {
                 callback: function(){
                      
                      var cities = eval("("+this.responseText+")"); /* this should be an array */
-                     var stuffing = "City Documents... length:" + cities.length + " <table> ";
+                     var stuffing = "<div id="docContent"><h1>City Documents</h1><p>Total Number of Cities: " + cities.length + " <table> ";
    		     for (var i=0; i<cities.length; i++){
   			var row = cities[i];
- 			stuffing += "<tr><td>" + row.id + "</td></tr>"; 
   			stuffing += "<tr><td>id: " + row.id + "</td><td>title:" + row.title + "</td><td>type:" + row.doctype + "</td></tr>"; 
  		     };
-  		     stuffing += "</table>end of table<p>" + cities + "<p>" + cities;
+  		     stuffing += "</table>end of table<p>";
     		     x$('#documents').inner(stuffing);
                 }
              });
