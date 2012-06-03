@@ -75,7 +75,7 @@ run(function () {
     });
     when('#look', function () {
     	loc="http://dev.budgetblogs.com:3000/city_docs/" + row.id;
-    	x$("#documents").inner(loc);
+    	x$("#documents").xhr(loc);
     	display('#documents');
     });
 });
