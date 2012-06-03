@@ -3,20 +3,20 @@
 //
 run(function () {
 
-    var stuffing = "";
+    
     // immediately invoked on first run
     var init = (function () {
         if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");
         } else {
         	var cityDocs = x$('#documents').xhr('http://dev.budgetblogs.com:3000/city_docs.json');
-        	stuffing = "City Documents<table>" + citiDocs.length;
+        	var stuffing = "City Documents<table>" + citiDocs.length;
     		for (var i=0; i<cityDocs.length; i++){
     			row = cityDocs[i];
     			stuffing += "<tr><td>id: " + row.id + "</td><td>title:" + row.title + "</td><td>type:" + row.type + "</td></tr>"; 
     		};
     		stuffing += "</table>end of table";
-    		x$('#documents').inner(stuffing);
+  //  		x$('#documents').inner(stuffing);
     		x$('#documents').after(cityDocs);
         };
         
