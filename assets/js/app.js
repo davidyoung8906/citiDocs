@@ -18,7 +18,7 @@ run(function () {
   			var row = cities[i];
   			stuffing += "<tr><td>id: " + row.id + "</td><td>title:" + row.title + "</td><td>type:" + row.doctype + "</td></tr>"; 
  		     };
-  		     stuffing += "</table>end of table<p>";
+  		     stuffing += "</table>end of table</div><p>";
     		     x$('#documents').inner(stuffing);
                 }
              });
