@@ -17,8 +17,8 @@ run(function () {
  // 			var row = cites[i];
  // 			stuffing += "" + cites.length + "<tr><td>id: " + row.id + "</td><td>title:" + row.title + "</td><td>type:" + row.doctype + "</td></tr>"; 
   //		     };
-//  		     stuffing += "</table>end of table";
-//    		     x$('#documents').inner(stuffing);
+  		     stuffing += "</table>end of table";
+    		     x$('#documents').inner(stuffing);
                 }
              });
         };
