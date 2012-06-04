@@ -29,12 +29,10 @@ run(function () {
    // 		     var el=x$('.row_button');
     		     x$('.row_button').on('touchstart',function () {
     		     	var tu="http://www.cityofportsmouth.com/finance/fy13/1-TableofContents.pdf";
-    		     	x$('#looking').xhr('inner', tu);
-    		        display('#looking');
-    		        alert("try iframe");
-    		        x$('#looking').html('<iframe width="640" height="360" src="http://www.cityofportsmouth.com/finance/fy13/1-TableofContents.pdf" frameborder="0" allowfullscreen></iframe>');
-    		        alert("try iframe with local file");
-    		        x$('#looking').html('<iframe width="640" height="360" src="/documents/1-TableofContents.pdf" frameborder="0" allowfullscreen></iframe>');
+    		     	var tv='<iframe width="640" height="360" src="'
+    		     		+ tu
+    		     		+ '" frameborder="0" allowfullscreen></iframe>';
+    		     	x$('#looking').html(tv);
     		     });        		     
                   }
              });
