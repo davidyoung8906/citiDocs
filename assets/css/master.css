@@ -53,6 +53,7 @@ body {
 
 .row_button {
   width:auto;
+  font: 12px Helvetica;
 }  
 
 #back_button {
@@ -132,7 +133,7 @@ table {
 
 td {
 	color:darkblue;
-	font: 10px Helvetica;
+	font: 12px Helvetica;
 	vertical-align:text-top;
 	padding: 0px 15px;
 	margin: 0px 15px;
