@@ -133,6 +133,7 @@ table {
 td {
 	color:darkblue;
 	valign:top;
+	padding: 0px 15px;
 	margin: 0px 15px;
 	text-align:left;
 }
