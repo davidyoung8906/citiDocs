@@ -33,6 +33,8 @@ run(function () {
     		        display('#looking');
     		        alert("try iframe");
     		        x$('#looking').html('<iframe width="640" height="360" src="http://www.cityofportsmouth.com/finance/fy13/1-TableofContents.pdf" frameborder="0" allowfullscreen></iframe>');
+    		        alert("try iframe with local file");
+    		        x$('#looking').html('<iframe width="640" height="360" src="/documents/1-TableofContents.pdf" frameborder="0" allowfullscreen></iframe>');
     		     });        		     
                   }
              });
