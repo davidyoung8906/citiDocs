@@ -32,7 +32,7 @@ run(function () {
     		     	x$('#looking').xhr('inner', tu);
     		        display('#looking');
     		        alert("try iframe");
-    		        x$('#looking').html("<iframe height=60 width=100 src='http://www.cityofportsmouth.com/finance/fy13/1-TableofContents.pdf'");
+    		        x$('#looking').html('<iframe width="640" height="360" src="http://www.cityofportsmouth.com/finance/fy13/1-TableofContents.pdf" frameborder="0" allowfullscreen></iframe>');
     		     });        		     
                   }
              });
