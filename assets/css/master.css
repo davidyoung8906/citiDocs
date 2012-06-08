@@ -53,7 +53,9 @@ body {
 
 .row_button {
   width:auto;
-  font: 12px Helvetica;
+  font: 10px Helvetica;
+  padding: 0px;
+  margin-bottom: 0px;
 }  
 
 #back_button {
@@ -129,9 +131,13 @@ body {
 table { 
 	margin-left: auto;
 	margin-right: auto;
+	vertical-align:text-top;
+	padding: 0px 15px;
+	margin: 0px 15px;
+	text-align:left;
 }
 
-td {
+tr, td {
 	color:darkblue;
 	font: 12px Helvetica;
 	vertical-align:text-top;
