@@ -11,18 +11,18 @@ run(function () {
         } else {
        	     x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
                 callback: function(){
-                     var itemurl = "";
+                     var itemurl = "http://";
                      var cities = eval("("+this.responseText+")"); /* this should be an array */
                      var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents: " + cities.length + " <table> ";
    		     for (var i=0; i<cities.length; i++){
   			var row = cities[i];
-  			itemurl = "" + row[0] + row[1]
+  			itemurl += row[0] + row[1]
   			stuffing += "<tr><td>" 
-  					+ row.id + "</td><td>" 
+  					+ i + 1 + "</td><td>" 
   					
   					+ itemurl + "</td><td>"
   					+ "<button class='row_button' id='" 
-  					+ row.id + "'>Open</button></td></tr>"; 
+  					+ i + 1 + "'>Open</button></td></tr>"; 
  		     };
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
