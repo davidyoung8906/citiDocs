@@ -19,11 +19,10 @@ run(function () {
    		     for (var i=0; i<cities.length; i++){
   			var row = cities[i];
   			
-  			stuffing += "<button class='row_button'><tr class='trow' id="
+  			stuffing += "<tr class='trow' id="
   					+ eval(i + 1) + "'><td>" 
   					+ eval(i + 1) + "</td><td>" 
-  					
-  					+ row[1] + "</td></tr></button"; 
+  					+ row[1] + "</td></tr>"; 
  		     };
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
