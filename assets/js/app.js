@@ -9,18 +9,18 @@ run(function () {
         if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");
         } else {
-       	     x$('#documents').xhr('http://dev.budgetblogs.com:3000/city_docs.json',{
+       	     x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
                 callback: function(){
-                     
+                     var itemurl = "";
                      var cities = eval("("+this.responseText+")"); /* this should be an array */
                      var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents: " + cities.length + " <table> ";
    		     for (var i=0; i<cities.length; i++){
   			var row = cities[i];
+  			itemurl = "" + row[0] + row[1]
   			stuffing += "<tr><td>" 
   					+ row.id + "</td><td>" 
-  					+ row.doctype + "</td><td>"
-  					+ row.title + "</td><td>"
-  					+ row.description + "</td><td>"
+  					
+  					+ itemurl + "</td><td>"
   					+ "<button class='row_button' id='" 
   					+ row.id + "'>Open</button></td></tr>"; 
  		     };
@@ -28,9 +28,8 @@ run(function () {
     		     x$('#documents').inner(stuffing);
    // 		     var el=x$('.row_button');
     		     x$('.row_button').on('touchstart',function () {
-    		     	var tu="http://www.cityofportsmouth.com/finance/fy13/1-TableofContents.pdf";
     		     	var tv='<iframe width="640" height="360" src="'
-    		     		+ tu
+    		     		+ itemurl
     		     		+ '" frameborder="0" allowfullscreen></iframe>';
     		     	x$('#looking').html(tv);
     		     });        		     
