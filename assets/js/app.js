@@ -30,8 +30,9 @@ run(function () {
     		     x$('#documents').inner(stuffing);
    // 		     var el=x$('.row_button');
     		     x$('.row_button').on('touchstart',function () {
+    		     	var i = this.id;
     		     	var tv='<iframe width="640" height="360" src="http://www.'
-    		     		+ cities[0][0] + cities[0][1]
+    		     		+ cities[i][0] + cities[i][1]
     		     		+ '" frameborder="0" allowfullscreen></iframe>';
     		     	x$('#looking').html(tv);
     		     });        		     
