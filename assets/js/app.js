@@ -16,7 +16,7 @@ run(function () {
                      var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents: " + cities.length + " <table> ";
    		     for (var i=0; i<cities.length; i++){
   			var row = cities[i];
-  			itemurl += row[0] + row[1]
+  			itemurl = row[0] + row[1]
   			stuffing += "<tr><td>" 
   					+ i + 1 + "</td><td>" 
   					
@@ -27,9 +27,9 @@ run(function () {
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
    // 		     var el=x$('.row_button');
-    		     x$('.row_button').on('touchstart',function () {
-    		     	var tv='<iframe width="640" height="360" src="'
-    		     		+ itemurl
+    		     x$('.row_button').on('touchstart',function (index) {
+    		     	var tv='<iframe width="640" height="360" src="http://www.'
+    		     		+ cities[index][0] + cities[index][1]
     		     		+ '" frameborder="0" allowfullscreen></iframe>';
     		     	x$('#looking').html(tv);
     		     });        		     
