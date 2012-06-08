@@ -134,14 +134,14 @@ table {
 	vertical-align:text-top;
 	padding: 0px 15px;
 	margin: 0px 15px;
-	text-align:left;
+	
 }
 
-tr, td {
+td {
 	color:darkblue;
-	font: 12px Helvetica;
+	font: 14px Helvetica;
 	vertical-align:text-top;
-	padding: 0px 15px;
+	padding: 5px 15px;
 	margin: 0px 15px;
 	text-align:left;
 }
