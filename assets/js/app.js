@@ -29,9 +29,9 @@ run(function () {
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
    // 		     var el=x$('.row_button');
-    		     x$('.row_button').on('touchstart',function (var index=0) {
+    		     x$('.row_button').on('touchstart',function (e) {
     		     	var tv='<iframe width="640" height="360" src="http://www.'
-    		     		+ cities[index][0] + cities[index][1]
+    		     		+ cities[e.id][0] + cities[e.id][1]
     		     		+ '" frameborder="0" allowfullscreen></iframe>';
     		     	x$('#looking').html(tv);
     		     });        		     
