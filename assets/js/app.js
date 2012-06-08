@@ -10,11 +10,11 @@ run(function () {
             alert("No internet connection - cannot access remote documents");
         } else {
        	     x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
-                callback: function(ee){
+                callback: function(){
                      var itemurl = "http://";
                      var cities = eval("("+this.responseText+")"); /* this should be an array */
                      var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
-                     			+ ee.id + cities[0][0] + " is " 
+                     			+ cities[0][0] + " is " 
                      			+ cities.length + " <table> ";
    		     for (var i=0; i<cities.length; i++){
   			var row = cities[i];
@@ -29,9 +29,9 @@ run(function () {
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
    // 		     var el=x$('.row_button');
-    		     x$('.row_button').on('touchstart',function (e) {
+    		     x$('.row_button').on('touchstart',function () {
     		     	var tv='<iframe width="640" height="360" src="http://www.'
-    		     		+ cities[e.id][0] + cities[e.id][1]
+    		     		+ cities[0][0] + cities[0][1]
     		     		+ '" frameborder="0" allowfullscreen></iframe>';
     		     	x$('#looking').html(tv);
     		     });        		     
