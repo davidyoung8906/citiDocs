@@ -30,7 +30,7 @@ run(function () {
     		     x$('#documents').inner(stuffing);
    // 		     var el=x$('.row_button');
     		     x$('.row_button').on('touchstart',function () {
-    		     	var i = -1 + this.id ;
+    		     	var i = -1 + parseInt(this.id) ;
     		     	var tv='<iframe width="640" height="360" src="http://www.'
     		     		+ cities[i][0] + cities[i][1]
     		     		+ '" frameborder="0" allowfullscreen></iframe>';
