@@ -30,7 +30,7 @@ run(function () {
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
    // 		     var el=x$('.row_button');
-    		     x$('.trow').on('touchstart',function () {
+    		     x$('.trow').on('click',function () {
     		     	var i = -1 + parseInt(this.id) ;
     		     	var tv='<iframe width="640" height="360" src="http://www.'
     		     		+ cities[i][0] + cities[i][1]
