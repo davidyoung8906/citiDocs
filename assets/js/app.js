@@ -10,11 +10,11 @@ run(function () {
             alert("No internet connection - cannot access remote documents");
         } else {
        	     x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
-                callback: function(){
+                callback: function(ee){
                      var itemurl = "http://";
                      var cities = eval("("+this.responseText+")"); /* this should be an array */
                      var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
-                     			+ cities[0][0] + " is " 
+                     			+ ee.id + cities[0][0] + " is " 
                      			+ cities.length + " <table> ";
    		     for (var i=0; i<cities.length; i++){
   			var row = cities[i];
