@@ -19,7 +19,8 @@ run(function () {
    		     for (var i=0; i<cities.length; i++){
   			var row = cities[i];
   			
-  			stuffing += "<tr><td>" 
+  			stuffing += "<tr class='trow' id="
+  					+ eval(i + 1) + "'><td>" 
   					+ eval(i + 1) + "</td><td>" 
   					
   					+ row[1] + "</td><td>"
@@ -29,7 +30,7 @@ run(function () {
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
    // 		     var el=x$('.row_button');
-    		     x$('.row_button').on('touchstart',function () {
+    		     x$('.trow').on('touchstart',function () {
     		     	var i = -1 + parseInt(this.id) ;
     		     	var tv='<iframe width="640" height="360" src="http://www.'
     		     		+ cities[i][0] + cities[i][1]
