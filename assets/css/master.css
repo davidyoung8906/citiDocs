@@ -125,12 +125,17 @@ body {
 #docContent h1 {
 	color: darkblue;
 	font-size: 20px;
-	text-shadow: 0 0 10px yellow;
+	text-shadow: 0 0 10px lightgreen;
 }
 
 table { 
 	margin-left: auto;
 	margin-right: auto;
+}
+
+tr {
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+  	box-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
 
 td {
