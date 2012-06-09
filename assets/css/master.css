@@ -115,6 +115,7 @@ body {
 #welcome_msg h1, h2 {
 	font-weight: bold;
 	font-size: 80px;
+	-webkit-text-stroke-color: red;
 	text-shadow: 0 5px 0 #fff;	
 }
 
