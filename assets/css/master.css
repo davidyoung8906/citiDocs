@@ -8,9 +8,7 @@ body {
 
 #title_bar {
   /* need a position set to something for z-index to take effect */
-  position: absolute;
-  left:0px;
-  top:0px;
+  position: relative;
   z-index: 1;
   background: #ccc;
   background: -webkit-gradient(linear, 0 0, 0 70%, from(lightgrey), to(lightblue));
@@ -73,7 +71,8 @@ body {
 }
 /* our three views */
 #welcome {
-  display: block;  
+  display: block; 
+  overflow: scroll;
 }
 
 #map { 
