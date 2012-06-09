@@ -21,7 +21,8 @@ run(function () {
   			
   			stuffing += "<tr class='trow' id="
   					+ eval(i + 1) + "'><td>" 
-  					+ eval(i + 1) + "</td><td>" 
+  					+ eval(i + 1) + "</td><td>"
+  					+ row[3] + "</td><td>"
   					+ row[1] + "</td></tr>"; 
  		     };
   		     stuffing += "</table></div><p>";
