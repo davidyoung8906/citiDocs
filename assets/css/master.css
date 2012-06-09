@@ -110,7 +110,7 @@ body {
   
   
 
-#welcome_msg {color: blue;}
+#welcome_msg {color: darkred;}
 
 #welcome_msg h1, h2 {
 	font-weight: bold;
