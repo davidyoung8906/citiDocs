@@ -1,4 +1,6 @@
 body {
+  position:fixed;
+  top:0px;
   background: #fff;
   background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(lightgrey), color-stop(0.47, white), to(lightgrey));
   margin: 0;
