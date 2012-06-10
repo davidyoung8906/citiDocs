@@ -144,7 +144,7 @@ body {
 #docContent {
 	position:absolute;
 	top:120px;
-	overflow: hidden;
+	overflow: scroll;
 	
 }
 
