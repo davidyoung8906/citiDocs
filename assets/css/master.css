@@ -128,7 +128,7 @@ body {
 
 #docContent {
 	color:darkblue;
-	position: absolute;
+	position: fixed;
 	top:100px;
 	overflow: scroll;
 }
