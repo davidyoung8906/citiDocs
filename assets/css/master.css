@@ -53,6 +53,7 @@ body {
   line-height: 40px;
   color:#fff;
   text-align: center;
+  opacity:0;
 }
 
 .row_button {
@@ -112,6 +113,7 @@ body {
   input {
     margin-bottom: 8px;
     align:left;
+    opacity:0;
   }
   
   
