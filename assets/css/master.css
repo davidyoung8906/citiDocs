@@ -133,12 +133,12 @@ body {
 
 #documents {
 	color:darkblue;
-	position: fixed:
-	overflow: scroll;
+	position: fixed;
 	top:100px;
 }
 
 #docContent {
+	
 	overflow: scroll;
 	
 }
