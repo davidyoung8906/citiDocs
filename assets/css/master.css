@@ -128,7 +128,9 @@ body {
 
 #docContent {
 	color:darkblue;
-	padding-top:100px;}
+	padding-top:80px;
+	position:relative;
+}
 
 #docContent h1 {
 	color: darkblue;
