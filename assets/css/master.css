@@ -3,11 +3,8 @@ body {
   background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(lightgrey), color-stop(0.47, white), to(lightgrey));
   margin: 0;
   font: 18px Helvetica;
-  text-align: center;
-  position:fixed;
-  top:0px;
+  text-align: center;  
   width:100%;
-  
 }	
 
 #title_bar {
@@ -124,12 +121,12 @@ body {
 #welcome_msg h2 {font-size: 50px;}
 
 #documents {
+	position:fixed;
+	top: 110px;
 }
 
 #docContent {
 	color:darkblue;
-	position: fixed;
-	top:100px;
 	overflow: auto;
 }
 
