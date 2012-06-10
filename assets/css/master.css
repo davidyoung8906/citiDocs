@@ -14,7 +14,7 @@ body {
   width: 100%;
   z-index: 9999;
   background: #ccc;
-  background: -webkit-gradient(linear, 0 0, 0 70%, from(lightgrey), to(lightblue));
+  background: -webkit-gradient(linear, 0 0, 0 70%, from(lightgrey), to(grey));
   background: linear-gradient(white, lightblue 70%);
   color: #444;
   text-shadow: 0 1px 0 #fff;
@@ -132,9 +132,13 @@ body {
 
 #documents {
 	color:darkblue;
-	padding-top:80px;
+	
 	position:absolute;
 	top:100px;
+}
+
+#docContent {
+	overflow: scroll;
 }
 
 #docContent h1 {
