@@ -8,8 +8,10 @@ body {
 
 #title_bar {
   /* need a position set to something for z-index to take effect */
-  position: relative;
-  z-index: 1;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 9999;
   background: #ccc;
   background: -webkit-gradient(linear, 0 0, 0 70%, from(lightgrey), to(lightblue));
   background: linear-gradient(white, lightblue 70%);
