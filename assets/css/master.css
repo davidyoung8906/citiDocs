@@ -11,6 +11,7 @@ body {
   position: fixed;
   top: 0px;
   right: 0px;
+  width: 100%;
   z-index: 9999;
   background: #ccc;
   background: -webkit-gradient(linear, 0 0, 0 70%, from(lightgrey), to(lightblue));
