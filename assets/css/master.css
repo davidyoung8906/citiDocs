@@ -136,7 +136,7 @@ body {
 	color:darkblue;
 	height:50%
 	width:100%
-	position:absolute;
+	position:fixed;
 	top:120px;
 	overflow: hidden;
 }
