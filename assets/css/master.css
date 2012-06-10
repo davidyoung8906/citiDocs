@@ -76,7 +76,7 @@ body {
 #welcome {
   display: block; 
   overflow: scroll;
-  padding-top: 70px;
+  padding-top: 200px;
 }
 
 #map { 
