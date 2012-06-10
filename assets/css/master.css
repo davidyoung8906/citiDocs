@@ -123,11 +123,12 @@ body {
 #documents {
 	position:fixed;
 	top: 110px;
+	overflow:auto;
 }
 
 #docContent {
 	color:darkblue;
-	overflow: auto;
+	
 }
 
 
