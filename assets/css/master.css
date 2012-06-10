@@ -132,10 +132,11 @@ body {
 
 #documents {
 	color:darkblue;
+	position: absolute:
+	top:100px;
 }
 
 #docContent {
-	position:absolute;
 	overflow: scroll;
 	
 }
