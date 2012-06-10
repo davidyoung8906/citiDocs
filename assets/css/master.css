@@ -76,7 +76,7 @@ body {
 #welcome {
   display: block; 
   overflow: scroll;
-  padding-top: 200px;
+  padding-top: 100px;
 }
 
 #map { 
@@ -126,7 +126,9 @@ body {
 
 #welcome_msg h2 {font-size: 50px;}
 
-#docContent {color:darkblue;}
+#docContent {
+	color:darkblue;
+	padding-top:100px;}
 
 #docContent h1 {
 	color: darkblue;
