@@ -1,6 +1,6 @@
 body {
   background: #fff;
-  background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(lightyellow), color-stop(0.47, white), to(lightgreen));
+  background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(red), color-stop(0.47, white), to(red));
   margin: 0;
   font: 18px Helvetica;
   text-align: center;
