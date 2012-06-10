@@ -119,7 +119,7 @@ body {
 
 #welcome_msg h2 {font-size: 50px;}
 
-#documents {
+#docContent {
 	color:darkblue;
 	position: fixed;
 	top:100px;
@@ -127,7 +127,7 @@ body {
 	height:100%;
 }
 
-#docContent {
+
 	
 	
 	
