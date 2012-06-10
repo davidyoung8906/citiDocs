@@ -123,7 +123,8 @@ body {
 #documents {
 	position:fixed;
 	top: 110px;
-	overflow:scroll;
+	overflow:visible;
+	
 }
 
 #docContent {
@@ -133,12 +134,6 @@ body {
 	color:darkblue;
 	
 }
-
-
-	
-	
-	
-
 
 #docContent h1 {
 	color: darkblue;
