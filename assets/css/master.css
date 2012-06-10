@@ -130,7 +130,7 @@ body {
 	color:darkblue;
 	position: fixed;
 	top:100px;
-	overflow: scroll;
+	overflow: auto;
 }
 
 
