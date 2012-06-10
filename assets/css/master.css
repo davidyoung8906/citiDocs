@@ -132,7 +132,8 @@ body {
 
 #documents {
 	color:darkblue;
-	position: absolute:
+	position: fixed:
+	overflow: scroll;
 	top:100px;
 }
 
