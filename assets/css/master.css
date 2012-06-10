@@ -18,8 +18,8 @@ body {
   background: #ccc;
   background: -webkit-gradient(linear, 0 0, 0 70%, from(lightgrey), to(black));
   background: linear-gradient(white, lightblue 70%);
-  color: red;
-  text-shadow: 0 1px 0 #fff;
+  color: black;
+  text-shadow: 0 2px 0 #fff;
   border-bottom: 1px solid #999;
   height: 70px;
   line-height: 44px;
@@ -138,7 +138,7 @@ body {
 	width:100%
 	position:absolute;
 	top:120px;
-	overflow: hidden;
+	overflow: scroll;
 }
 
 #docContent {
