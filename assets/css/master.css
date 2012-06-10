@@ -135,12 +135,12 @@ body {
 	height:100%
 	height:100%
 	position:absolute;
-	top:100px;
+	top:120px;
 	overflow: hidden;
 }
 
 #docContent {
-	overflow: scroll;
+	
 }
 
 #docContent h1 {
