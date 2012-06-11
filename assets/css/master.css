@@ -122,14 +122,14 @@ body {
 
 #documents {
 	position:fixed;
-	overflow:scroll;
+	
 	top:110px;
 	width:100%;	
 }
 
 #docContent {
 	position:relative;
-	
+	overflow:scroll;
 	color:darkblue;
 	
 }
