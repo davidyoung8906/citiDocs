@@ -121,14 +121,13 @@ body {
 #welcome_msg h2 {font-size: 50px;}
 
 #documents {
-	position:absolute;
 	
-	top:110px;
+	
 	width:100%;	
 }
 
 #docContent {
-	
+	top:110px;
 	overflow:scroll;
 	color:darkblue;
 	
