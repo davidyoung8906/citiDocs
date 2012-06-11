@@ -121,9 +121,7 @@ body {
 #welcome_msg h2 {font-size: 50px;}
 
 #documents {
-	position:fixed;
-	top: 110px;
-	overflow:scroll;
+	
 	
 	width:100%;
 	
@@ -133,7 +131,7 @@ body {
 	position:fixed;
 	top:110px;
 	overflow:scroll;
-	display:block;
+	
 	color:darkblue;
 	
 }
