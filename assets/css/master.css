@@ -123,6 +123,7 @@ body {
 #documents {
 	position:fixed;
 	top: 110px;
+	overflow:scroll;
 	overflow:visible;
 	width:100%;
 	
@@ -131,7 +132,7 @@ body {
 #docContent {
 	position:absolute;
 	top:0px;
-	overflow:scroll;
+	display:block;
 	color:darkblue;
 	
 }
