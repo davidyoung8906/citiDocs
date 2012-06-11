@@ -130,8 +130,6 @@ body {
 }
 
 #docContent {
-	position:absolute;
-	top:0px;
 	display:block;
 	color:darkblue;
 	
