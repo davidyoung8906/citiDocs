@@ -14,7 +14,7 @@ run(function () {
                      var itemurl = "http://";
                      var cities = eval("("+this.responseText+")"); /* this should be an array */
                      var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
-                     			+ cities[0][0] + " is " 
+                     			+ cities[0].host + " is " 
                      			+ cities.length + " <table> ";
    		     for (var i=0; i<cities.length; i++){
   			var row = cities[i];
@@ -22,8 +22,8 @@ run(function () {
   			stuffing += "<tr class='trow' id="
   					+ eval(i + 1) + "'><td>" 
   					+ eval(i + 1) + "</td><td>"
-  					+ row[3] + "</td><td>"
-  					+ row[1] + "</td></tr>"; 
+  					+ row.title + "</td><td>"
+  					+ row.path + "</td></tr>"; 
  		     };
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
