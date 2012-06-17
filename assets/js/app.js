@@ -9,8 +9,8 @@ run(function () {
         if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");
         } else {
-      // 	     x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
-//                callback: function(){
+       	     x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
+                callback: function(){
                      
  //                    var listing = eval("("+this.responseText+")"); /* this should be an array or hash */
   //                   var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
@@ -35,7 +35,7 @@ run(function () {
     //		     	x$('#looking').html(tv);
     //		     });        		     
    //               }
-   //          });
+             });
         };
         store.get('city', function(saved) {
     		if (saved) {if (saved.value) {x$('input#city_input').attr('placeholder', saved.value);};}    		
