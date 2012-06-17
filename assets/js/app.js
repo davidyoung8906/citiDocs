@@ -16,15 +16,15 @@ run(function () {
                     var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
                    			+ "Portsmouth NH " + " is " 
                     			+ " <table> ";
-        //             val i=1;
- //  		     for (var k in list) {
-  //			stuffing += "<tr class='trow' id="
-  //					+ eval(i+1) + "'><td>" 
-  //					+ eval(i+1) + "</td><td>"
-  //					+ k + "</td><td>"
-  //					+ list[k] + "</td></tr>"; 
-  //			i++;			
- //		     };
+                     val i=1;
+   		     for (var k in list) {
+ 			stuffing += "<tr class='trow' id="
+  				+ eval(i+1) + "'><td>" 
+  				+ eval(i+1) + "</td><td>"
+  				+ k + "</td><td>"
+  				+ list[k] + "</td></tr>"; 
+  			i++;			
+ 		     };
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
    // 		     var el=x$('.row_button');
