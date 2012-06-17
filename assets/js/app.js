@@ -28,12 +28,12 @@ run(function () {
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
    // 		     var el=x$('.row_button');
-    		     x$('.trow').on('click',function () {
-    		     	var i = -1 + parseInt(this.id) ;
-    		     	var tv='<iframe width="640" height="360" src="'
-    		     		+ this.id + '" frameborder="0" allowfullscreen></iframe>';
-    		     	x$('#looking').html(tv);
-    		     });        		     
+  //  		     x$('.trow').on('click',function () {
+    //		     	var i = -1 + parseInt(this.id) ;
+    //		     	var tv='<iframe width="640" height="360" src="'
+    //		     		+ this.id + '" frameborder="0" allowfullscreen></iframe>';
+    //		     	x$('#looking').html(tv);
+    //		     });        		     
                   }
              });
         };
