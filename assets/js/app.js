@@ -16,7 +16,7 @@ run(function () {
  //                   var listing = eval(this.responseText);
                     var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
                    			+ "Portsmouth NH " + " is " 
-                    			+ Object.keys(listing)+ " <table> ";
+                    			+ Object.keys(listing).length + " <table> ";
                     var i=1;
  	//     	for (var k in listing) {
  	//		stuffing += "<tr class='trow' id="
