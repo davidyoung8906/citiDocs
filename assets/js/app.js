@@ -15,7 +15,7 @@ run(function () {
                      var list = eval("("+this.responseText+")"); /* this should be an array or hash */
                      var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
                      			+ "Portsmouth NH" + " is " 
-                     			+ list.length + " <table> ";
+ /                    			+ list.length + " <table> ";
                      val i=1;
  //  		     for (var k in list) {
   //			stuffing += "<tr class='trow' id="
@@ -30,9 +30,8 @@ run(function () {
    // 		     var el=x$('.row_button');
     		     x$('.trow').on('click',function () {
     		     	var i = -1 + parseInt(this.id) ;
-    		     	var tv='<iframe width="640" height="360" src="http://www.'
-    		     		+ cities[i][0] + cities[i][1]
-    		     		+ '" frameborder="0" allowfullscreen></iframe>';
+    		     	var tv='<iframe width="640" height="360" src="'
+    		     		+ this.id + '" frameborder="0" allowfullscreen></iframe>';
     		     	x$('#looking').html(tv);
     		     });        		     
                   }
