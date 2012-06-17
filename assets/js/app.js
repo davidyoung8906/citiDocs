@@ -13,7 +13,7 @@ run(function () {
                 callback: function(){
                      
  //                   var listing = eval("("+this.responseText+")"); /* this should be an array or hash */
-                    var listing = this.responseText;
+                    var listing = val(this.responseText);
                     var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
                    			+ "Portsmouth NH " + " is " 
                     			+ listing + " <table> ";
