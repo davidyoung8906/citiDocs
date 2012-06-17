@@ -34,8 +34,8 @@ run(function () {
     //		     		+ this.id + '" frameborder="0" allowfullscreen></iframe>';
     //		     	x$('#looking').html(tv);
     //		     });        		     
-                  }
-             });
+   //               }
+   //          });
         };
         store.get('city', function(saved) {
     		if (saved) {if (saved.value) {x$('input#city_input').attr('placeholder', saved.value);};}    		
