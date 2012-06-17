@@ -17,12 +17,12 @@ run(function () {
                    			+ "Portsmouth NH " + " is " 
                     			+ " <table> ";
                      val i=1;
-   		     for (var k in list) {
+   		     for (var k in listing) {
  			stuffing += "<tr class='trow' id="
   				+ eval(i+1) + "'><td>" 
   				+ eval(i+1) + "</td><td>"
   				+ k + "</td><td>"
-  				+ list[k] + "</td></tr>"; 
+  				+ listing[k] + "</td></tr>"; 
   			i++;			
  		     };
   		     stuffing += "</table></div><p>";
