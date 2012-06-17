@@ -20,8 +20,8 @@ run(function () {
                 var i=0;
  		for (var k in listing) {
  			stuffing += "<tr class='trow' id="
-  				+ eval(i+1) + "'><td>" 
-  				+ eval(i+1) + "</td><td>"
+  				+ k + "'><td>" 
+ // 				+ eval(i+1) + "</td><td>"
   				+ k + "</td><td>"
   				+ listing[k] + "</td></tr>"; 
   			i++;			
@@ -29,12 +29,12 @@ run(function () {
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
    // 		     var el=x$('.row_button');
-  //  		     x$('.trow').on('click',function () {
+    		     x$('.trow').on('click',function () {
     //		     	var i = -1 + parseInt(this.id) ;
-    //		     	var tv='<iframe width="640" height="360" src="'
-    //		     		+ this.id + '" frameborder="0" allowfullscreen></iframe>';
-    //		     	x$('#looking').html(tv);
-    //		     });        		     
+    		     	var tv='<iframe width="640" height="360" src="'
+    		     		+ this.id + '" frameborder="0" allowfullscreen></iframe>';
+    		     	x$('#looking').html(tv);
+    		     });        		     
                   }
              });
         };
