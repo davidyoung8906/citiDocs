@@ -12,10 +12,10 @@ run(function () {
        	     x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
                 callback: function(){
                      
-                     var list = eval("("+this.responseText+")"); /* this should be an array or hash */
+                     var listing = eval("("+this.responseText+")"); /* this should be an array or hash */
                      var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
                      			+ "Portsmouth NH " + " is " 
-                     			+ list.length + " <table> ";
+                     			+ listing.length + " <table> ";
                      val i=1;
  //  		     for (var k in list) {
   //			stuffing += "<tr class='trow' id="
