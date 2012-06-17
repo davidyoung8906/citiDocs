@@ -14,10 +14,10 @@ run(function () {
                      
  //                   var listing = eval("("+this.responseText+")"); /* this should be an array or hash */
  //                   var listing = this.responseText;
- //                   var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
-   //                			+ "Portsmouth NH " + " is " 
-     //               			+ " <table> ";
-       //              val i=1;
+                    var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
+                   			+ "Portsmouth NH " + " is " 
+                    			+ " <table> ";
+                    val i=1;
  //  		     for (var k in listing) {
  //			stuffing += "<tr class='trow' id="
   //				+ eval(i+1) + "'><td>" 
@@ -26,8 +26,8 @@ run(function () {
   //				+ listing[k] + "</td></tr>"; 
   //			i++;			
  //		     };
-  	//	     stuffing += "</table></div><p>";
-    	//	     x$('#documents').inner(stuffing);
+  		     stuffing += "</table></div><p>";
+    		     x$('#documents').inner(stuffing);
    // 		     var el=x$('.row_button');
   //  		     x$('.trow').on('click',function () {
     //		     	var i = -1 + parseInt(this.id) ;
