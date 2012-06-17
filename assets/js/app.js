@@ -23,6 +23,7 @@ run(function () {
   					+ eval(i+1) + "</td><td>"
   					+ k + "</td><td>"
   					+ list[k] + "</td></tr>"; 
+  			i++;			
  		     };
   		     stuffing += "</table></div><p>";
     		     x$('#documents').inner(stuffing);
