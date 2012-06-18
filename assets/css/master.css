@@ -132,6 +132,7 @@ body {
 	overflow:scroll;
 	color:darkblue;
 	bottom:50px;
+        width:100%;
 }
 
 #docContent h1 {
