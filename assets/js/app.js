@@ -23,7 +23,7 @@ run(function () {
   				+ k + "><td>" 
  // 				+ eval(i+1) + "</td><td>"
   				+ k + "</td><td>"
-  				+ listing[k] + "</td></tr>"; 
+  				+ listing[k].squeeze("http://") + "</td></tr>"; 
   			i++;			
  		     };
   		     stuffing += "</table></div><p>";
