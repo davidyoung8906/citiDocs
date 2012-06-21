@@ -12,14 +12,30 @@ var run = function(application) {
 // throw our settings into a lawnchair
 , store = new Lawnchair({adaptor:'dom'})
 
+, getfile = function() {
+	var listing = {};
+	
+}
+
+, displayit = function(listing) {
+	
+}
+
 , listings = function() {
+	var listing = {};
+	store.get('listing', function(saved) {
+    		if (saved) {if (saved.value) {
+    				listing = saved.value;};}
+    		else {listing = getfile;}
+    	});
+    	displayit;
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");
         } else {
        	     x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
              	callback: function(){
                      
-                var listing = eval("("+this.responseText+")"); /* this should be an array or hash */
+                listing = eval("("+this.responseText+")"); /* this should be an array or hash */
  //                   var listing = eval(this.responseText);
                 var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
                    			+ "Portsmouth NH " + " is " 
