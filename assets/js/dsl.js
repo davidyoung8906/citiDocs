@@ -12,7 +12,7 @@ var run = function(application) {
 // throw our settings into a lawnchair
 , store = new Lawnchair({adaptor:'dom'})
 
-, listings = function {
+, listings = function() {
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");
         } else {
