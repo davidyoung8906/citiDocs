@@ -12,6 +12,41 @@ var run = function(application) {
 // throw our settings into a lawnchair
 , store = new Lawnchair({adaptor:'dom'})
 
+, listings = function {
+	if (navigator.network.connection.type == Connection.NONE) {
+            alert("No internet connection - cannot access remote documents");
+        } else {
+       	     x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
+             	callback: function(){
+                     
+                var listing = eval("("+this.responseText+")"); /* this should be an array or hash */
+ //                   var listing = eval(this.responseText);
+                var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
+                   			+ "Portsmouth NH " + " is " 
+                    			+ Object.keys(listing).length + " <table> ";
+                var i=0;
+ 		for (var k in listing) {
+ 			stuffing += "<tr class='trow' id="
+  				+ k + "><td>" 
+ // 				+ eval(i+1) + "</td><td>"
+  				+ k + "</td><td>"
+  				+ listing[k] + "</td></tr>"; 
+  			i++;			
+ 		     };
+  		     stuffing += "</table></div><p>";
+    		     x$('#documents').inner(stuffing);
+   // 		     var el=x$('.row_button');
+    		     x$('.trow').on('click',function () {
+    //		     	var i = -1 + parseInt(this.id) ;
+    		     	var tv='<iframe width="640" height="360" src="'
+    		     		+ this.id + '" frameborder="0" allowfullscreen></iframe>';
+    		     	x$('#looking').html(tv);
+    		     });        		     
+                  }
+             });
+        };
+}
+
 // shows id passed
 , display = function(id) {
     x$(["#welcome", "#map", "#documents", "#pages", "#people", "#looking"]).each(function(e, i) {
