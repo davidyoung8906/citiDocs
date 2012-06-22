@@ -15,15 +15,15 @@ var run = function(application) {
 , getfile = function() {
 	var mil = new Date().getTime();
 	var listing = {};
-	x$("#welcome").after("made before xhr callback" + (Date().getTime()-mil));
+	x$("#welcome").after("made before xhr callback");
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
         else {x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
              		callback: function(){
-             			x$("#welcome").after("made it to after xhr callback " + (Date().getTime()-mil));
+             			x$("#welcome").after("made it to after xhr callback ");
              			listing = eval("("+this.responseText+")");
-             			x$("#welcome").after("made it to after eval " + (Date().getTime()-mil));
+             			x$("#welcome").after("made it to after eval ");
              		}             		
         	});             	
         }; 
