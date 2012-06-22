@@ -13,17 +13,17 @@ var run = function(application) {
 , store = new Lawnchair({adaptor:'dom'})
 
 , getfile = function() {
-//	if (navigator.network.connection.type == Connection.NONE) {
-  //          alert("No internet connection - cannot access remote documents");
-    //        return;           
-//	} 
-  //      else {
-    //    	x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
-      //       		callback: function(){
-        //     			return eval("("+this.responseText+")");             			
-//             		}             		
-  //      	};             	
-    //    };        
+	if (navigator.network.connection.type == Connection.NONE) {
+            alert("No internet connection - cannot access remote documents");
+            return;           
+	} 
+        else {
+        	x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
+             		callback: function(){
+             			return eval("("+this.responseText+")");             			
+             		}             		
+        	};             	
+        };        
 }
 
 //, displayit = function(listing) {
