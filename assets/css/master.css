@@ -126,16 +126,8 @@ body {
 	width:100%;	
 }
 
-#docContent {
-	position:absolute;
-	top:110px;
-	overflow:scroll;
-	color:darkblue;
-	bottom:50px;
-        width:100%;
-}
-
-#docContent h1 {
+#docheader #doccrumbs #docdocs #docfooter {
+	width:100%;
 	color: darkblue;
 	font-size: 20px;
 	text-shadow: 0 0 10px lightgreen;
