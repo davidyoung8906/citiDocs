@@ -49,6 +49,7 @@ var run = function(application) {
     				};
     				
     	});
+    	x$("#welcome").bottom("<p>stuff =  " + stuff);
     	return stuff;
 }
 
