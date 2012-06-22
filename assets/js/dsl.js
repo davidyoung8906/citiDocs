@@ -31,20 +31,20 @@ var run = function(application) {
 }
 
 , getfilestore = function() {
-	return getfile();
-//	store.get('list', function(saved) {
-//				if (saved) {if (saved.value) {
-//						x$("#welcome").after("list found in store");
-//						return saved.value;
-//					    };}
-//    				else {
-//    					x$("#welcome").after("storing list");
-//    					var s = getfile;
-//    					store.save({key: 'list', value: s});
-//    					return s;
-//    				};
+//	return getfile();
+	store.get('list', function(saved) {
+				if (saved) {if (saved.value) {
+						x$("#welcome").after("list found in store");
+						return saved.value;
+					    };}
+    				else {
+    					x$("#welcome").after("storing list");
+    					var s = getfile;
+    					store.save({key: 'list', value: s});
+    					return s;
+    				};
     				
-//    	});
+    	});
 }
 
 //, displayit = function(listing) {
