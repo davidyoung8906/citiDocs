@@ -39,7 +39,7 @@ var run = function(application) {
 					    };}
     				else {
     					x$("#welcome").after("storing list");
-    					var s = getfile;
+    					var s = getfile();
     					store.save({key: 'list', value: s});
     					return s;
     				};
