@@ -17,8 +17,7 @@ var run = function(application) {
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
-        else {
-        	x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
+        else {x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
              		callback: function(){
              			x$("#welcome").after("made it to xhr callback");
              			return eval("("+this.responseText+")");             			
@@ -36,7 +35,10 @@ var run = function(application) {
 					    };}
     				else {
     					x$("#welcome").after("storing list");
-    					store.save({key: 'list', value: getfile})};
+    					var s = getfile;
+    					store.save({key: 'list', value: s});
+    					return s;
+    				};
     				
     	});
 }
