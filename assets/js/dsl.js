@@ -28,7 +28,7 @@ var run = function(application) {
 }
 
 , getfilestore = function() {
-	return getfile;
+	return getfile();
 //	store.get('list', function(saved) {
 //				if (saved) {if (saved.value) {
 //						x$("#welcome").after("list found in store");
@@ -49,8 +49,7 @@ var run = function(application) {
 //}
 
 , listings = function() {
-	var listing = {};
-	listing = getfile();
+	var listing = getfilestore();
 //    	displayit(listing);
 //	if (navigator.network.connection.type == Connection.NONE) {
 //            alert("No internet connection - cannot access remote documents");
