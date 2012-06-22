@@ -33,11 +33,11 @@ var run = function(application) {
 
 , getfilestore = function() {
 //	return getfile();
-
+	var s = {};
 	var stuff = store.get('list', function(saved) {
 				if (saved) {if (saved.value) {
 						x$("#welcome").bottom("<p>list found in store");
-						return saved.value;
+						s=saved.value;
 					    };}
     				else {
     					x$("#welcome").bottom("<p>Need to store -- get file");
@@ -45,12 +45,11 @@ var run = function(application) {
     					x$("#welcome").bottom("<p>got file and storing it");
     					store.save({key: 'list', value: s});
     					x$("#welcome").bottom("<p>list stored, list =  " + s);
-    					return s;
     				};
     				
     	});
     	x$("#welcome").bottom("<p>stuff =  " + stuff);
-    	return stuff;
+    	return s;
 }
 
 //, displayit = function(listing) {
