@@ -14,19 +14,19 @@ var run = function(application) {
 
 , getfile = function() {
 	var listing = {"initial":"value", "second":"another"};
-//	x$("#welcome").bottom("<p>made it before xhr callback, initial listing = " + Object.keys(listing).length);
-//	if (navigator.network.connection.type == Connection.NONE) {
-//            alert("No internet connection - cannot access remote documents");           
-//	} 
-//        else {x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
-//             		callback: function(){
-//             			x$("#welcome").bottom("<p>made it to after xhr callback ");
-//             			listing = eval("("+this.responseText+")");
-//             			x$("#welcome").bottom("<p>made it to after eval" + Object.keys(listing).length + "<p>");
-//             		}             		
-//        	});             	
-//        }; 
-//        x$("#welcome").bottom("<p>in get file, listing =  " + Object.keys(listing).length);
+	x$("#welcome").bottom("<p>made it before xhr callback, initial listing = " + Object.keys(listing).length);
+	if (navigator.network.connection.type == Connection.NONE) {
+            alert("No internet connection - cannot access remote documents");           
+	} 
+        else {x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
+             		callback: function(){
+             			x$("#welcome").bottom("<p>made it to after xhr callback ");
+             			listing = eval("("+this.responseText+")");
+             			x$("#welcome").bottom("<p>made it to after eval" + Object.keys(listing).length + "<p>");
+             		}             		
+        	});             	
+        }; 
+        x$("#welcome").bottom("<p>in get file, listing =  " + Object.keys(listing).length);
         return listing;
 }
 
