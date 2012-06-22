@@ -1,4 +1,4 @@
-// the app method accepts a fn to invoke on init unobtrusively 
+uuu// the app method accepts a fn to invoke on init unobtrusively 
 var run = function(application) {
     if (navigator.userAgent.indexOf('Browzr') > -1) {
         // blackberry
@@ -31,58 +31,58 @@ var run = function(application) {
 }
 
 , getfilestore = function() {
-//	return getfile();
 	var s = {};
 	var stuff = store.get('list', function(saved) {
 				if (saved) {if (saved.value) {
-						x$("#welcome").bottom("<p>list found in store");
 						s=saved.value;
 					    };}
     				else {
-    					x$("#welcome").bottom("<p>Need to store -- get file");
     					s = getfile();
-    					x$("#welcome").bottom("<p>got file and storing it");
     					store.save({key: 'list', value: s});
-    					x$("#welcome").bottom("<p>list stored, list =  " + Object.keys(s).length);
     				};
     				
     	});
-    	x$("#welcome").bottom("<p>keys =  " + Object.keys(s).length);
     	return s;
 }
 
-//, displayit = function(listing) {
-	
-//}
+, displayit = function(listing) {
+	var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
+       			+ "Portsmouth NH " + " is " 
+       			+ Object.keys(listing).length + " <table> ";
+	for (var k in listing) {
+		stuffing += "<tr class='trow' id="
+				+ k + "><td>" 
+				+ k + "</td><td>"
+				+ listing[k] + "</td></tr>"; 			
+ 	};
+ 	stuffing += "</table></div><p>";
+ 	x$('#documents').inner(stuffing);
+ 	x$('.trow').on('click',function () {
+     		var tv='<iframe width="640" height="360" src="'
+     			+ this.id + '" frameborder="0" allowfullscreen></iframe>';
+     		x$('#looking').html(tv);
+     	});
+}
 
 , listings = function() {
 	var listing = getfilestore();
-	x$("#welcome").bottom("<p>back to listings with list");
-	x$("#welcome").bottom("Listing:  " + listing );
-//    	displayit(listing);
-//	if (navigator.network.connection.type == Connection.NONE) {
-//            alert("No internet connection - cannot access remote documents");
-//        } else {
-//       	     x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
-//             	callback: function(){
-//                	listing = eval("("+this.responseText+")"); 
-//	x$("#welcome").after(listing);
-                	var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
-                   			+ "Portsmouth NH " + " is " 
-                    			+ Object.keys(listing).length + " <table> ";
- 			for (var k in listing) {
- 				stuffing += "<tr class='trow' id="
-  					+ k + "><td>" 
-  					+ k + "</td><td>"
-  					+ listing[k] + "</td></tr>"; 			
- 		 	};
-  		 	stuffing += "</table></div><p>";
-    		 	x$('#documents').inner(stuffing);
-    		 	x$('.trow').on('click',function () {
-    		     		var tv='<iframe width="640" height="360" src="'
-    		     			+ this.id + '" frameborder="0" allowfullscreen></iframe>';
-    		     		x$('#looking').html(tv);
-    		     	});        		     
+    	displayit(listing);
+//                	var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
+//                   			+ "Portsmouth NH " + " is " 
+//                    			+ Object.keys(listing).length + " <table> ";
+// 			for (var k in listing) {
+// 				stuffing += "<tr class='trow' id="
+//  					+ k + "><td>" 
+//  					+ k + "</td><td>"
+//  					+ listing[k] + "</td></tr>"; 			
+// 		 	};
+//  		 	stuffing += "</table></div><p>";
+//    		 	x$('#documents').inner(stuffing);
+//    		 	x$('.trow').on('click',function () {
+//    		     		var tv='<iframe width="640" height="360" src="'
+//    		     			+ this.id + '" frameborder="0" allowfullscreen></iframe>';
+//    		     		x$('#looking').html(tv);
+//    		     	});        		     
 //                  }
 //             });
 //        };
