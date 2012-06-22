@@ -63,7 +63,7 @@ var run = function(application) {
 
 , listings = function() {
 	var listing = getfilestore();
-    	displayit(listing);
+//    	displayit(listing);
 }
 
 // shows id passed
