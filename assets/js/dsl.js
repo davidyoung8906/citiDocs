@@ -50,7 +50,7 @@ var run = function(application) {
 
 , listings = function() {
 	var listing = {};
-	listing = getfile;
+	listing = getfile();
 //    	displayit(listing);
 //	if (navigator.network.connection.type == Connection.NONE) {
 //            alert("No internet connection - cannot access remote documents");
