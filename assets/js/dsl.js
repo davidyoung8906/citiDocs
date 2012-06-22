@@ -32,11 +32,11 @@ var run = function(application) {
 
 , listings = function() {
 	var listing = {};
-//	store.get('listing', function(saved) {
-//    		if (saved) {if (saved.value) {
-//    				listing = saved.value;};}
-//    		else {listing = getfile;}
-//    	});
+	store.get('listing', function(saved) {
+		if (saved) {if (saved.value) {
+    				listing = saved.value;};}
+    		else {listing = getfile;}
+    	});
 //    	displayit(listing);
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");
