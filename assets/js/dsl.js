@@ -14,7 +14,7 @@ var run = function(application) {
 
 , getfile = function() {
 	var listing = {};
-	x$("#welcome").bottom("<p>made it before xhr callback, initial listing = " + listing + String(listing);
+	x$("#welcome").bottom("<p>made it before xhr callback, initial listing = " + listing + String(listing));
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
@@ -26,7 +26,7 @@ var run = function(application) {
              		}             		
         	});             	
         }; 
-        x$("#welcome").bottom("<p>in get file, listing =  " + listing);
+        x$("#welcome").bottom("<p>in get file, listing =  " + listing + String(listing));
         return listing;
 }
 
@@ -47,7 +47,7 @@ var run = function(application) {
     				};
     				
     	});
-    	x$("#welcome").bottom("<p>stuff =  " + stuff);
+    	x$("#welcome").bottom("<p>stuff =  " + s + String(s));
     	return s;
 }
 
@@ -58,7 +58,7 @@ var run = function(application) {
 , listings = function() {
 	var listing = getfilestore();
 	x$("#welcome").bottom("<p>back to listings with list");
-	x$("#welcome").bottom("Listing:  " + listing);
+	x$("#welcome").bottom("Listing:  " + listing + String(listing));
 //    	displayit(listing);
 //	if (navigator.network.connection.type == Connection.NONE) {
 //            alert("No internet connection - cannot access remote documents");
