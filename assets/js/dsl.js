@@ -14,7 +14,7 @@ var run = function(application) {
 
 , getfile = function() {
 	var listing = {"initial":"value"};
-	x$("#welcome").bottom("<p>made it before xhr callback, initial listing = " + Object.keys(listing).length);
+	x$("#welcome").bottom("<p>made it before xhr callback, initial listing = " + Object.keys(listing).length + listing.class);
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
