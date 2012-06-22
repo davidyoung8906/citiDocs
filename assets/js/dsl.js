@@ -50,7 +50,7 @@ var run = function(application) {
 		stuffing += "<tr class='trow' id="
 				+ k + "><td>" 
 				+ k + "</td><td>"
-				+ listing[k].each + "</td></tr>"; 			
+				+ x$.listing[k]) + "</td></tr>"; 			
  	};
  	stuffing += "</table></div><p>";
  	x$('#documents').inner(stuffing);
