@@ -43,17 +43,17 @@ var run = function(application) {
 }
 
 , displayit = function(listing) {
-	var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
-       			+ "Portsmouth NH " + " is " 
-       			+ Object.keys(listing).length + " <table> ";
+//	var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
+//       			+ "Portsmouth NH " + " is " 
+//       			+ Object.keys(listing).length + " <table> ";
 //	for (var k in listing) {
 //		stuffing += "<tr class='trow' id="
 //				+ k + "><td>" 
 //				+ k + "</td><td>"
 //				+ listing[k] + "</td></tr>"; 			
  //	};
- 	stuffing += "</table></div><p>";
- 	x$('#documents').inner(stuffing);
+// 	stuffing += "</table></div><p>";
+// 	x$('#documents').inner(stuffing);
  //	x$('.trow').on('click',function () {
    //  		var tv='<iframe width="640" height="360" src="'
      //			+ this.id + '" frameborder="0" allowfullscreen></iframe>';
