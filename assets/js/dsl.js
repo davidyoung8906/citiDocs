@@ -20,6 +20,7 @@ var run = function(application) {
         else {
         	x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
              		callback: function(){
+             			x$("#welcome").after("made it to xhr callback");
              			return eval("("+this.responseText+")");             			
              		}             		
         	});             	
@@ -29,8 +30,13 @@ var run = function(application) {
 , getfilestore = function() {
 	
 	store.get('list', function(saved) {
-				if (saved) {if (saved.value) {return saved.value;};}
-    				else {store.save({key: 'list', value: getfile})};
+				if (saved) {if (saved.value) {
+						x$("#welcome").after("list found in store");
+						return saved.value;
+					    };}
+    				else {
+    					x$("#welcome").after("storing list");
+    					store.save({key: 'list', value: getfile})};
     				
     	});
 }
@@ -48,6 +54,7 @@ var run = function(application) {
 //       	     x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
 //             	callback: function(){
 //                	listing = eval("("+this.responseText+")"); 
+x$("#welcome").after(listing);
                 	var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
                    			+ "Portsmouth NH " + " is " 
                     			+ Object.keys(listing).length + " <table> ";
