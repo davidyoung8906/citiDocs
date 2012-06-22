@@ -31,11 +31,9 @@ var run = function(application) {
 //}
 
 , listings = function() {
-	var listing = {};
-	store.get('listing', function(saved) {
-		if (saved) {if (saved.value) {
-    				listing = saved.value;};}
-    		else {listing = getfile;}
+	var listing = store.get('list', function(saved) {
+				if (saved) {if (saved.value) {return saved.value;};}
+    				else {store.save({key: 'list', value: getfile)}
     	});
 //    	displayit(listing);
 	if (navigator.network.connection.type == Connection.NONE) {
