@@ -52,7 +52,7 @@ var run = function(application) {
 		x$("#docheader").html("THIS IS THE DOC CRUMB PATH");
 }
 
-, docdocs = function(d) {
+, docdocs = function(listing) {
 	var stuffing = "<table>";
 	for (var k in listing) {
 		stuffing += "<tr class='trow' id="
