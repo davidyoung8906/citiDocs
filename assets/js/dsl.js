@@ -48,14 +48,21 @@ var run = function(application) {
        			+ Object.keys(listing).length); 
 }
 
-, doccrumbs = function() {}
+, doccrumbs = function() {
+		x$("#docheader").html("THIS IS THE DOC CRUMB PATH);
+}
 
 , docdocs = function() {}
 
-, docfooter = function() {}
+, docfooter = function() {
+		x$("#docheader").html("THIS IS THE DOC FOOTER);
+}
 
 , displaylist = function(listing) {
 	docheader(listing);
+	doccrumbs();
+	docdocs();
+	docfooter();
 
 	var stuffing = "<table>";
 	for (var k in listing) {
