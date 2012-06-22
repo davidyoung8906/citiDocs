@@ -70,7 +70,7 @@ var run = function(application) {
 //	x$("#welcome").after(listing);
                 	var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
                    			+ "Portsmouth NH " + " is " 
-                    			+ Object.keys(listing).length + listing + " <table> ";
+                    			+ Object.keys(listing).length + listing.class + " <table> ";
  			for (var k in listing) {
  				stuffing += "<tr class='trow' id="
   					+ k + "><td>" 
