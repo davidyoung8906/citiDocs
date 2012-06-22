@@ -133,6 +133,10 @@ body {
 	text-shadow: 0 0 10px lightgreen;
 }
 
+#docheader {
+	margin: 100px auto 0 auto;
+}
+
 table { 
 	margin-left: auto;
 	margin-right: auto;
