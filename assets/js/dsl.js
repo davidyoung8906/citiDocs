@@ -13,7 +13,7 @@ var run = function(application) {
 , store = new Lawnchair({adaptor:'dom'})
 
 , getfile = function() {
-	var listing = {"initial":"value"};
+	var listing = {"initial":"value", "second":"another"};
 	x$("#welcome").bottom("<p>made it before xhr callback, initial listing = " + Object.keys(listing).length);
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
