@@ -33,14 +33,11 @@ var run = function(application) {
 , getfilestore = function() {
 	var s = {};
 	var stuff = store.get('list', function(saved) {
-				if (saved) {if (saved.value) {
-						s=saved.value;
-					    };}
+				if (saved) {if (saved.value) {s=saved.value;};}
     				else {
     					s = getfile();
     					store.save({key: 'list', value: s});
-    				};
-    				
+    				}; 				
     	});
     	return s;
 }
