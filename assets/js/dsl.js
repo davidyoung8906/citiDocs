@@ -49,7 +49,7 @@ var run = function(application) {
 }
 
 , doccrumbs = function(c) {
-		x$("#docheader").html("THIS IS THE DOC CRUMB PATH");
+		x$("#doccrumbs").html("THIS IS THE DOC CRUMB PATH");
 }
 
 , docdocs = function(listing) {
@@ -70,7 +70,7 @@ var run = function(application) {
 }
 
 , docfooter = function(f) {
-		x$("#docheader").html("THIS IS THE DOC FOOTER");
+		x$("#docfooter").html("THIS IS THE DOC FOOTER");
 }
 
 , displaylist = function(listing) {
