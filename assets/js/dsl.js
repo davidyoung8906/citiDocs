@@ -31,7 +31,7 @@ var run = function(application) {
 }
 
 , getfilestore = function() {
-	var s = getfile();
+	var s = {};
 	var stuff = store.get('list', function(saved) {
 				if (saved) {if (saved.value) {s=saved.value;};}
     				else {
