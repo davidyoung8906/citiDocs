@@ -56,6 +56,7 @@ var run = function(application) {
 , listings = function() {
 	var listing = getfilestore();
 	x$("#welcome").bottom("<p>back to listings with list");
+	x$("#welcome").bottom(listing);
 //    	displayit(listing);
 //	if (navigator.network.connection.type == Connection.NONE) {
 //            alert("No internet connection - cannot access remote documents");
