@@ -15,15 +15,15 @@ var run = function(application) {
 , getfile = function() {
 	var mil = new Date().getTime();
 	var listing = {};
-	x$("#welcome").after("<p>made it before xhr callback");
+	x$("#welcome").bottom("<p>made it before xhr callback");
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
         else {x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
              		callback: function(){
-             			x$("#welcome").after("<p>made it to after xhr callback ");
+             			x$("#welcome").bottom("<p>made it to after xhr callback ");
              			listing = eval("("+this.responseText+")");
-             			x$("#welcome").after("<p>made it to after eval");
+             			x$("#welcome").bottom("<p>made it to after eval");
              		}             		
         	});             	
         }; 
@@ -34,13 +34,14 @@ var run = function(application) {
 //	return getfile();
 	store.get('list', function(saved) {
 				if (saved) {if (saved.value) {
-						x$("#welcome").after("list found in store");
+						x$("#welcome").bottom("<p>list found in store");
 						return saved.value;
 					    };}
     				else {
-    					x$("#welcome").after("storing list");
+    					x$("#welcome").bottom("<p>storing list");
     					var s = getfile();
     					store.save({key: 'list', value: s});
+    					x$("#welcome").bottom("<p>list stored");
     					return s;
     				};
     				
