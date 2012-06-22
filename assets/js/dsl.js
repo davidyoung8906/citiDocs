@@ -29,7 +29,8 @@ var run = function(application) {
 , getfilestore = function() {
 	store.get('list', function(saved) {
 				if (saved) {if (saved.value) {return saved.value;};}
-    				else {store.save({key: 'list', value: getfile)}
+    				else {store.save({key: 'list', value: getfile})};
+    				
     	});
 }
 
