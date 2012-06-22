@@ -48,21 +48,21 @@ var run = function(application) {
        			+ Object.keys(listing).length); 
 }
 
-, doccrumbs = function() {
-		x$("#docheader").html("THIS IS THE DOC CRUMB PATH);
+, doccrumbs = function(c) {
+		x$("#docheader").html("THIS IS THE DOC CRUMB PATH");
 }
 
-, docdocs = function() {}
+, docdocs = function(d) {}
 
-, docfooter = function() {
-		x$("#docheader").html("THIS IS THE DOC FOOTER);
+, docfooter = function(f) {
+		x$("#docheader").html("THIS IS THE DOC FOOTER");
 }
 
 , displaylist = function(listing) {
 	docheader(listing);
-	doccrumbs();
-	docdocs();
-	docfooter();
+	doccrumbs(listing);
+	docdocs(listing);
+	docfooter(listing);
 
 	var stuffing = "<table>";
 	for (var k in listing) {
