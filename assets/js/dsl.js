@@ -27,6 +27,7 @@ var run = function(application) {
              		}             		
         	});             	
         }; 
+        x$("#welcome").bottom("<p>in get file, listing =  " + listing);
         return listing;
 }
 
