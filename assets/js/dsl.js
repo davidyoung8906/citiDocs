@@ -43,7 +43,7 @@ var run = function(application) {
     					var s = getfile();
     					x$("#welcome").bottom("<p>got file and storing it");
     					store.save({key: 'list', value: s});
-    					x$("#welcome").bottom("<p>list stored, list =  " + s);
+    					x$("#welcome").bottom("<p>list stored, list =  " + Object.keys(s).length);
     				};
     				
     	});
