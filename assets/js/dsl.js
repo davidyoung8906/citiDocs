@@ -26,7 +26,7 @@ var run = function(application) {
 //             		}             		
 //        	});             	
 //        }; 
-        x$("#welcome").bottom("<p>in get file, listing =  " + Object.keys(listing).length);
+//        x$("#welcome").bottom("<p>in get file, listing =  " + Object.keys(listing).length);
         return listing;
 }
 
