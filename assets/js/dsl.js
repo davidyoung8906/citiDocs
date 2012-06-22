@@ -26,15 +26,19 @@ var run = function(application) {
         };        
 }
 
+, getfilestore = function() {
+	store.get('list', function(saved) {
+				if (saved) {if (saved.value) {return saved.value;};}
+    				else {store.save({key: 'list', value: getfile)}
+    	});
+}
+
 //, displayit = function(listing) {
 	
 //}
 
 , listings = function() {
-	var listing = store.get('list', function(saved) {
-				if (saved) {if (saved.value) {return saved.value;};}
-    				else {store.save({key: 'list', value: getfile)}
-    	});
+	var listing = getfilestore;
 //    	displayit(listing);
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");
