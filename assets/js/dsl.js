@@ -32,7 +32,8 @@ var run = function(application) {
 
 , getfilestore = function() {
 //	return getfile();
-	store.get('list', function(saved) {
+
+	var stuff = store.get('list', function(saved) {
 				if (saved) {if (saved.value) {
 						x$("#welcome").bottom("<p>list found in store");
 						return saved.value;
@@ -47,6 +48,7 @@ var run = function(application) {
     				};
     				
     	});
+    	return stuff;
 }
 
 //, displayit = function(listing) {
