@@ -42,7 +42,7 @@ var run = function(application) {
     	return s;
 }
 
-, displayit = function(listing) {
+//, displaylist = function(listing) {
 //	var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
 //       			+ "Portsmouth NH " + " is " 
 //       			+ Object.keys(listing).length + " <table> ";
@@ -59,11 +59,11 @@ var run = function(application) {
      //			+ this.id + '" frameborder="0" allowfullscreen></iframe>';
      //		x$('#looking').html(tv);
      //	});
-}
+//}
 
 , listings = function() {
 	var listing = getfilestore();
-//    	displayit(listing);
+//    	displaylist(listing);
 }
 
 // shows id passed
