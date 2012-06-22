@@ -30,23 +30,21 @@ var run = function(application) {
 //    				listing = saved.value;};}
 //    		else {listing = getfile;}
 //    	});
-    	displayit(listing);
+//    	displayit(listing);
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");
         } else {
        	     x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
              	callback: function(){
-                	listing = eval("("+this.responseText+")"); /* this should be an array or hash */
+                	listing = eval("("+this.responseText+")"); 
                 	var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
                    			+ "Portsmouth NH " + " is " 
                     			+ Object.keys(listing).length + " <table> ";
-                	var i=0;
  			for (var k in listing) {
  				stuffing += "<tr class='trow' id="
   					+ k + "><td>" 
   					+ k + "</td><td>"
-  					+ listing[k] + "</td></tr>"; 
-  				i++;			
+  					+ listing[k] + "</td></tr>"; 			
  		 	};
   		 	stuffing += "</table></div><p>";
     		 	x$('#documents').inner(stuffing);
