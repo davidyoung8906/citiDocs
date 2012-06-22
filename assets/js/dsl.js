@@ -47,7 +47,7 @@ var run = function(application) {
     				};
     				
     	});
-    	x$("#welcome").bottom("<p>stuff =  " + s);
+    	x$("#welcome").bottom("<p>keys =  " + Object.keys(s).length);
     	return s;
 }
 
