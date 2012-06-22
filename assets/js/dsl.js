@@ -42,7 +42,21 @@ var run = function(application) {
     	return s;
 }
 
+, docheader = function(listing) {
+		x$("#docheader").html("<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
+       			+ "Portsmouth NH " + " is " 
+       			+ Object.keys(listing).length + " <table> "); 
+}
+
+, doccrumbs = function() {}
+
+, docdocs = function() {}
+
+, docfooter = function() {}
+
 , displaylist = function(listing) {
+	docheader(listing)
+
 	var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
        			+ "Portsmouth NH " + " is " 
        			+ Object.keys(listing).length + " <table> ";
