@@ -27,6 +27,7 @@ var run = function(application) {
 }
 
 , getfilestore = function() {
+	
 	store.get('list', function(saved) {
 				if (saved) {if (saved.value) {return saved.value;};}
     				else {store.save({key: 'list', value: getfile})};
@@ -41,12 +42,12 @@ var run = function(application) {
 , listings = function() {
 	var listing = getfilestore;
 //    	displayit(listing);
-	if (navigator.network.connection.type == Connection.NONE) {
-            alert("No internet connection - cannot access remote documents");
-        } else {
-       	     x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
-             	callback: function(){
-                	listing = eval("("+this.responseText+")"); 
+//	if (navigator.network.connection.type == Connection.NONE) {
+//            alert("No internet connection - cannot access remote documents");
+//        } else {
+//       	     x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
+//             	callback: function(){
+//                	listing = eval("("+this.responseText+")"); 
                 	var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
                    			+ "Portsmouth NH " + " is " 
                     			+ Object.keys(listing).length + " <table> ";
@@ -63,9 +64,9 @@ var run = function(application) {
     		     			+ this.id + '" frameborder="0" allowfullscreen></iframe>';
     		     		x$('#looking').html(tv);
     		     	});        		     
-                  }
-             });
-        };
+//                  }
+//             });
+//        };
 }
 
 // shows id passed
