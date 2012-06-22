@@ -65,7 +65,7 @@ var run = function(application) {
 				+ listing[k] + "</td></tr>"; 			
  	};
  	stuffing += "</table></div><p>";
- 	x$('#docdocs').bottom(stuffing);
+ 	x$('#docdocs').html(stuffing);
  	x$('.trow').on('click',function () {
      		var tv='<iframe width="640" height="360" src="'
      			+ this.id + '" frameborder="0" allowfullscreen></iframe>';
