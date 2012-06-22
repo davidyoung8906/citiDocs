@@ -52,18 +52,7 @@ var run = function(application) {
 		x$("#docheader").html("THIS IS THE DOC CRUMB PATH");
 }
 
-, docdocs = function(d) {}
-
-, docfooter = function(f) {
-		x$("#docheader").html("THIS IS THE DOC FOOTER");
-}
-
-, displaylist = function(listing) {
-	docheader(listing);
-	doccrumbs(listing);
-	docdocs(listing);
-	docfooter(listing);
-
+, docdocs = function(d) {
 	var stuffing = "<table>";
 	for (var k in listing) {
 		stuffing += "<tr class='trow' id="
@@ -78,6 +67,17 @@ var run = function(application) {
      			+ this.id + '" frameborder="0" allowfullscreen></iframe>';
      		x$('#looking').html(tv);
      	});
+}
+
+, docfooter = function(f) {
+		x$("#docheader").html("THIS IS THE DOC FOOTER");
+}
+
+, displaylist = function(listing) {
+	docheader(listing);
+	doccrumbs(listing);
+	docdocs(listing);
+	docfooter(listing);
 }
 
 , listings = function() {
