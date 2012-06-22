@@ -40,7 +40,7 @@ var run = function(application) {
 					    };}
     				else {
     					x$("#welcome").bottom("<p>Need to store -- get file");
-    					var s = getfile();
+    					s = getfile();
     					x$("#welcome").bottom("<p>got file and storing it");
     					store.save({key: 'list', value: s});
     					x$("#welcome").bottom("<p>list stored, list =  " + Object.keys(s).length);
