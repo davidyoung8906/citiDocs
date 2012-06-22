@@ -20,7 +20,7 @@ var run = function(application) {
         else {
         	x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
              		callback: function(){
-             			listing = eval("("+this.responseText+")");             			
+             			return eval("("+this.responseText+")");             			
              		}             		
         	});             	
         };        
