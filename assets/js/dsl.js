@@ -45,7 +45,7 @@ var run = function(application) {
 , docheader = function(listing) {
 		x$("#docheader").html("<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
        			+ "Portsmouth NH " + " is " 
-       			+ Object.keys(listing).length + " <table> "); 
+       			+ Object.keys(listing).length); 
 }
 
 , doccrumbs = function() {}
@@ -57,9 +57,7 @@ var run = function(application) {
 , displaylist = function(listing) {
 	docheader(listing)
 
-	var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
-       			+ "Portsmouth NH " + " is " 
-       			+ Object.keys(listing).length + " <table> ";
+	var stuffing = "<table>";
 	for (var k in listing) {
 		stuffing += "<tr class='trow' id="
 				+ k + "><td>" 
@@ -67,7 +65,7 @@ var run = function(application) {
 				+ listing[k] + "</td></tr>"; 			
  	};
  	stuffing += "</table></div><p>";
- 	x$('#documents').inner(stuffing);
+ 	x$('#docdocs').bottom(stuffing);
  	x$('.trow').on('click',function () {
      		var tv='<iframe width="640" height="360" src="'
      			+ this.id + '" frameborder="0" allowfullscreen></iframe>';
