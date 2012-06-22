@@ -14,7 +14,7 @@ var run = function(application) {
 
 , getfile = function() {
 	var listing = {};
-	x$("#welcome").bottom("<p>made it before xhr callback, initial listing = " + listing + String(listing));
+	x$("#welcome").bottom("<p>made it before xhr callback, initial listing = " + listing;
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
@@ -22,11 +22,11 @@ var run = function(application) {
              		callback: function(){
              			x$("#welcome").bottom("<p>made it to after xhr callback ");
              			listing = eval("("+this.responseText+")");
-             			x$("#welcome").bottom("<p>made it to after eval");
+             			x$("#welcome").bottom("<p>made it to after eval" + listing + "<p>" + this.responseText);
              		}             		
         	});             	
         }; 
-        x$("#welcome").bottom("<p>in get file, listing =  " + listing + String(listing));
+        x$("#welcome").bottom("<p>in get file, listing =  " + listing);
         return listing;
 }
 
