@@ -58,7 +58,7 @@ var run = function(application) {
 , listings = function() {
 	var listing = getfilestore();
 	x$("#welcome").bottom("<p>back to listings with list");
-	x$("#welcome").bottom("Listing:  " + listing + String(listing));
+	x$("#welcome").bottom("Listing:  " + listing );
 //    	displayit(listing);
 //	if (navigator.network.connection.type == Connection.NONE) {
 //            alert("No internet connection - cannot access remote documents");
@@ -69,7 +69,7 @@ var run = function(application) {
 //	x$("#welcome").after(listing);
                 	var stuffing = "<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
                    			+ "Portsmouth NH " + " is " 
-                    			+ Object.keys(listing).length + listing.class + " <table> ";
+                    			+ Object.keys(listing).length + " <table> ";
  			for (var k in listing) {
  				stuffing += "<tr class='trow' id="
   					+ k + "><td>" 
