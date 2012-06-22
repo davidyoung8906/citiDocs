@@ -13,9 +13,8 @@ var run = function(application) {
 , store = new Lawnchair({adaptor:'dom'})
 
 , getfile = function() {
-	var mil = new Date().getTime();
 	var listing = {};
-	x$("#welcome").bottom("<p>made it before xhr callback");
+	x$("#welcome").bottom("<p>made it before xhr callback, initial listing = " + listing + String(listing);
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
