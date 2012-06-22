@@ -13,16 +13,16 @@ var run = function(application) {
 , store = new Lawnchair({adaptor:'dom'})
 
 , getfile = function() {
+	var listing = {};
 	if (navigator.network.connection.type == Connection.NONE) {
-            alert("No internet connection - cannot access remote documents");
-            return;           
+            alert("No internet connection - cannot access remote documents");           
 	} 
         else {
         	x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
              		callback: function(){
-             			return eval("("+this.responseText+")");             			
+             			listing = eval("("+this.responseText+")");             			
              		}             		
-        	};             	
+        	});             	
         };        
 }
 
