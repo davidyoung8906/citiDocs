@@ -55,7 +55,7 @@ var run = function(application) {
 , docfooter = function() {}
 
 , displaylist = function(listing) {
-	docheader(listing)
+	docheader(listing);
 
 	var stuffing = "<table>";
 	for (var k in listing) {
