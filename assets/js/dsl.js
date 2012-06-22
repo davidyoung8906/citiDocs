@@ -13,14 +13,17 @@ var run = function(application) {
 , store = new Lawnchair({adaptor:'dom'})
 
 , getfile = function() {
+	var mil = new Date().getTime();
 	var listing = {};
+	x$("#welcome").after("made before xhr callback" + eval(Date().getTime()-mil));
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
         else {x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
              		callback: function(){
-             			x$("#welcome").after("made it to xhr callback");
-             			listing = eval("("+this.responseText+")");             			
+             			x$("#welcome").after("made it to after xhr callback " + eval(Date().getTime()-mil));
+             			listing = eval("("+this.responseText+")");
+             			x$("#welcome").after("made it to after eval " + eval(Date().getTime()-mil));
              		}             		
         	});             	
         }; 
