@@ -13,8 +13,8 @@ var run = function(application) {
 , store = new Lawnchair({adaptor:'dom'})
 
 , getfile = function() {
-	var listing = {};
-	x$("#welcome").bottom("<p>made it before xhr callback, initial listing = " + listing);
+	var listing = {"initial":"value"};
+	x$("#welcome").bottom("<p>made it before xhr callback, initial listing = " + Object.keys(listing).length);
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
@@ -22,7 +22,7 @@ var run = function(application) {
              		callback: function(){
              			x$("#welcome").bottom("<p>made it to after xhr callback ");
              			listing = eval("("+this.responseText+")");
-             			x$("#welcome").bottom("<p>made it to after eval" + listing + "<p>" + this.responseText);
+             			x$("#welcome").bottom("<p>made it to after eval" + listing + "<p>");
              		}             		
         	});             	
         }; 
