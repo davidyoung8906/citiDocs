@@ -96,10 +96,12 @@ var run = function(application) {
 }
 
 , getdocs = function(listing) {
-	var docs = {};
+	var docs = [{"key":"value"}];
 	for (k in listing) {
-		for (h in listing[k]) {
-			if (typeof h === "String") {docs << listing[k]};
+		for (var i=0; i<listing[k].length; i++) {		
+			for (key in listing[k][i]) {
+				if (typeof listing[k][i][key] === 'string') {docs[i] = listing[k][i];};
+			};
 		};
 	};
 	return docs;
@@ -112,10 +114,8 @@ var run = function(application) {
 , getsubs = function(listing) {
 	var subs = ["sub1", "sub2"];
 	for (k in listing) {
-		x$("#welcome").bottom("Subs focus:"+k+listing[k].length);
 		for (var i=0; i<listing[k].length; i++) {		
 			for (key in listing[k][i]) {
-				x$("#welcome").bottom("<p>i and key:  " + i + "  " + key);
 				if (typeof listing[k][i][key] === 'object') {subs[i] = key;};
 			};
 		};
