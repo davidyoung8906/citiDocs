@@ -63,7 +63,7 @@ var run = function(application) {
 //		x$("#doccrumbs").bottom("</span><span id='focus'>  ..." + focus + "</span>");
 }
 
-, popcrumbs(n) {
+, popcrumbs = function(n) {
 	var crumbs = getcrumbs();
 	while(n > 0) {
 		crumbs.pop();
