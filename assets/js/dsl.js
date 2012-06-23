@@ -43,7 +43,7 @@ var run = function(application) {
 }
 
 , docheader = function(listing) {
-		x$("#docheader").html("<div id='docContent'><h1>City Documents</h1><p>Total Number of Documents for "
+		x$("#docheader").html("<div id='docContent'><h1>Document List for the City of Portsmouth NH</h1><p>Total Number of Documents for "
        			+ "Portsmouth NH " + " is " 
        			+ Object.keys(listing).length); 
 }
@@ -69,14 +69,36 @@ var run = function(application) {
      	});
 }
 
+, docsubs = function(s) {
+		x$("#docsubs").html("THIS IS THE SUB AREA");
+}
+
 , docfooter = function(f) {
 		x$("#docfooter").html("THIS IS THE DOC FOOTER");
 }
 
+, getcrumbs = function() {}
+
+, getdocs = function(list) {}
+
+, getfocus = function(listing) {}
+
+, getsubs = function(list) {}
+
+, breakout = function(listing) {
+	return {"crumbs": getcrumbs(),
+		"focus" : var f=listing.keys.first, 
+		"docs"  : getdocs(listing[f]),
+		"subs"  : getsubs(listing[f])
+	}
+}
+
 , displaylist = function(listing) {
+	var d = breakout(listing);
 	docheader(listing);
 	doccrumbs(listing);
 	docdocs(listing);
+	docsubs(listing);
 	docfooter(listing);
 }
 
