@@ -91,8 +91,13 @@ var run = function(application) {
 
 // analyze data and create data structures for display
 
-, getcrumbs = function() {
-	return ["top", "next", "cityofportsmouth.com"];
+, getcrumbs = function() {	
+	var c = ['nothing'];
+	store.get('crumbs', function(saved) {
+		if (saved) {if (saved.crumbstore) {c=saved.crumbstore;};}
+    		else {store.save({key: 'list', value: ["TOP"]});}; 				
+    	});
+    	return c;
 }
 
 , getdocs = function(listing) {
