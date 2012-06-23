@@ -106,7 +106,7 @@ var run = function(application) {
 			x$("#welcome").bottom("sub factory: " + i);
 			x$("#docsubs").bottom("" + subbutton);	
 		};
-		x$("#docsubs").bottom("</span>);
+		x$("#docsubs").bottom("</span>");
 }
 
 , docfooter = function(list) {}
