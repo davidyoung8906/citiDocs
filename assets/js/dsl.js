@@ -92,6 +92,7 @@ var run = function(application) {
 			if (typeof h === "String") {docs << list[k]};
 		};
 	};
+	return docs;
 }
 
 , getfocus = function(listing) {
@@ -112,7 +113,7 @@ var run = function(application) {
 	var d = breakout(listing);
 	docheader(listing);
 	doccrumbs(d.crumbs, d.focus);
-	docdocs(listing[d.focus]);
+	docdocs(d.docs);
 	docsubs(listing);
 	docfooter(listing);
 }
