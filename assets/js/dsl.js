@@ -80,7 +80,7 @@ var run = function(application) {
 }
 
 , docsubs = function(subs) {
-		x$("#docsubs").html("<span id='subs'>");
+		x$("#docsubs").html("<span id='subs'>Subs:");
 		for (s in subs) {
 			x$("#docsubs").bottom("<button>"+subs[s]+"</button");	
 		};
@@ -129,7 +129,7 @@ var run = function(application) {
 	};
 }
 
-// create display after getting data
+// create display after analuzing and structuring data
 
 , displaylist = function(listing) {
 	var d = breakout(listing);
