@@ -53,14 +53,14 @@ var run = function(application) {
 }
 
 , doccrumbs = function(crumbs, focus) {
-		x$("#doccrumbs").html("<span id='crumbs'>");
-		for (i=0; i<crumbs.length; i++) {
-			var button = "<button class='crumb' id='crumb" + i + "' "
-					+ "onclick('popcrumbs(" + crumbs.length + ")')>"
-					+ crumbs[i] + "</button>";
-			x$("#doccrumbs").bottom(button);	
-		};
-		x$("#doccrumbs").bottom("</span><span id='focus'>  ..." + focus + "</span>");
+//		x$("#doccrumbs").html("<span id='crumbs'>");
+//		for (i=0; i<crumbs.length; i++) {
+//			var button = "<button class='crumb' id='crumb" + i + "' "
+//					+ "onclick('popcrumbs(" + crumbs.length + ")')>"
+//					+ crumbs[i] + "</button>";
+//			x$("#doccrumbs").bottom(button);	
+//		};
+//		x$("#doccrumbs").bottom("</span><span id='focus'>  ..." + focus + "</span>");
 }
 
 , popcrumbs(n) {
