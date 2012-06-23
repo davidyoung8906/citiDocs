@@ -110,10 +110,12 @@ var run = function(application) {
 }
 
 , getsubs = function(listing) {
-	var subs = {};
+	var subs = [];
 	for (k in listing) {
-		for (h in listing[k]) {
-			if (typeof h !== "String") {subs << for (key in h) {key;}};
+		if (typeof listing[k] !== "String") {
+			for (h in listing[k]) {
+				for (key in h) {subs << key;};
+			};
 		};
 	};
 	return subs;
