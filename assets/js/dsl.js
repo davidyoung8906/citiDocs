@@ -75,7 +75,10 @@ var run = function(application) {
 	listings;
 }
 
+, pushcrumb = function(crumb) {store.save({key: "crumbs", crumbstore: getcrumbs().push(crumb)});}
+
 , docdocs = function(docs) {
+	
 	var stuffing = "<table>";
 	for (var i=0; i<docs.length; i++) {
 		for (k in docs[i]) {
@@ -94,12 +97,16 @@ var run = function(application) {
      	});
 }
 
-, docsubs = function(subs) {  // subs is an array of subs like ["sub1", "sub2",...]
+, docsubs = function(subs, focus) {  // subs is an array of subs like ["sub1", "sub2",...]
 		x$("#docsubs").html("<span id='subs'>");
-		for (s in subs) {
-			x$("#docsubs").bottom("<button>"+subs[s]+"</button");	
+		for (var i=0; i<subs.length; i++) {
+			var subbutton = "<button "
+					+ "onclick='pushcrumb(" + focus + ")'>"
+					+ crumbs[i] + "</button>";
+			x$("#welcome").bottom("sub factory: " + i);
+			x$("#doccrumbs").bottom("" + crumbbutton);	
 		};
-		x$("#docsubs").bottom("</span>");
+		x$("#doccrumbs").bottom("</span><span id='focus'>  ..." + focus + "</span>");
 }
 
 , docfooter = function(list) {}
@@ -158,7 +165,7 @@ var run = function(application) {
 	docheader(listing);
 	doccrumbs(d.crumbs, d.focus);
 	docdocs(d.docs);
-	docsubs(d.subs);
+	docsubs(d.subs, d.focus);
 	docfooter(listing);
 }
 
