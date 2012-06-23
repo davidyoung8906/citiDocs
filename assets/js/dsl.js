@@ -112,7 +112,7 @@ var run = function(application) {
 	var d = breakout(listing);
 	docheader(listing);
 	doccrumbs(d.crumbs, d.focus);
-	docdocs(listing);
+	docdocs(listing[d.focus]);
 	docsubs(listing);
 	docfooter(listing);
 }
