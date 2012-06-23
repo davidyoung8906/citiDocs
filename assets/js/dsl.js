@@ -81,7 +81,7 @@ var run = function(application) {
 	return ["TOP", "cityofportsmouth.com"];
 }
 
-, getdocs = function(list) {
+, getdocs = function(listing) {
 	var docs = {};
 	for (k in listing) {
 		for (h in listing[k]) {
