@@ -80,7 +80,7 @@ var run = function(application) {
 }
 
 , docsubs = function(s) {
-		x$("#docsubs").html(""+s);
+		x$("#docsubs").html("subs:"+s);
 }
 
 , docfooter = function(list) {}
