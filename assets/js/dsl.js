@@ -92,12 +92,12 @@ var run = function(application) {
 // analyze data and create data structures for display
 
 , getcrumbs = function() {	
-	var c = ['nothing'];
+	var crumblist = ['nothing'];
 	store.get('crumbs', function(saved) {
-		if (saved) {if (saved.crumbstore) {c=saved.crumbstore;};}
-    		else {store.save({key: 'list', value: ["TOP"]});}; 				
+		if (saved) {if (saved.crumbstore) {crumblist=saved.crumbstore;};}
+    		else {store.save({key: 'list', crumbstore: ["TOP"]});}; 				
     	});
-    	return c;
+    	return crumblist;
 }
 
 , getdocs = function(listing) {
