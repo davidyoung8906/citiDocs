@@ -49,7 +49,10 @@ var run = function(application) {
 }
 
 , doccrumbs = function(crumbs, focus) {
-		x$("#doccrumbs").html("" + crumbs + focus);
+		for (c in crumbs) {
+			x$("#doccrumbs").bottom("<button>"+c+"</button")	
+		}
+		x$("#doccrumbs").bottom("<div id='focus'>..." + focus + "</div>");
 }
 
 , docdocs = function(listing) {
@@ -78,7 +81,7 @@ var run = function(application) {
 }
 
 , getcrumbs = function() {
-	return ["TOP", "cityofportsmouth.com"];
+	return [["top", "next"], "cityofportsmouth.com"];
 }
 
 , getdocs = function(listing) {
