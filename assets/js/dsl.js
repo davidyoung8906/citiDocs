@@ -104,9 +104,9 @@ var run = function(application) {
 					+ "onclick='pushcrumb(" + focus + ")'>"
 					+ crumbs[i] + "</button>";
 			x$("#welcome").bottom("sub factory: " + i);
-			x$("#doccrumbs").bottom("" + crumbbutton);	
+			x$("#docsubs").bottom("" + subbutton);	
 		};
-		x$("#doccrumbs").bottom("</span><span id='focus'>  ..." + focus + "</span>");
+		x$("#docsubs").bottom("</span>);
 }
 
 , docfooter = function(list) {}
