@@ -57,6 +57,11 @@ body {
   text-align: center;
   z-index:9998;
 } 
+
+#crumbs button {
+	width:auto;
+	height:auto;
+}
  
 .view {
   padding: 35px;
