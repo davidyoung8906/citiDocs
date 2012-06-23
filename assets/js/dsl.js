@@ -58,11 +58,13 @@ var run = function(application) {
 
 , docdocs = function(listing) {
 	var stuffing = "<table>";
-	for (var k in listing) {
-		stuffing += "<tr class='trow' id="
+	for (var h in listing) {
+		for (k in h) {
+			stuffing += "<tr class='trow' id="
 				+ k + "><td>" 
 				+ k + "</td><td>"
-				+ listing[k] + "</td></tr>"; 			
+				+ h[k] + "</td></tr>";
+		};
  	};
  	stuffing += "</table></div><p>";
  	x$('#docdocs').html(stuffing);
