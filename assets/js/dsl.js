@@ -60,7 +60,7 @@ var run = function(application) {
 					+ "onclick('popcrumbs(" + (crumbs.length - i) + ")')>"
 					+ crumbs[i] + "</button>";
 			x$("#welcome").bottom("button factory: " + i);
-			x$("#doccrumbs").bottom("" + button);	
+//			x$("#doccrumbs").bottom("" + button);	
 		};
 		x$("#doccrumbs").bottom("</span><span id='focus'>  ..." + focus + "</span>");
 }
