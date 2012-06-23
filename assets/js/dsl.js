@@ -87,7 +87,7 @@ var run = function(application) {
 
 , breakout = function(listing) {
 	return {"crumbs": getcrumbs(),
-		"focus" : var f=listing.keys.first, 
+		"focus" : var f=listing,
 		"docs"  : getdocs(listing[f]),
 		"subs"  : getsubs(listing[f])
 	};
