@@ -65,7 +65,7 @@ var run = function(application) {
 
 , popcrumbs(n) {
 	var crumbs = getcrumbs();
-	while(var n > 0) {
+	while(n > 0) {
 		crumbs.pop();
 		n--;		
 	};
