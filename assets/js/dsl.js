@@ -113,7 +113,7 @@ var run = function(application) {
 	var subs = ["sub1", "sub2"];
 	for (k in listing) {
 		if (typeof listing[k] === "Array") {
-			for (var i=0; i<listing[h]; i++) {
+			for (var i=0; i<listing[h].length; i++) {
 				for (key in listing[k][i]) {subs[i] = key;};
 			};
 		};
