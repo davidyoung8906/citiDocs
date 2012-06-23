@@ -99,7 +99,7 @@ var run = function(application) {
 	var docs = {};
 	for (k in listing) {
 		for (h in listing[k]) {
-			if (typeof h === "String") {docs << list[k]};
+			if (typeof h === "String") {docs << listing[k]};
 		};
 	};
 	return docs;
@@ -109,8 +109,14 @@ var run = function(application) {
 	for (key in listing) {return key};
 }
 
-, getsubs = function(list) {
-	return ["sub 1", "sub 2"];
+, getsubs = function(listing) {
+	var docs = {};
+	for (k in listing) {
+		for (h in listing[k]) {
+			if (typeof h !== "String") {subs << for (key in h) {key;}};
+		};
+	};
+	return subs;
 }
 
 , breakout = function(listing) {
