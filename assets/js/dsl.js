@@ -79,8 +79,12 @@ var run = function(application) {
      	});
 }
 
-, docsubs = function(s) {
-		x$("#docsubs").html("subs:"+s);
+, docsubs = function(subs) {
+		x$("#docsubs").html("<span id='subs'>");
+		for (s in subs) {
+			x$("#docsubs").bottom("<button>"+subs[s]+"</button");	
+		};
+		x$("#docsubs").bottom("</span>");
 }
 
 , docfooter = function(list) {}
