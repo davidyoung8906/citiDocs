@@ -54,10 +54,21 @@ var run = function(application) {
 
 , doccrumbs = function(crumbs, focus) {
 		x$("#doccrumbs").html("<span id='crumbs'>");
-		for (c in crumbs) {
-			x$("#doccrumbs").bottom("<button>"+crumbs[c]+"</button");	
+		for (i=0; i<crumbs.length; i++) {
+			var button = "<button class='crumb' id='crumb" + i + "' "
+					+ "onclick('popcrumbs(" + (crumbs.length - i) + "))>"
+					+ crumbs[i] + "</button>"
+			x$("#doccrumbs").bottom(button);	
 		};
 		x$("#doccrumbs").bottom("</span><span id='focus'>..." + focus + "</span>");
+}
+
+, popcrumbs(n) {
+	var crumbs = getcrumbs();
+	while(var n > 0) {
+		crumbs.pop();
+		n--;		
+	};
 }
 
 , docdocs = function(docs) {
