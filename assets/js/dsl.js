@@ -76,7 +76,7 @@ var run = function(application) {
 }
 
 , pushcrumb = function(crumb) {
-	store.save({key: "crumbs", crumbstore: (getcrumbs().push(crumb))});
+//	store.save({key: "crumbs", crumbstore: (getcrumbs().push(crumb))});
 	x$("#welcome").bottom("pushed crumb");
 	listings;
 }
@@ -174,6 +174,7 @@ var run = function(application) {
 
 , listings = function() {
 	var listing = getfilestore();
+	var crumbs = getcrumbs();
     	displaylist(listing);
 }
 
