@@ -49,8 +49,9 @@ var run = function(application) {
 }
 
 , doccrumbs = function(crumbs, focus) {
+		x$("#doccrumbs").html("<div id='crumbs'>"
 		for (c in crumbs) {
-			x$("#doccrumbs").bottom("<button>"+c+"</button")	
+			x$("#doccrumbs").bottom("<button>"+crumbs[c]+"</button")	
 		}
 		x$("#doccrumbs").bottom("<div id='focus'>..." + focus + "</div>");
 }
