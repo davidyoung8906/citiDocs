@@ -80,7 +80,7 @@ var run = function(application) {
 }
 
 , docsubs = function(subs) {  // subs is an array of subs like ["sub1", "sub2",...]
-		x$("#docsubs").html("<span id='subs'>" + subs);
+		x$("#docsubs").html("<span id='subs'>");
 		for (s in subs) {
 			x$("#docsubs").bottom("<button>"+subs[s]+"</button");	
 		};
@@ -113,8 +113,8 @@ var run = function(application) {
 	var subs = ["sub1", "sub2"];
 	for (k in listing) {
 		if (typeof listing[k] === "Array") {
-			for (h in listing[k]) {
-				for (key in h) {subs[h] = key;};
+			for (var i=0; i<listing[h]; i++) {
+				for (key in listing[k][i]) {subs[i] = key;};
 			};
 		};
 	};
