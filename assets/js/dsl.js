@@ -76,12 +76,10 @@ var run = function(application) {
 }
 
 , docsubs = function(s) {
-		x$("#docsubs").html("THIS IS THE SUB AREA");
+		x$("#docsubs").html(s);
 }
 
-, docfooter = function(f) {
-		x$("#docfooter").html("THIS IS THE DOC FOOTER");
-}
+, docfooter = function(list) {}
 
 , getcrumbs = function() {
 	return ["top", "next", "cityofportsmouth.com"];
@@ -101,7 +99,9 @@ var run = function(application) {
 	for (key in listing) {return key};
 }
 
-, getsubs = function(list) {}
+, getsubs = function(list) {
+	return ["sub 1", "sub 2"]
+}
 
 , breakout = function(listing) {
 	return {"crumbs": getcrumbs(),
@@ -116,7 +116,7 @@ var run = function(application) {
 	docheader(listing);
 	doccrumbs(d.crumbs, d.focus);
 	docdocs(d.docs);
-	docsubs(listing);
+	docsubs(d.subs);
 	docfooter(listing);
 }
 
