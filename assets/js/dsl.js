@@ -110,7 +110,7 @@ var run = function(application) {
 }
 
 , getsubs = function(listing) {
-	var docs = {};
+	var subs = {};
 	for (k in listing) {
 		for (h in listing[k]) {
 			if (typeof h !== "String") {subs << for (key in h) {key;}};
