@@ -110,7 +110,7 @@ var run = function(application) {
 }
 
 , getsubs = function(listing) {
-	var subs = [];
+	var subs = ["sub1", "sub2"];
 	for (k in listing) {
 		if (typeof listing[k] === "Array") {
 			for (h in listing[k]) {
