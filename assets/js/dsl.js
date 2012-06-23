@@ -60,10 +60,10 @@ var run = function(application) {
 		x$("#doccrumbs").bottom("</span><span id='focus'>..." + focus + "</span>");
 }
 
-, docdocs = function(listing) {
+, docdocs = function(docs) {
 	var stuffing = "<table>";
-	for (var h in listing) {
-		for (k in h) {
+	for (var i=0; i<docs.length; i++) {
+		for (k in docs[i]) {
 			stuffing += "<tr class='trow' id="
 				+ k + "><td>" 
 				+ k + "</td><td>"
