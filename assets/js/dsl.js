@@ -76,7 +76,7 @@ var run = function(application) {
 }
 
 , pushcrumb = function(crumb) {
-//	store.save({key: "crumbs", crumbstore: (getcrumbs().push(crumb))});
+	store.save({key: "crumbs", crumbstore: (getcrumbs().push(crumb))});
 	x$("#welcome").bottom("pushed crumb");
 	listings;
 }
@@ -106,7 +106,7 @@ var run = function(application) {
 		for (var i=0; i<subs.length; i++) {
 			var subbutton = "<button onclick='pushcrumb(" + focus + ")'>"
 					+ subs[i] + "</button>";
-			x$("#welcome").bottom("sub factory: " + i);
+			x$("#welcome").bottom("sub factory: " + i + focus);
 			x$("#docsubs").bottom("" + subbutton);	
 		};
 		x$("#docsubs").bottom("</span>");
