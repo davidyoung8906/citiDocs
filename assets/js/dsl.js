@@ -12,6 +12,8 @@ var run = function(application) {
 // throw our settings into a lawnchair
 , store = new Lawnchair({adaptor:'dom'})
 
+// look for and get data file from server or from file store
+
 , getfile = function() {
 	var listing = {"initial":"value", "second":"another"};
 	x$("#welcome").bottom("<p>made it before xhr callback, initial listing = " + Object.keys(listing).length);
@@ -41,6 +43,8 @@ var run = function(application) {
     	});
     	return s;
 }
+
+// display data in each section
 
 , docheader = function(listing) {
 		x$("#docheader").html("<div id='docContent'><h1>Document List for the City of Portsmouth NH</h1><p>Total Number of Documents for "
@@ -81,6 +85,8 @@ var run = function(application) {
 
 , docfooter = function(list) {}
 
+// analyze data and create data structures for display
+
 , getcrumbs = function() {
 	return ["top", "next", "cityofportsmouth.com"];
 }
@@ -100,7 +106,7 @@ var run = function(application) {
 }
 
 , getsubs = function(list) {
-	return ["sub 1", "sub 2"]
+	return ["sub 1", "sub 2"];
 }
 
 , breakout = function(listing) {
@@ -110,6 +116,8 @@ var run = function(application) {
 		"subs"  : getsubs(listing)
 	};
 }
+
+// create display after getting data
 
 , displaylist = function(listing) {
 	var d = breakout(listing);
