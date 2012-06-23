@@ -56,11 +56,11 @@ var run = function(application) {
 		x$("#doccrumbs").html("<span id='crumbs'>");
 		
 		for (var i=0; i<crumbs.length; i++) {
-			var button = "<button "
+			var crumbbutton = "<button "
 					+ "onclick('popcrumbs(" + (crumbs.length - i) + ")')>"
 					+ crumbs[i] + "</button>";
 			x$("#welcome").bottom("button factory: " + "onclick('popcrumbs(" + (crumbs.length - i) + ")')");
-			x$("#doccrumbs").bottom("" + button);	
+			x$("#doccrumbs").bottom("" + crumbbutton);	
 		};
 		x$("#doccrumbs").bottom("</span><span id='focus'>  ..." + focus + "</span>");
 }
