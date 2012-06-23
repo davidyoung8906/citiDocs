@@ -112,8 +112,10 @@ var run = function(application) {
 , getsubs = function(listing) {
 	var subs = ["sub1", "sub2"];
 	for (k in listing) {
-		for (var i=0; i<listing[k].length; i++) {
+		x$("#welcome").bottom("Subs focus:"+k+listing[k].length);
+		for (var i=0; i<listing[k].length; i++) {		
 			for (key in listing[k][i]) {
+				x$("#welcome").bottom("<p>i and key:  " + i + "  " + key);
 				if (typeof listing[k][i][key] === "Array") {subs[i] = key;};
 			};
 		};
