@@ -90,7 +90,7 @@ var run = function(application) {
 		"focus" : var f=listing.keys.first, 
 		"docs"  : getdocs(listing[f]),
 		"subs"  : getsubs(listing[f])
-	}
+	};
 }
 
 , displaylist = function(listing) {
