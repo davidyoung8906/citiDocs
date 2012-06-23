@@ -57,7 +57,7 @@ var run = function(application) {
 		
 		for (var i=0; i<crumbs.length; i++) {
 			var button = "<button class='crumb' id='crumb" + i + "' "
-					+ "onclick('popcrumbs(" + (i - crumbs.length) + ")')>"
+					+ "onclick('popcrumbs(" + (crumbs.length - i) + ")')>"
 					+ crumbs[i] + "</button>";
 			x$("#welcome").bottom("button factory: " + i);
 			x$("#doccrumbs").bottom("" + button);	
