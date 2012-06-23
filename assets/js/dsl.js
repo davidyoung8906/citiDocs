@@ -59,7 +59,7 @@ var run = function(application) {
 			var button = "<button "
 					+ "onclick('popcrumbs(" + (crumbs.length - i) + ")')>"
 					+ crumbs[i] + "</button>";
-			x$("#welcome").bottom("button factory: " + i);
+			x$("#welcome").bottom("button factory: " + "onclick('popcrumbs(" + (crumbs.length - i) + ")')");
 			x$("#doccrumbs").bottom("" + button);	
 		};
 		x$("#doccrumbs").bottom("</span><span id='focus'>  ..." + focus + "</span>");
