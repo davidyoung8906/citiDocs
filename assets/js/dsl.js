@@ -16,15 +16,15 @@ var run = function(application) {
 
 , getfile = function() {
 	var listing = {"initial":"value", "second":"another"};
-	x$("#welcome").bottom("<p>made it before xhr callback, initial listing = " + Object.keys(listing).length);
+//	x$("#welcome").bottom("<p>made it before xhr callback, initial listing = " + Object.keys(listing).length);
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
         else {x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
              		callback: function(){
-             			x$("#welcome").bottom("<p>made it to after xhr callback ");
+//             			x$("#welcome").bottom("<p>made it to after xhr callback ");
              			listing = eval("("+this.responseText+")");
-             			x$("#welcome").bottom("<p>made it to after eval" + Object.keys(listing).length + "<p>");
+//             			x$("#welcome").bottom("<p>made it to after eval" + Object.keys(listing).length + "<p>");
              		}             		
         	});             	
         }; 
@@ -59,7 +59,7 @@ var run = function(application) {
 			var crumbbutton = "<button "
 					+ "onclick='popcrumbs(" + (crumbs.length - i) + ")'>"
 					+ crumbs[i] + "</button>";
-			x$("#welcome").bottom("button factory: " + i);
+//			x$("#welcome").bottom("button factory: " + i);
 			x$("#doccrumbs").bottom("" + crumbbutton);	
 		};
 		x$("#doccrumbs").bottom("</span><span id='focus'>  ..." + focus + "</span>");
@@ -107,7 +107,7 @@ var run = function(application) {
 		for (var i=0; i<subs.length; i++) {
 			var subbutton = "<button onclick='pushcrumb('' + " + focus + ")'>"
 					+ subs[i] + "</button>";
-			x$("#welcome").bottom("sub factory: " + i + focus);
+//			x$("#welcome").bottom("sub factory: " + i + focus);
 			x$("#docsubs").bottom("" + subbutton);	
 		};
 		x$("#docsubs").bottom("</span>");
