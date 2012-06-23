@@ -67,7 +67,7 @@ var run = function(application) {
 			stuffing += "<tr class='trow' id="
 				+ k + "><td>" 
 				+ k + "</td><td>"
-				+ h[k] + "</td></tr>";
+				+ docs[i][k] + "</td></tr>";
 		};
  	};
  	stuffing += "</table></div><p>";
