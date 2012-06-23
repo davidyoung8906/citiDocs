@@ -95,7 +95,7 @@ var run = function(application) {
 	var crumblist = ['nothing'];
 	store.get('crumbs', function(saved) {
 		if (saved) {if (saved.crumbstore) {crumblist=saved.crumbstore;};}
-    		else {store.save({key: 'list', crumbstore: ["TOP"]});}; 				
+    		else {store.save({key: 'crumbs', crumbstore: ["TOP"]});}; 				
     	});
     	return crumblist;
 }
