@@ -57,9 +57,9 @@ var run = function(application) {
 		
 		for (var i=0; i<crumbs.length; i++) {
 			var crumbbutton = "<button "
-					+ "onclick('popcrumbs(" + (crumbs.length - i) + ")')>"
+					+ "onclick='popcrumbs(" + (crumbs.length - i) + ")'>"
 					+ crumbs[i] + "</button>";
-			x$("#welcome").bottom("button factory: " + "onclick('popcrumbs(" + (crumbs.length - i) + ")')");
+			x$("#welcome").bottom("button factory: " + i);
 			x$("#doccrumbs").bottom("" + crumbbutton);	
 		};
 		x$("#doccrumbs").bottom("</span><span id='focus'>  ..." + focus + "</span>");
