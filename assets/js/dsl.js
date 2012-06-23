@@ -101,7 +101,7 @@ var run = function(application) {
 		x$("#docsubs").html("<span id='subs'>");
 		for (var i=0; i<subs.length; i++) {
 			var subbutton = "<button onclick='pushcrumb(" + focus + ")'>"
-					+ crumbs[i] + "</button>";
+					+ subs[i] + "</button>";
 			x$("#welcome").bottom("sub factory: " + i);
 			x$("#docsubs").bottom("" + subbutton);	
 		};
