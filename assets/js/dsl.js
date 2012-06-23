@@ -48,8 +48,8 @@ var run = function(application) {
        			+ Object.keys(listing).length); 
 }
 
-, doccrumbs = function(c) {
-		x$("#doccrumbs").html("THIS IS THE DOC CRUMB PATH");
+, doccrumbs = function(crumbs, focus) {
+		x$("#doccrumbs").html("" + crumbs + focus);
 }
 
 , docdocs = function(listing) {
@@ -77,17 +77,21 @@ var run = function(application) {
 		x$("#docfooter").html("THIS IS THE DOC FOOTER");
 }
 
-, getcrumbs = function() {}
+, getcrumbs = function() {
+	return ["TOP", "cityofportsmouth.com"];
+}
 
 , getdocs = function(list) {}
 
-, getfocus = function(listing) {}
+, getfocus = function(listing) {
+	for (key in listing) {return key};
+}
 
 , getsubs = function(list) {}
 
 , breakout = function(listing) {
 	return {"crumbs": getcrumbs(),
-		"focus" : 1,
+		"focus" : getfocus(listing),
 		"docs"  : getdocs(listing),
 		"subs"  : getsubs(listing)
 	};
@@ -96,7 +100,7 @@ var run = function(application) {
 , displaylist = function(listing) {
 	var d = breakout(listing);
 	docheader(listing);
-	doccrumbs(listing);
+	doccrumbs(d.crumbs, d.focus);
 	docdocs(listing);
 	docsubs(listing);
 	docfooter(listing);
