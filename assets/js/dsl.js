@@ -49,11 +49,11 @@ var run = function(application) {
 }
 
 , doccrumbs = function(crumbs, focus) {
-		x$("#doccrumbs").html("<div id='crumbs'>"
+		x$("#doccrumbs").html("<div id='crumbs'>");
 		for (c in crumbs) {
-			x$("#doccrumbs").bottom("<button>"+crumbs[c]+"</button")	
-		}
-		x$("#doccrumbs").bottom("<div id='focus'>..." + focus + "</div>");
+			x$("#doccrumbs").bottom("<button>"+crumbs[c]+"</button");	
+		};
+		x$("#doccrumbs").bottom("</div><div id='focus'>..." + focus + "</div>");
 }
 
 , docdocs = function(listing) {
