@@ -71,6 +71,7 @@ var run = function(application) {
 		crumbs.pop();
 		n--;		
 	};
+	x$("#welcome").bottom("popped crumb");
 	listings;
 }
 
