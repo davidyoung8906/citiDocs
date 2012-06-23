@@ -55,7 +55,7 @@ var run = function(application) {
 , doccrumbs = function(crumbs, focus) {
 		x$("#doccrumbs").html("<span id='crumbs'>");
 		
-		for (i=0; i<crumbs.length; i++) {
+		for (var i=0; i<crumbs.length; i++) {
 			var button = "<button class='crumb' id='crumb" + i + "' "
 					+ "onclick('popcrumbs(" + (i - crumbs.length) + ")')>"
 					+ crumbs[i] + "</button>";
