@@ -116,7 +116,7 @@ var run = function(application) {
 		for (var i=0; i<listing[k].length; i++) {		
 			for (key in listing[k][i]) {
 				x$("#welcome").bottom("<p>i and key:  " + i + "  " + key);
-				if (is_array(listing[k][i][key])) {subs[i] = key;};
+				if (typeof listing[k][i][key] === 'object') {subs[i] = key;};
 			};
 		};
 	};
