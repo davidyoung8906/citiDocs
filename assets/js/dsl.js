@@ -81,7 +81,14 @@ var run = function(application) {
 	return ["TOP", "cityofportsmouth.com"];
 }
 
-, getdocs = function(list) {}
+, getdocs = function(list) {
+	var docs = {};
+	for (k in listing) {
+		for (h in listing[k]) {
+			if (typeof h === "String") {docs << list[k]};
+		};
+	};
+}
 
 , getfocus = function(listing) {
 	for (key in listing) {return key};
