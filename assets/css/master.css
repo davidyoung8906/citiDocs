@@ -58,11 +58,6 @@ body {
   z-index:9998;
 } 
 
-#crumbs button {
-	width:auto;
-	height:auto;
-}
- 
 .view {
   padding: 35px;
 	/*  only one view is displayed at a time
@@ -162,3 +157,7 @@ td {
 	text-align:left;
 }
 
+#crumbs button {
+	width:auto;
+	height:auto;
+}
