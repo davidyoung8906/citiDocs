@@ -54,6 +54,7 @@ var run = function(application) {
 
 , doccrumbs = function(crumbs, focus) {
 		x$("#doccrumbs").html("<span id='crumbs'>");
+		x$("welcome").bottom("inside doccrumbs " + crumbs);
 		for (i=0; i<crumbs.length; i++) {
 			var button = "<button class='crumb' id='crumb" + i + "' "
 					+ "onclick('popcrumbs(" + "1" + ")')>"
@@ -69,6 +70,7 @@ var run = function(application) {
 		crumbs.pop();
 		n--;		
 	};
+	listings;
 }
 
 , docdocs = function(docs) {
