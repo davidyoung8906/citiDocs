@@ -75,7 +75,10 @@ var run = function(application) {
 	listings;
 }
 
-, pushcrumb = function(crumb) {store.save({key: "crumbs", crumbstore: (getcrumbs().push(crumb))});}
+, pushcrumb = function(crumb) {
+	store.save({key: "crumbs", crumbstore: (getcrumbs().push(crumb))});
+	listings;
+}
 
 , docdocs = function(docs) {
 	
