@@ -128,7 +128,7 @@ var run = function(application) {
 //	x$("#welcome").bottom("resolve: " + ne);
 	var crumbs = getcrumbs();
         x$("#welcome").bottom("resolve crumbs: " + crumbs);
-	var list = [getfilestore();];
+	var list = [getfilestore()];
 	var focus = "";
 	for (i=1; i<crumbs.length; i++) {
 		for (j=0; j<list.length; j++) {
