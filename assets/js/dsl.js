@@ -114,7 +114,7 @@ var run = function(application) {
 		x$("#docsubs").bottom("</span>");
                 for (i=0; i<subs.length; i++) {
                         var newfocus = subs[i];
-                        x$(("#subbutton" + i)).click(function() {resolvedown(newfocus);});
+                        x$(("button#subbutton" + i)).click(function() {resolvedown(newfocus);});
                 };
 }
 
@@ -130,7 +130,7 @@ var run = function(application) {
         x$("#welcome").bottom("resolve crumbs: " + crumbs);
 	var listings = getfilestore();
 	for (i=1; i<crumbs.length; i++) {
-                list = [listing];
+                list = [listings];
 		for (j=0; j<list.length; j++) {
 			h = list[j];
 			for (k in h) {
