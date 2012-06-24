@@ -104,18 +104,18 @@ var run = function(application) {
 }
 
 , docsubs = function(subs) {  // subs is an array of subs like ["sub1", "sub2",...]
-		x$("#docsubs").html("<span id='subs'>");
-		for (var i=0; i<subs.length; i++) {
-			var subbutton = "<button id='subbutton" + i + "'>"
-					+ subs[i] + "</button>";
-			x$("#welcome").bottom("sub factory: " + i + " "subs[i]);
-			x$("#docsubs").bottom(subbutton);
-		};
-		x$("#docsubs").bottom("</span>");
-                for (i=0; i<subs.length; i++) {
-                        var newfocus = subs[i];
-                        x$(("button#subbutton" + i)).click(function() {resolvedown(newfocus);});
-                };
+//		x$("#docsubs").html("<span id='subs'>");
+//		for (var i=0; i<subs.length; i++) {
+//			var subbutton = "<button id='subbutton" + i + "'>"
+//					+ subs[i] + "</button>";
+//			x$("#welcome").bottom("sub factory: " + i + " "subs[i]);
+//			x$("#docsubs").bottom(subbutton);
+//		};
+//		x$("#docsubs").bottom("</span>");
+  //              for (i=0; i<subs.length; i++) {
+//                        var newfocus = subs[i];
+//                        x$(("button#subbutton" + i)).click(function() {resolvedown(newfocus);});
+//                };
 }
 
 , resolvedown = function(newfocus) {
@@ -150,12 +150,11 @@ var run = function(application) {
 
 , getcrumbs = function() {	
 	var crumblist = ['nothing'];
-	
-	x$("#welcome").bottom('getcrumbs focus: ' + focus);
+//	x$("#welcome").bottom('getcrumbs focus: ' + focus);
 	store.get('crumbs', function(saved) {
 		if (saved) {if (saved.crumbstore) {crumblist=saved.crumbstore;};}
     		else {
-    			focus = "";
+    			var focus = "";
 			for (k in getfilestore()) {focus = k};
     			crumblist = ["TOP", focus];
     			store.save({key: 'crumbs', crumbstore: crumblist});
