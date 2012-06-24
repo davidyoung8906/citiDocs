@@ -107,7 +107,7 @@ var run = function(application) {
 			var subbutton = "<button onclick='resolvedown(" + focus + "," + subs[i] + ")'>"
 					+ subs[i] + "</button>";
 			x$("#welcome").bottom("sub factory: " + i + focus);
-			x$("#docsubs").bottom("" + subbutton);	
+			x$("#docsubs").bottom(subbutton);	
 		};
 		x$("#docsubs").bottom("</span>");
 }
