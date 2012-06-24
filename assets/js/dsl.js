@@ -106,14 +106,14 @@ var run = function(application) {
 		for (var i=0; i<subs.length; i++) {
 			var subbutton = "<button onclick='resolvedown(" + focus + "," + subs[i] + ")'>"
 					+ subs[i] + "</button>";
-			x$("#welcome").bottom("sub factory: " + i + focus);
+//			x$("#welcome").bottom("sub factory: " + i + focus);
 			x$("#docsubs").bottom(subbutton);	
 		};
 		x$("#docsubs").bottom("</span>");
 }
 
 , resolvedown = function(oldfocus, newfocus) {
-	x$("#docsubs").top("resolve down");
+	x$("#welcome").bottom("resolve down");
 	pushcrumb(oldfocus);
 	resolve(newfocus);
 }
