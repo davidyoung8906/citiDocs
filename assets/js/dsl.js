@@ -124,22 +124,22 @@ var run = function(application) {
 
 , resolve = function() {
 //	x$("#welcome").bottom("resolve: " + ne);
-//	var crumbs = getcrumbs();
-//        x$("#welcome").bottom("resolve crumbs: " + crumbs);
-//	var list = [getfilestore()];
-//	var focus = "http://";
-//	for (i=1; i<crumbs.length; i++) {
-//		for (j=0; j<list.length; j++) {
-//			h = list[j];
-//			for (k in h) {
-//				if (k == crumbs[i]) {
-//					focus = k;
-//					list = h[k];
-//				};
-//			};
-//		};
-//	};
-//	displaylist({focus:list});	
+	var crumbs = getcrumbs();
+        x$("#welcome").bottom("resolve crumbs: " + crumbs);
+	var list = [getfilestore()];
+	var focus = "http://";
+	for (i=1; i<crumbs.length; i++) {
+		for (j=0; j<list.length; j++) {
+			h = list[j];
+			for (k in h) {
+				if (k == crumbs[i]) {
+					focus = k;
+					list = h[k];
+				};
+			};
+		};
+	};
+	displaylist({focus:list});	
 }
 
 , docfooter = function(list) {}
