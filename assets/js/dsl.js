@@ -65,13 +65,14 @@ var run = function(application) {
 }
 
 , popcrumbs = function(n) {
+	x$("#welcome").bottom("popped " + n + " crumbs");
 	var crumbs = getcrumbs();
 	while(n > 0) {
 		crumbs.pop();
 		n--;		
 	};
 	store.save({key: "crumbs", crumbstore: crumbs});
-	x$("#welcome").bottom("popped crumb");
+	
 	resolve();
 }
 
