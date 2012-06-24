@@ -150,12 +150,12 @@ var run = function(application) {
 
 , getcrumbs = function() {	
 	var crumblist = ['nothing'];
-//	x$("#welcome").bottom('getcrumbs focus: ' + focus);
 	store.get('crumbs', function(saved) {
 		if (saved) {if (saved.crumbstore) {crumblist=saved.crumbstore;};}
     		else {
     			var focus = "";
 			for (k in getfilestore()) {focus = k};
+			x$("#welcome").bottom('getcrumbs focus: ' + focus);
     			crumblist = ["TOP", focus];
     			store.save({key: 'crumbs', crumbstore: crumblist});
     			
