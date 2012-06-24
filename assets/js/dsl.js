@@ -121,8 +121,8 @@ var run = function(application) {
 , resolve = function(newfocus) {
 	var crumbs = getcrumbs();
 	var listings = getfilestore();
-//	for (i=1; i<crumbs.length; i++) {
-//		var list = listings[crumbs[i]];
+	for (i=1; i<crumbs.length; i++) {
+		var list = listings[crumbs[i]];
 //		for (j=0; j<list.length) {
 //			h = list[j];
 //			for (k in h) {
@@ -131,7 +131,7 @@ var run = function(application) {
 //				};
 //			};
 //		};
-//	};
+	};
 	displaylist(listings);	
 }
 
