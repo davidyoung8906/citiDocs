@@ -107,7 +107,7 @@ var run = function(application) {
 		x$("#docsubs").html("<span id='subs'>");
 		for (var i=0; i<subs.length; i++) {
 			var subbutton = "<button id='subbutton" + i 
-					+ "onclick='resolvedown(" + i + ")'>"
+					+ "' onclick='resolvedown(\"" + subs[i] + "\")'>"
 					+ subs[i] + "</button>";
 			x$("#welcome").bottom("sub factory: " + i + " " + subs[i]);
 			x$("#docsubs").bottom(subbutton);
