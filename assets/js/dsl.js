@@ -128,6 +128,7 @@ var run = function(application) {
 , resolve = function(newfocus) {
 	x$("#welcome").bottom("resolve: " + newfocus);
 	var crumbs = getcrumbs();
+        x$("#welcome").bottom("resolve crumbs: " + crumbs);
 	var listings = getfilestore();
 	for (i=1; i<crumbs.length; i++) {
 		var list = listings[crumbs[i]];
