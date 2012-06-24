@@ -71,6 +71,7 @@ var run = function(application) {
 		newfocus = crumbs.pop();
 		n--;		
 	};
+	store.save({key: "crumbs", crumbstore: crumbs});
 	x$("#welcome").bottom("popped crumb");
 	resolve(newfocus);
 }
@@ -78,7 +79,7 @@ var run = function(application) {
 , pushcrumb = function(crumb) {
 	var crumbs = getcrumbs();
 	crumbs[crumbs.length] = crumb;
-	x$("#welcome").bottom("pushing crumb" + crumb + crumbs);
+//	x$("#welcome").bottom("pushing crumb" + crumb + crumbs);
 	store.save({key: "crumbs", crumbstore: crumbs});
 	x$("#welcome").bottom("pushed crumb" + getcrumbs());
 }
