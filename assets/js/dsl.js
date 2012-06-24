@@ -119,7 +119,7 @@ var run = function(application) {
 }
 
 , resolve = function(newfocus) {
-	var crumbs = getcrumbs;
+	var crumbs = getcrumbs();
 	var listings = getfilestore();
 	for (i=1; i<crumbs.length; i++) {
 		var list = listings[crumbs[i]];
