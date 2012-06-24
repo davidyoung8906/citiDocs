@@ -171,7 +171,7 @@ var run = function(application) {
 }
 
 , getsubs = function(listing) {
-	var subs = ["sub1", "sub2"];
+	var subs = [];
 	for (k in listing) {
 		for (var i=0; i<listing[k].length; i++) {		
 			for (key in listing[k][i]) {
