@@ -108,7 +108,8 @@ var run = function(application) {
 					+ subs[i] + "</button>";
 //			x$("#welcome").bottom("sub factory: " + i + focus);
 			x$("#docsubs").bottom(subbutton);
-			x$("#subbutton" + i).click(resolvedown(focus, subs[i]));
+			var ref = "#subbutton" + i;
+			x$(ref).click(function() {resolvedown(focus, subs[i]);});
 		};
 		x$("#docsubs").bottom("</span>");
 }
