@@ -120,7 +120,7 @@ var run = function(application) {
 }
 
 , resolvedown = function(newfocus) {
-	x$("#welcome").bottom("resolve down:" + newfocus);
+	x$("#welcome").bottom("resolve down!:" + newfocus);
 	pushcrumb(newfocus);
 	resolve();
 }
