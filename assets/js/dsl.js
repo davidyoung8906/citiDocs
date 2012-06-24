@@ -121,6 +121,7 @@ var run = function(application) {
 }
 
 , resolve = function(newfocus) {
+	x$("#welcome").bottom("resolve: " + newfocus);
 	var crumbs = getcrumbs();
 	var listings = getfilestore();
 	for (i=1; i<crumbs.length; i++) {
