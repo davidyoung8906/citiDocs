@@ -129,14 +129,14 @@ var run = function(application) {
 	x$("#welcome").bottom("resolve: " + newfocus);
 	var crumbs = getcrumbs();
         x$("#welcome").bottom("resolve crumbs: " + crumbs);
-	var listings = getfilestore();
+	var listing = getfilestore();
 	for (i=1; i<crumbs.length; i++) {
-		var list = listings[crumbs[i]];
+                list = [listing];
 		for (j=0; j<list.length; j++) {
 			h = list[j];
 			for (k in h) {
-				if (k == newfocus) {
-					listings = h;
+				if (k == crumbs[i]) {
+					listing = h;
 				};
 			};
 		};
