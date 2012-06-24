@@ -114,6 +114,7 @@ var run = function(application) {
 }
 
 , resolvedown = function(oldfocus, newfocus) {
+	x$("#welcome").bottom("resolve down");
 	pushcrumb(oldfocus);
 	resolve(newfocus);
 }
