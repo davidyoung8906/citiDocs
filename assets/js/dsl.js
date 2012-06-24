@@ -58,7 +58,7 @@ var run = function(application) {
 		for (var i=0; i<crumbs.length; i++) {
 			var crumbbutton = "<button onclick='popcrumbs(" + (crumbs.length - i) + ")'>"
 					+ crumbs[i] + "</button>";
-//			x$("#welcome").bottom("button factory: " + i);
+			x$("#welcome").bottom("button factory: " + i + " " + crumbs[i]);
 			x$("#doccrumbs").bottom("" + crumbbutton);	
 		};
 		x$("#doccrumbs").bottom("</span><span id='focus'>  ..." + focus + "</span>");
@@ -151,7 +151,7 @@ var run = function(application) {
 	var crumblist = ['nothing'];
 	focus = "";
 	for (k in getfilestore()) {focus = k};
-	x$("#welcome").bottom('getcrumbs focus: ' + focus + " crumbs: " + crumbs);
+	x$("#welcome").bottom('getcrumbs focus: ' + focus);
 	store.get('crumbs', function(saved) {
 		if (saved) {if (saved.crumbstore) {crumblist=saved.crumbstore;};}
     		else {store.save({key: 'crumbs', crumbstore: ["TOP", focus]});}; 				
