@@ -107,8 +107,7 @@ var run = function(application) {
 , docsubs = function(subs) {  // subs is an array of subs like ["sub1", "sub2",...]
 		x$("#docsubs").html("<span id='subs'>");
 		for (var i=0; i<subs.length; i++) {
-			var subbutton = "<button id='subbutton" + i 
-					+ "' onclick='resolvedown(" + '"' + subs[i] + '"' + ")'>"
+			var subbutton = "<button onclick='resolvedown(" + '"' + subs[i] + '"' + ")'>"
 					+ subs[i] + "</button>";
 			x$("#welcome").bottom("sub factory: " + i + " " + subs[i] + "' onclick='resolvedown(" + '"' + subs[i] + '"' + ")'");
 			x$("#docsubs").bottom(subbutton);
