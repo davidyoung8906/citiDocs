@@ -157,9 +157,9 @@ td {
 	text-align:left;
 }
 
-#crumbs {align:left;}
+#docsubs #doccrumbs {align:left;}
 
-#docsubs button {
+#docsubs #doccrumbs button {
 	width:auto;
 	height:auto;
 }
