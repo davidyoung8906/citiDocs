@@ -114,13 +114,15 @@ var run = function(application) {
 			var ref = "#subbutton" + i;
 			x$("#welcome").bottom("ref: " + ref);
 			var newfocus = String(subs[i]);
-			x$(ref).click(function() {resolvedown(focus, newfocus, ref);});
 		};
 		x$("#docsubs").bottom("</span>");
+                for (i=0; i<subs.length; i++) {
+                        x$("#subbutton" + i).click(function() {resolvedown(focus, newfocus);});
+                };
 }
 
-, resolvedown = function(oldfocus, newfocus, ref) {
-	x$("#welcome").bottom("resolve down" + oldfocus + ":" + newfocus + ref);
+, resolvedown = function(oldfocus, newfocus) {
+	x$("#welcome").bottom("resolve down" + oldfocus + ":" + newfocus);
 	pushcrumb(oldfocus);
 	resolve(newfocus);
 }
