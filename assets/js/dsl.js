@@ -76,11 +76,11 @@ var run = function(application) {
 }
 
 , pushcrumb = function(crumb) {
-//	var crumbs = getcrumbs();
-//	crumbs[crumbs.length] = crumb;
-//	x$("#welcome").bottom("pushing crumb" + crumb + crumbs);
-//	store.save({key: "crumbs", crumbstore: crumbs});
-//	x$("#welcome").bottom("pushed crumb" + getcrumbs());
+	var crumbs = getcrumbs();
+	crumbs[crumbs.length] = crumb;
+	x$("#welcome").bottom("pushing crumb" + crumb + crumbs);
+	store.save({key: "crumbs", crumbstore: crumbs});
+	x$("#welcome").bottom("pushed crumb" + getcrumbs());
 }
 
 , docdocs = function(docs) {
@@ -104,18 +104,18 @@ var run = function(application) {
 }
 
 , docsubs = function(subs) {  // subs is an array of subs like ["sub1", "sub2",...]
-//		x$("#docsubs").html("<span id='subs'>");
-//		for (var i=0; i<subs.length; i++) {
-//			var subbutton = "<button id='subbutton" + i + "'>"
-//					+ subs[i] + "</button>";
-//			x$("#welcome").bottom("sub factory: " + i + " "subs[i]);
-//			x$("#docsubs").bottom(subbutton);
-//		};
-//		x$("#docsubs").bottom("</span>");
-  //              for (i=0; i<subs.length; i++) {
-//                        var newfocus = subs[i];
-//                        x$(("button#subbutton" + i)).click(function() {resolvedown(newfocus);});
-//                };
+		x$("#docsubs").html("<span id='subs'>");
+		for (var i=0; i<subs.length; i++) {
+			var subbutton = "<button id='subbutton" + i + "'>"
+					+ subs[i] + "</button>";
+			x$("#welcome").bottom("sub factory: " + i + " "subs[i]);
+			x$("#docsubs").bottom(subbutton);
+		};
+		x$("#docsubs").bottom("</span>");
+                for (i=0; i<subs.length; i++) {
+                        var newfocus = subs[i];
+                        x$(("button#subbutton" + i)).click(function() {resolvedown(newfocus);});
+                };
 }
 
 , resolvedown = function(newfocus) {
