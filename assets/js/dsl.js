@@ -114,13 +114,13 @@ var run = function(application) {
 			var ref = "#subbutton" + i;
 			x$("#welcome").bottom("ref: " + ref);
 			var newfocus = String(subs[i]);
-			x$(ref).click(function() {resolvedown(focus, newfocus);});
+			x$(ref).click(function() {resolvedown(focus, newfocus, ref);});
 		};
 		x$("#docsubs").bottom("</span>");
 }
 
-, resolvedown = function(oldfocus, newfocus) {
-	x$("#welcome").bottom("resolve down" + oldfocus + ":" + newfocus);
+, resolvedown = function(oldfocus, newfocus, ref) {
+	x$("#welcome").bottom("resolve down" + oldfocus + ":" + newfocus + ref);
 	pushcrumb(oldfocus);
 	resolve(newfocus);
 }
