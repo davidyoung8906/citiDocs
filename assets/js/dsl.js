@@ -110,7 +110,7 @@ var run = function(application) {
 			var subbutton = "<button id='subbutton" + i 
 					+ "' onclick='resolvedown(" + '"' + subs[i] + '"' + ")'>"
 					+ subs[i] + "</button>";
-			x$("#welcome").bottom("sub factory: " + i + " " + subs[i] + '"');
+			x$("#welcome").bottom("sub factory: " + i + " " + subs[i] + "' onclick='resolvedown(" + '"' + subs[i] + '"' + ")'");
 			x$("#docsubs").bottom(subbutton);
 		};
 		x$("#docsubs").bottom("</span>");
