@@ -67,19 +67,19 @@ var run = function(application) {
 
 , popcrumbs = function(n) {
 	var crumbs = getcrumbs();
+	var newfocus = "TOP";
 	while(n > 0) {
-		crumbs.pop();
+		newfocus = crumbs.pop();
 		n--;		
 	};
 	x$("#welcome").bottom("popped crumb");
-	listings;
+	resolve(newfocus);
 }
 
 , pushcrumb = function(crumb) {
 	x$("#welcome").bottom("pushing crumb");
 	store.save({key: "crumbs", crumbstore: (getcrumbs().push("" + crumb))});
 	x$("#welcome").bottom("pushed crumb");
-	listings;
 }
 
 , docdocs = function(docs) {
@@ -111,6 +111,28 @@ var run = function(application) {
 			x$("#docsubs").bottom("" + subbutton);	
 		};
 		x$("#docsubs").bottom("</span>");
+}
+
+, resolveup = function(oldfocus, newfocus) {
+	pushcrumb(oldfocus);
+	resolve(newfocus);
+}
+
+, resolve = function(newfocus) {
+	var crumbs = getcrumbs;
+	var listings = getfilestore();
+	for (i=1; i<crumbs.length; i++) {
+		var list = listings[crumbs[i]];
+		for (j=0; j<list.length) {
+			h = list[j];
+			for (k in h) {
+				if (k == newfocus) {
+					listings = h;
+				}
+			}
+		}
+	}
+	displaylist(listings);	
 }
 
 , docfooter = function(list) {}
