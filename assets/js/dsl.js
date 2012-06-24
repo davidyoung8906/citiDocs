@@ -121,22 +121,22 @@ var run = function(application) {
 
 , resolvedown = function(oldfocus, newfocus) {
 	x$("#welcome").bottom("resolve down" + oldfocus + ":" + newfocus);
-	pushcrumb(oldfocus);
 	resolve(newfocus);
 }
 
 , resolve = function(newfocus) {
 	x$("#welcome").bottom("resolve: " + newfocus);
+        pushcrumb(newfocus);
 	var crumbs = getcrumbs();
         x$("#welcome").bottom("resolve crumbs: " + crumbs);
-	var listing = getfilestore();
+	var listings = getfilestore();
 	for (i=1; i<crumbs.length; i++) {
                 list = [listing];
 		for (j=0; j<list.length; j++) {
 			h = list[j];
 			for (k in h) {
 				if (k == crumbs[i]) {
-					listing = h;
+					listings = h;
 				};
 			};
 		};
