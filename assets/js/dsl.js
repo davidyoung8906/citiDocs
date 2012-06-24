@@ -115,7 +115,7 @@ var run = function(application) {
 		x$("#docsubs").bottom("</span>");
 		for (var i=0; i<subs.length; i++) {
 			var ref = "#docsubs" + i;
-			x$(ref).click(resolvedown(subs[i]));
+			x$(ref).click(resolvedown(subs[i])); 
 		}
 }
 
