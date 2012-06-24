@@ -66,14 +66,14 @@ var run = function(application) {
 
 , popcrumbs = function(n) {
 	var crumbs = getcrumbs();
-	var newfocus = "TOP";
 	while(n > 0) {
-		newfocus = crumbs.pop();
+		crumbs.pop();
 		n--;		
 	};
+//	var newfocus = crumbs[crumbs.length];
 	store.save({key: "crumbs", crumbstore: crumbs});
 	x$("#welcome").bottom("popped crumb");
-	resolve(newfocus);
+	resolve();
 }
 
 , pushcrumb = function(crumb) {
@@ -115,18 +115,18 @@ var run = function(application) {
 		x$("#docsubs").bottom("</span>");
                 for (i=0; i<subs.length; i++) {
                         var newfocus = subs[i];
-                        x$("#subbutton" + i).click(function() {resolvedown(focus, newfocus);});
+                        x$(("#subbutton" + i)).click(function() {resolvedown(newfocus);});
                 };
 }
 
-, resolvedown = function(oldfocus, newfocus) {
-	x$("#welcome").bottom("resolve down" + oldfocus + ":" + newfocus);
-	resolve(newfocus);
+, resolvedown = function(newfocus) {
+	x$("#welcome").bottom("resolve down" + newfocus);
+	pushcrumb(newfocus);
+	resolve();
 }
 
-, resolve = function(newfocus) {
-	x$("#welcome").bottom("resolve: " + newfocus);
-        pushcrumb(newfocus);
+, resolve = function() {
+//	x$("#welcome").bottom("resolve: " + ne);
 	var crumbs = getcrumbs();
         x$("#welcome").bottom("resolve crumbs: " + crumbs);
 	var listings = getfilestore();
@@ -136,12 +136,12 @@ var run = function(application) {
 			h = list[j];
 			for (k in h) {
 				if (k == crumbs[i]) {
-					listings = h;
+					listings = h[k];
 				};
 			};
 		};
 	};
-	displaylist(listings);	
+	displaylist({focus:listings});	
 }
 
 , docfooter = function(list) {}
@@ -150,9 +150,11 @@ var run = function(application) {
 
 , getcrumbs = function() {	
 	var crumblist = ['nothing'];
+	focus = "";
+	for (k in getfilestore()) {focus = k};
 	store.get('crumbs', function(saved) {
 		if (saved) {if (saved.crumbstore) {crumblist=saved.crumbstore;};}
-    		else {store.save({key: 'crumbs', crumbstore: ["TOP"]});}; 				
+    		else {store.save({key: 'crumbs', crumbstore: ["TOP", focus]});}; 				
     	});
     	return crumblist;
 }
@@ -169,10 +171,6 @@ var run = function(application) {
 	return docs;
 }
 
-, getfocus = function(listing) {
-	for (key in listing) {return key};
-}
-
 , getsubs = function(listing) {
 	var subs = [];
 	for (k in listing) {
@@ -185,22 +183,13 @@ var run = function(application) {
 	return subs;
 }
 
-, breakout = function(listing) {
-	return {"crumbs": getcrumbs(),
-		"focus" : getfocus(listing),
-		"docs"  : getdocs(listing),
-		"subs"  : getsubs(listing)
-	};
-}
-
 // create display after analuzing and structuring data
 
 , displaylist = function(listing) {
-	var d = breakout(listing);
 	docheader(listing);
-	doccrumbs(d.crumbs, d.focus);
-	docdocs(d.docs);
-	docsubs(d.subs, d.focus);
+	doccrumbs();
+	docdocs(getdocs(listing));
+	docsubs(getsubs(listing));
 	docfooter(listing);
 }
 
