@@ -128,19 +128,20 @@ var run = function(application) {
 //	x$("#welcome").bottom("resolve: " + ne);
 	var crumbs = getcrumbs();
         x$("#welcome").bottom("resolve crumbs: " + crumbs);
-	var listings = getfilestore();
+	var list = [getfilestore();];
+	var focus = "";
 	for (i=1; i<crumbs.length; i++) {
-                list = [listings];
 		for (j=0; j<list.length; j++) {
 			h = list[j];
 			for (k in h) {
 				if (k == crumbs[i]) {
-					listings = h[k];
+					focus = k;
+					list = h[k];
 				};
 			};
 		};
 	};
-	displaylist({focus:listings});	
+	displaylist({focus:list});	
 }
 
 , docfooter = function(list) {}
