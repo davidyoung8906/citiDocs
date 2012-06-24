@@ -76,7 +76,8 @@ var run = function(application) {
 }
 
 , pushcrumb = function(crumb) {
-	var crumbs = getcrumbs().push(crumb);
+	var crumbs = getcrumbs();
+	crumbs[crumbs.length] = crumb;
 	x$("#welcome").bottom("pushing crumb" + crumb + crumbs);
 	store.save({key: "crumbs", crumbstore: crumbs});
 	x$("#welcome").bottom("pushed crumb" + getcrumbs());
