@@ -111,12 +111,10 @@ var run = function(application) {
 					+ subs[i] + "</button>";
 //			x$("#welcome").bottom("sub factory: " + i + focus);
 			x$("#docsubs").bottom(subbutton);
-			var ref = "#subbutton" + i;
-			x$("#welcome").bottom("ref: " + ref);
-			var newfocus = String(subs[i]);
 		};
 		x$("#docsubs").bottom("</span>");
                 for (i=0; i<subs.length; i++) {
+                        var newfocus = subs[i];
                         x$("#subbutton" + i).click(function() {resolvedown(focus, newfocus);});
                 };
 }
