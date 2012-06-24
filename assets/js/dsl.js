@@ -52,9 +52,9 @@ var run = function(application) {
        			+ Object.keys(listing).length); 
 }
 
-, doccrumbs = function(crumbs, focus) {
+, doccrumbs = function() {
 		x$("#doccrumbs").html("<span id='crumbs'>");
-		
+		var crumbs = getcrumbs();
 		for (var i=0; i<crumbs.length; i++) {
 			var crumbbutton = "<button onclick='popcrumbs(" + (crumbs.length - i) + ")'>"
 					+ crumbs[i] + "</button>";
@@ -103,12 +103,12 @@ var run = function(application) {
      	});
 }
 
-, docsubs = function(subs, focus) {  // subs is an array of subs like ["sub1", "sub2",...]
+, docsubs = function(subs) {  // subs is an array of subs like ["sub1", "sub2",...]
 		x$("#docsubs").html("<span id='subs'>");
 		for (var i=0; i<subs.length; i++) {
 			var subbutton = "<button id='subbutton" + i + "'>"
 					+ subs[i] + "</button>";
-			x$("#welcome").bottom("sub factory: " + i + focus);
+			x$("#welcome").bottom("sub factory: " + i + " "subs[i]);
 			x$("#docsubs").bottom(subbutton);
 		};
 		x$("#docsubs").bottom("</span>");
@@ -119,7 +119,7 @@ var run = function(application) {
 }
 
 , resolvedown = function(newfocus) {
-	x$("#welcome").bottom("resolve down" + newfocus);
+	x$("#welcome").bottom("resolve down:" + newfocus);
 	pushcrumb(newfocus);
 	resolve();
 }
@@ -151,7 +151,7 @@ var run = function(application) {
 	var crumblist = ['nothing'];
 	focus = "";
 	for (k in getfilestore()) {focus = k};
-	x$("#welcome").bottom('getcrumbs focus:' + focus);
+	x$("#welcome").bottom('getcrumbs focus: ' + focus + " crumbs: " + crumbs);
 	store.get('crumbs', function(saved) {
 		if (saved) {if (saved.crumbstore) {crumblist=saved.crumbstore;};}
     		else {store.save({key: 'crumbs', crumbstore: ["TOP", focus]});}; 				
