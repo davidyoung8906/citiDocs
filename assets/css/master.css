@@ -80,7 +80,7 @@ button {
   z-index:9998;
 }
 
-.docurl .doctitle {
+button.docurl button.doctitle {
   border: none;
   background-color: black;
   opacity: 0.5;
