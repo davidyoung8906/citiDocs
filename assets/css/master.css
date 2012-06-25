@@ -128,13 +128,18 @@ body {
 
 #docheader #doccrumbs #docdocs #docfooter {
 	width:100%;
-	color: darkblue;
-	font-size: 20px;
-	text-shadow: 0 0 10px lightgreen;
+	font-size: 16px;	
 }
 
 #docheader {
 	margin: 100px auto 0 auto;
+}
+
+#docsubs #doccrumbs {align:left;}
+
+#docsubs #doccrumbs button {
+	width:auto;
+	height:auto;
 }
 
 table { 
@@ -157,9 +162,3 @@ td {
 	text-align:left;
 }
 
-#docsubs #doccrumbs {align:left;}
-
-#docsubs #doccrumbs button {
-	width:auto;
-	height:auto;
-}
