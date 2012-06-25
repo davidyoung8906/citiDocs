@@ -95,11 +95,7 @@ var run = function(application) {
  	};
  	stuffing += "</table></div><p>";
  	x$('#docdocs').html(stuffing);
- 	x$('.trow').on('click',function () {
-     		var tv='<iframe width="640" height="360" src="'
-     			+ this.id + '" frameborder="0" allowfullscreen></iframe>';
-     		x$('#looking').html(tv);
-     	});
+ 	});
 }
 
 , docsubs = function(subs) {  // subs is an array of subs like ["sub1", "sub2",...]
