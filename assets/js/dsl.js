@@ -167,7 +167,7 @@ var run = function(application) {
 }
 
 , getdocs = function(listing) {
-	var docs = [{"key":"value"}];
+	var docs = [];
 	for (k in listing) {
 		for (var i=0; i<listing[k].length; i++) {		
 			for (key in listing[k][i]) {
