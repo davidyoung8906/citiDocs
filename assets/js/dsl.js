@@ -91,7 +91,7 @@ var run = function(application) {
 			stuffing += "<tr class='trow' id='"
 				+ k + "'><td>" 
 				+ "<button class='docurl' onclick='window.open(" + '"' docpath + k + '"' + ")'>" + k + "</button></td><td>"
-				+ "<button class='doctitle' onclick='" + '"' + docpath + k + '"' + "'>" + docs[i][k] + "</button></td></tr>"
+				+ "<button class='doctitle' onclick='window.open(" + '"' + docpath + k + '"' + ")'>" + docs[i][k] + "</button></td></tr>"
 			x$("#welcome").bottom("full path: " + docpath + k);	
 		};
  	};
