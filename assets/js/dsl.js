@@ -47,9 +47,7 @@ var run = function(application) {
 // display data in each section
 
 , docheader = function(listing) {
-		x$("#docheader").html("<div id='docContent'><h1>Document List for the City of Portsmouth NH</h1><p>Total Number of Documents for "
-       			+ "Portsmouth NH " + " is " 
-       			+ Object.keys(listing).length); 
+		x$("#docheader").html("<div id='docContent'><h1>Document List for the City of Portsmouth NH</h1>"); 
 }
 
 , doccrumbs = function() {
