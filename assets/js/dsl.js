@@ -145,12 +145,12 @@ var run = function(application) {
 // analyze data and create data structures for display
 
 , getpath = function() {
-	var crumbs = getcrumbs();
-	var path = crumbs[1];
-	for (i=2; i<crumbs.length; i++) {
-		path += crumbs[i] + "/";
-	};
-	return path;
+//	var crumbs = getcrumbs();
+//	var path = crumbs[1];
+//	for (i=2; i<crumbs.length; i++) {
+//		path += crumbs[i] + "/";
+//	};
+//	return path;
 }
 
 , getcrumbs = function() {	
