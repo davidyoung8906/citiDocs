@@ -43,7 +43,7 @@ button {
   padding: 0 10px;
   margin-bottom: 20px;
   cursor: pointer;
-  width: 20%;
+  width: auto;
   background:#F7941E;
   background: -webkit-gradient(linear, 0 0, 0 70%, from(#F7941E), to(#D37F18));
   background: linear-gradient(#F7941E, #D37F18 70%);
@@ -58,7 +58,27 @@ button {
   z-index:9998;
 } 
 
-.app_button {width: 20%;}
+.app_button {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  width: 20%;
+  background:#F7941E;
+  background: -webkit-gradient(linear, 0 0, 0 70%, from(#F7941E), to(#D37F18));
+  background: linear-gradient(#F7941E, #D37F18 70%);
+  border: 1px solid #C97917;
+  font-size: 18px;
+  font-weight: 200;
+  text-shadow: 0 -1px 0 #7E4B0D;
+  height: 40px;
+  line-height: 40px;
+  color:#fff;
+  text-align: center;
+  z-index:9998;
+}
 
 .view {
   padding: 35px;
