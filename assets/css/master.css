@@ -83,6 +83,8 @@ button {
 .docurl, .doctitle {
   border: none;
   background-color: black;
+  background: -webkit-gradient(linear, 0 0, 0 70%, from(#888), to(#888));
+  background: linear-gradient(#888, #888 70%);
   opacity: 0.5;
   -webkit-border-radius: none;
   border-radius: none;
