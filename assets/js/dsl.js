@@ -92,7 +92,7 @@ var run = function(application) {
 				+ k + "'><td>" 
 				+ "<a href='" + docpath + k + "'>" + k + "</a></td><td>"
 				+ "<a href='" + docpath + k + "'>" + docs[i][k] + "</a></td></tr>";
-			X$("#welcome").bottom("full path: " + docpath + k);	
+			x$("#welcome").bottom("full path: " + docpath + k);	
 		};
  	};
  	stuffing += "</table></div><p>";
