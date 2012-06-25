@@ -90,8 +90,8 @@ var run = function(application) {
 		for (k in docs[i]) {
 			stuffing += "<tr class='trow' id='"
 				+ k + "'><td>" 
-				+ "<a href='" + docpath + k + "'>" + k + "</a></td><td>"
-				+ "<a href='" + docpath + k + "'>" + docs[i][k] + "</a></td></tr>";
+				+ "<button id='docbutton' scr='" + docpath + k + "'>" + k + "</a></td><td>"
+				+ "<button id='docbutton' scr='" + docpath + k + "'>" + docs[i][k] + "</a></td></tr>";
 			x$("#welcome").bottom("full path: " + docpath + k);	
 		};
  	};
