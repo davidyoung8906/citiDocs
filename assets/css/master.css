@@ -80,6 +80,10 @@ button {
   z-index:9998;
 }
 
+.docbutton {
+	border: none;
+}
+
 .view {
   padding: 35px;
 	/*  only one view is displayed at a time
