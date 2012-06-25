@@ -118,7 +118,7 @@ var run = function(application) {
 			var newfocus = subs[i];
 			x$("#welcome").bottom("on click: " + i + " " + newfocus);
 			x$(ref).attr('newfocus', 'newfocus');
-			x$(ref).on('click', function() {resolvedown(this.newfocus);}); 
+			x$(ref).on('click', function() {resolvedown(this.attr('newfocus');}); 
 		}
 }
 
