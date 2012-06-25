@@ -82,7 +82,8 @@ button {
 
 .docurl .doctitle {
 	border: none;
-	background: transparent;
+	background-color: black;
+	opacity: 0.5;
 }
 
 .view {
