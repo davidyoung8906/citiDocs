@@ -147,7 +147,7 @@ var run = function(application) {
 , getpath = function() {
 	var crumbs = getcrumbs();
 	var path = crumbs[1];
-	for (i=2; i<crumbs.length) {
+	for (i=2; i<crumbs.length; i++) {
 		path += crumbs[i] + "/";
 	};
 	return path;
