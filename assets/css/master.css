@@ -129,7 +129,7 @@ button {
 	
 }
 
-#docheader #doccrumbs #docdocs #docfooter {
+#docheader, #doccrumbs, #docdocs, #docfooter {
 	width:100%;
 	font-size: 16px;	
 }
@@ -138,7 +138,7 @@ button {
 	margin: 100px auto 0 auto;
 }
 
-#docsubs #doccrumbs {align:left;}
+#docsubs, #doccrumbs {align:left;}
 
 #docsubs button {
 	width:auto;
