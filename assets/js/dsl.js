@@ -16,7 +16,7 @@ var run = function(application) {
 
 , getfile = function() {
 	var listing = {"initial":"value", "second":"another"};
-//	x$("#welcome").bottom("<p>made it before xhr callback, initial listing = " + Object.keys(listing).length);
+	x$("#welcome").bottom("<p>Loading Data Complete");
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
@@ -28,7 +28,7 @@ var run = function(application) {
              		}             		
         	});             	
         }; 
-        x$("#welcome").bottom("<p>in get file, listing =  " + Object.keys(listing).length);
+//        x$("#welcome").bottom("<p>in get file, listing =  " + Object.keys(listing).length);
         return listing;
 }
 
@@ -58,14 +58,14 @@ var run = function(application) {
 		for (var i=0; i<crumbs.length; i++) {
 			var crumbbutton = "<button onclick='popcrumbs(" + (crumbs.length - i - 1) + ")'>"
 					+ crumbs[i] + "</button>";
-			x$("#welcome").bottom("button factory: " + i + " " + crumbs[i]);
+//			x$("#welcome").bottom("button factory: " + i + " " + crumbs[i]);
 			x$("#doccrumbs").bottom("" + crumbbutton);	
 		};
 		x$("#doccrumbs").bottom("</span>");
 }
 
 , popcrumbs = function(n) {
-	x$("#welcome").bottom("popped " + n + " crumbs");
+//	x$("#welcome").bottom("popped " + n + " crumbs");
 	var crumbs = getcrumbs();
 	while(n > 0) {
 		crumbs.pop();
@@ -79,9 +79,9 @@ var run = function(application) {
 , pushcrumb = function(crumb) {
 	var crumbs = getcrumbs();
 	crumbs[crumbs.length] = crumb;
-	x$("#welcome").bottom("pushing crumb" + crumb + crumbs);
+//	x$("#welcome").bottom("pushing crumb" + crumb + crumbs);
 	store.save({key: "crumbs", crumbstore: crumbs});
-	x$("#welcome").bottom("pushed crumb" + getcrumbs());
+//	x$("#welcome").bottom("pushed crumb" + getcrumbs());
 }
 
 , docdocs = function(docs) {
@@ -121,7 +121,7 @@ var run = function(application) {
 }
 
 , resolvedown = function(newfocus) {
-	x$("#welcome").bottom("resolve down!!:" + newfocus);
+//	x$("#welcome").bottom("resolve down!!:" + newfocus);
 	pushcrumb(newfocus);
 	resolve();
 }
@@ -129,7 +129,7 @@ var run = function(application) {
 , resolve = function() {
 //	x$("#welcome").bottom("resolve: " + ne);
 	var crumbs = getcrumbs();
-        x$("#welcome").bottom("resolve crumbs: " + crumbs);
+//        x$("#welcome").bottom("resolve crumbs: " + crumbs);
 	var list = [getfilestore()];
 	var focus = "http://";
 	for (i=1; i<crumbs.length; i++) {
@@ -157,7 +157,7 @@ var run = function(application) {
     		else {
     			var focus = "";
 			for (k in getfilestore()) {focus = k};
-			x$("#welcome").bottom('getcrumbs focus: ' + focus);
+//			x$("#welcome").bottom('getcrumbs focus: ' + focus);
     			crumblist = ["TOP", focus];
     			store.save({key: 'crumbs', crumbstore: crumblist});
     			
