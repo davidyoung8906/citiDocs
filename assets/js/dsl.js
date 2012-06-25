@@ -151,7 +151,7 @@ var run = function(application) {
 	for (i=2; i<crumbs.length; i++) {
 		path += crumbs[i] + "/";
 	};
-	return 'http://www.cityofportsmouth.com/';
+	return path;
 }
 
 , getcrumbs = function() {	
