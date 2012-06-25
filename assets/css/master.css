@@ -138,9 +138,10 @@ body {
 
 #docsubs #doccrumbs {align:left;}
 
-#docsubs #doccrumbs button {
+#docsubs button {
 	width:auto;
 	height:auto;
+	colcor: red;
 }
 
 table { 
