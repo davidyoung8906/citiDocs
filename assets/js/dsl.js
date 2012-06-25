@@ -89,8 +89,8 @@ var run = function(application) {
 		for (k in docs[i]) {
 			stuffing += "<tr class='trow' id="
 				+ k + "><td>" 
-				+ k + "</td><td>"
-				+ docs[i][k] + "</td></tr>";
+				+ "<a href='" + path + k + "'>" + k + "</td><td>"
+				+ "<a href='" + path + k + "'>" + docs[i][k] + "</td></tr>";
 		};
  	};
  	stuffing += "</table></div><p>";
@@ -147,6 +147,15 @@ var run = function(application) {
 , docfooter = function(list) {}
 
 // analyze data and create data structures for display
+
+, getpath = function() {
+	var crumbs = getcrumbs();
+	var path = crumbs[1];
+	for (i=2; i<crumbs.length) {
+		path += crumbs[i] + "/";
+	}
+	return path;
+}
 
 , getcrumbs = function() {	
 	var crumblist = ['nothing'];
