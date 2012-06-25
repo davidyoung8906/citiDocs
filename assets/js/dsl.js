@@ -175,7 +175,7 @@ var run = function(application) {
 			};
 		};
 	};
-	return docs;
+	return docs; // an array of associations [{file:title},...]
 }
 
 , getsubs = function(listing) {
@@ -187,7 +187,7 @@ var run = function(application) {
 			};
 		};
 	};
-	return subs;
+	return subs; // and array of keys [subgroup, ...] 
 }
 
 // create display after analuzing and structuring data
