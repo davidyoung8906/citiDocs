@@ -115,7 +115,7 @@ var run = function(application) {
 		x$("#docsubs").bottom("</span>");
 		for (var i=0; i<subs.length; i++) {
 			var ref = "#subbutton" + i;
-			var newfocus = subs[i];
+			var newfocus = '"' + subs[i] + '"';
 			x$("#welcome").bottom("on click: " + i + " " + newfocus);
 			x$(ref).on('click', function(newfocus) {resolvedown(newfocus);}); 
 		}
