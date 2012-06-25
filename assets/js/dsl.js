@@ -83,7 +83,7 @@ var run = function(application) {
 }
 
 , docdocs = function(docs) {
-	
+	var path = getpath();
 	var stuffing = "<table>";
 	for (var i=0; i<docs.length; i++) {
 		for (k in docs[i]) {
