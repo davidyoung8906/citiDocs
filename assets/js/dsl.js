@@ -171,7 +171,7 @@ var run = function(application) {
 	for (k in listing) {
 		for (var i=0; i<listing[k].length; i++) {		
 			for (key in listing[k][i]) {
-				if (typeof listing[k][i][key] === 'string') {docs[i] = listing[k][i];};
+				if (typeof listing[k][i][key] === 'string') {docs[docs.length] = listing[k][i];};
 			};
 		};
 	};
@@ -183,7 +183,7 @@ var run = function(application) {
 	for (k in listing) {
 		for (var i=0; i<listing[k].length; i++) {		
 			for (key in listing[k][i]) {
-				if (typeof listing[k][i][key] !== 'string') {subs[i] = key;};
+				if (typeof listing[k][i][key] !== 'string') {subs[subs.length] = key;};
 			};
 		};
 	};
