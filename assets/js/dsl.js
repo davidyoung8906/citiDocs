@@ -89,8 +89,8 @@ var run = function(application) {
 		for (k in docs[i]) {
 			stuffing += "<tr class='trow' id="
 				+ k + "><td>" 
-				+ "<a href='" + path + k + "'>" + k + "</td><td>"
-				+ "<a href='" + path + k + "'>" + docs[i][k] + "</td></tr>";
+				+ "<a href='" + path + k + "'>" + k + "</a></td><td>"
+				+ "<a href='" + path + k + "'>" + docs[i][k] + "</a></td></tr>";
 		};
  	};
  	stuffing += "</table></div><p>";
@@ -153,7 +153,7 @@ var run = function(application) {
 	var path = crumbs[1];
 	for (i=2; i<crumbs.length) {
 		path += crumbs[i] + "/";
-	}
+	};
 	return path;
 }
 
