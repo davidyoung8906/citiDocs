@@ -43,7 +43,7 @@ body {
   padding: 0 10px;
   margin-bottom: 20px;
   cursor: pointer;
-  width: auto;
+  width: 20%;
   background:#F7941E;
   background: -webkit-gradient(linear, 0 0, 0 70%, from(#F7941E), to(#D37F18));
   background: linear-gradient(#F7941E, #D37F18 70%);
