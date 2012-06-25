@@ -95,7 +95,6 @@ var run = function(application) {
  	};
  	stuffing += "</table></div><p>";
  	x$('#docdocs').html(stuffing);
- 	});
 }
 
 , docsubs = function(subs) {  // subs is an array of subs like ["sub1", "sub2",...]
