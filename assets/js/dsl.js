@@ -116,8 +116,6 @@ var run = function(application) {
 		for (var i=0; i<subs.length; i++) {
 			var ref = "#subbutton" + i;
 			var newfocus = subs[i];
-//			x$("#welcome").bottom("on click: " + i + " " + newfocus);
-//			x$(ref).attr('newfocus', 'newfocus');
 			x$(ref).on('click', eval("(function() {resolvedown('" + newfocus + "')})")); 
 		}
 }
