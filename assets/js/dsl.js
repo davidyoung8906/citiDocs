@@ -109,7 +109,7 @@ var run = function(application) {
 		for (var i=0; i<subs.length; i++) {
 			var subbutton = "<button id='subbutton" + i + "'>"
 					+ subs[i] + "</button>";
-			x$("#welcome").bottom("sub factory: " + i + " " + subs[i]);
+//			x$("#welcome").bottom("sub factory: " + i + " " + subs[i]);
 			x$("#docsubs").bottom(subbutton);
 		};
 		x$("#docsubs").bottom("</span>");
