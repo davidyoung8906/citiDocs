@@ -83,14 +83,14 @@ var run = function(application) {
 }
 
 , docdocs = function(docs) {
-	var path = getpath();
+	var docpath = getpath();
 	var stuffing = "<table>";
 	for (var i=0; i<docs.length; i++) {
 		for (k in docs[i]) {
 			stuffing += "<tr class='trow' id='"
 				+ k + "'><td>" 
-				+ "<a href='" + path + k + "'>" + k + "</a></td><td>"
-				+ "<a href='" + path + k + "'>" + docs[i][k] + "</a></td></tr>";
+				+ "<a href='" + docpath + k + "'>" + k + "</a></td><td>"
+				+ "<a href='" + docpath + k + "'>" + docs[i][k] + "</a></td></tr>";
 		};
  	};
  	stuffing += "</table></div><p>";
