@@ -162,7 +162,6 @@ button {
 #docsubs button {
 	width:auto;
 	height:auto;
-	colcor: red;
 }
 
 table { 
@@ -175,6 +174,9 @@ table {
 tr {
 	border-top: 1px solid darkgrey;
 }
+
+tr:nth-child(odd) { background:#fff; }
+tr:nth-child(even) { background:#ff8; }
 
 td {
 	color:black;
