@@ -80,8 +80,9 @@ button {
   z-index:9998;
 }
 
-.docbutton {
+.docurl .doctitle {
 	border: none;
+	background: transparent;
 }
 
 .view {
