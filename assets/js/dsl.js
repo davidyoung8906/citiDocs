@@ -84,6 +84,7 @@ var run = function(application) {
 
 , docdocs = function(docs) {
 	var docpath = getpath();
+	x$("#welcome").bottom("docpath: " + docpath);
 	var stuffing = "<table>";
 	for (var i=0; i<docs.length; i++) {
 		for (k in docs[i]) {
@@ -91,6 +92,7 @@ var run = function(application) {
 				+ k + "'><td>" 
 				+ "<a href='" + docpath + k + "'>" + k + "</a></td><td>"
 				+ "<a href='" + docpath + k + "'>" + docs[i][k] + "</a></td></tr>";
+			X$("#welcome").bottom("full path: " + docpath + k);	
 		};
  	};
  	stuffing += "</table></div><p>";
