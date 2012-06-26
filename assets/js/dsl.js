@@ -37,9 +37,10 @@ var run = function(application) {
 		x$("#citylist").setStyle("display","none");
 	}
 	else {
-		x$("#citylist").html("Here is a list of returned cities:<p>" + cities);
+		x$("#citylist").html("");
+		for (i=0; i<cities.length; i++) {x$("#citylist").bottom(cities[i]);}
 		x$("#citylist").setStyle("display","block");
-		x$('#citylist').tween([{left:'100px', backgroundColor:'green', duration:.2 }, { right:'100px' }]);
+		x$('#citylist').tween([{left:'100px', backgroundColor:'green', duration: 2 }, { right:'100px' }]);
 	};
 }
 
