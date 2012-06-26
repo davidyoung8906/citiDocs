@@ -29,7 +29,17 @@ var run = function(application) {
         	});             	
         }; 
         x$("#welcome").bottom("<p>getcitylist =  " + listing);
+        citylist(listing);
         return listing;
+}
+, citylist = function(cities) {
+	if (cities.length == 0) {
+		x$("#citylist").css("display")="none";
+	}
+	else {
+		x$("#citylist").html("Here is a list of returned cities:<p>" + cities);
+		x$("#citylist").css("display")="block";
+	};
 }
 
 , getfile = function() {
@@ -228,7 +238,7 @@ var run = function(application) {
 	var listing = getfilestore();
 	var crumbs = getcrumbs();
     	displaylist(listing);
-    	getcitylist("hello");
+    	getcitylist("Ash");
 }
 
 // shows id passed
