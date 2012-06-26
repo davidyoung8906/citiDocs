@@ -1,6 +1,6 @@
 body {
   background: #fff;
-  background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(lightgrey), color-stop(0.47, white), to(lightgrey));
+  background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(lightyellow), color-stop(0.47, white), to(lightgreen));
   margin: 0;
   font: 18px Helvetica;
   text-align: center;  
@@ -180,13 +180,12 @@ tr {
 	border-top: 1px solid darkgrey;
 }
 
-tr:nth-child(odd) { background:#fff; }
-tr:nth-child(even) { background:#ff8; }
+tr:nth-child(odd) { background:lightgreen; }
+tr:nth-child(even) { background:lightyellow; }
 
 td {
 	color:black;
 	font: 16px Helvetica;
-	vertical-align:text-top;
 	padding: 0px 15px;
 	margin: 0px 0px;
 	text-align:left;
