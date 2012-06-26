@@ -34,7 +34,7 @@ var run = function(application) {
 }
 , citylist = function(cities) {
 	if (cities.length == 0) {
-		x$("#citylist").setStyle("display","none");
+//		x$("#citylist").setStyle("display","none");
 	}
 	else {
 		x$("#citylist").html("Here is a list of returned cities:<p>" + cities);
