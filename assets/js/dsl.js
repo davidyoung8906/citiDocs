@@ -39,6 +39,7 @@ var run = function(application) {
 	else {
 		x$("#citylist").html("Here is a list of returned cities:<p>" + cities);
 		x$("#citylist").setStyle("display","block");
+		x$('#citylist').tween([{left:'100px', backgroundColor:'green', duration:.2 }, { right:'100px' }]);
 	};
 }
 
