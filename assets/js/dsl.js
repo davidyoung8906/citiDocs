@@ -16,7 +16,7 @@ var run = function(application) {
 
 , getcitylist = function(part) {
 	var listing = [];
-	x$("#welcome").bottom("<p>get city with: " + part);
+//	x$("#welcome").bottom("<p>get city with: " + part);
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
@@ -28,7 +28,7 @@ var run = function(application) {
              		}             		
         	});             	
         }; 
-        x$("#welcome").bottom("<p>getcitylist =  " + listing);
+//        x$("#welcome").bottom("<p>getcitylist =  " + listing);
         citylist(listing);
         return listing;
 }
@@ -114,7 +114,7 @@ var run = function(application) {
 
 , docdocs = function(docs) {
 	var docpath = getpath();
-	x$("#welcome").bottom("docpath: " + docpath);
+//	x$("#welcome").bottom("docpath: " + docpath);
 	var stuffing = "<table>";
 	for (var i=0; i<docs.length; i++) {
 		for (k in docs[i]) {
@@ -124,7 +124,7 @@ var run = function(application) {
                                          + "</td><td class='doctitle' onclick='window.open(" 
                                          + '"' + docpath + k + '"' + ")'>" + docs[i][k] 
                                          + "</td></tr>";
-			x$("#welcome").bottom("full path: " + docpath + k);	
+//			x$("#welcome").bottom("full path: " + docpath + k);	
 		};
  	};
  	stuffing += "</table></div><p>";
