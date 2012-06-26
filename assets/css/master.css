@@ -1,6 +1,6 @@
 body {
   background: #fff;
-  background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(lightyellow), color-stop(0.47, white), to(lightgreen));
+  background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(yellow), color-stop(0.47, white), to(lightgreen));
   margin: 0;
   font: 18px Helvetica;
   text-align: center;  
@@ -181,7 +181,7 @@ tr {
 }
 
 tr:nth-child(odd) { background:lightgreen; }
-tr:nth-child(even) { background:lightyellow; }
+tr:nth-child(even) { background:yellow; }
 
 td {
 	color:black;
