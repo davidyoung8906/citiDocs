@@ -81,28 +81,6 @@ button {
 }
 
 .docurl, .doctitle {
-  border: none;
-  background-color: black;
-  background: -webkit-gradient(linear, 0 0, 0 70%, from(#888), to(#888));
-  background: linear-gradient(#888, #888 70%);
-  opacity: 0.5;
-  -webkit-border-radius: none;
-  border-radius: none;
-  display: inline-block;
-  padding: 0 10px;
-  margin-bottom: 20px;
-  cursor: pointer;
-  width: auto;
-  background:black;
-  border: none;
-  font-size: 16px;
-  font-weight: none;
-  text-shadow: 0 -1px 0 #7E4B0D;
-  height: auto;
-  line-height: 40px;
-  color:#fff;
-  text-align: center;
-  z-index:9998;
 }
 
 .view {
@@ -210,8 +188,7 @@ td {
 	font: 16px Helvetica;
 	vertical-align:text-top;
 	padding: 0px 15px;
-	padding-top: 5px;
-	margin: 0px 15px;
+	margin: 0px 0px;
 	text-align:left;
 }
 
