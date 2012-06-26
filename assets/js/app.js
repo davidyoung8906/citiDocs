@@ -10,7 +10,10 @@ run(function () {
         
         store.get('city', function(saved) {
     		if (saved) {if (saved.value) {x$('input#city_input').attr('placeholder', saved.value);};}    		
-    	});        
+    	});
+    	x$("#city_input").on("keypress", function() {
+    		getcitylist(this.value);	
+    	});
     })();
     
     // a little inline controller
