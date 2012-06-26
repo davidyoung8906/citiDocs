@@ -22,7 +22,6 @@
  				<input 	id="city_input"
  					type="text" 
  					name="city" 
-                                        list="cities"
  					placeholder="Enter city and state"
  					title="Enter a city and state 'PORTSMOUTH NH'"
  					oninput="store.save({key:'city', value: this.value})"/>
@@ -32,11 +31,8 @@
                                         <option value="Ashland OR">
                                 </datalist>
  			</form>
- 			<div class="app_button" id="map_button">Location</div>
-  	      	  	<div class="app_button" id="documents_button">Documents</div>
-  	      	  	<div class="app_button" id="pages_button">Pages</div>
-  	      	  	<div class="app_button" id="people_button">People</div>	
  		</div>
+ 		<div id="citylist"></div>
 
 		<div id="welcome" class="view">
 		  <div id="welcome_msg">
