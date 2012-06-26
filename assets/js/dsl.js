@@ -34,11 +34,11 @@ var run = function(application) {
 }
 , citylist = function(cities) {
 	if (cities.length == 0) {
-		x$("#citylist").css("display")="none";
+		x$("#citylist").setStyle("display","none");
 	}
 	else {
 		x$("#citylist").html("Here is a list of returned cities:<p>" + cities);
-		x$("#citylist").css("display")="block";
+		x$("#citylist").setStyle("display","block");
 	};
 }
 
