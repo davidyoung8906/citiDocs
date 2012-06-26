@@ -38,6 +38,10 @@ body {
   position: fixed;
   top: 60px;
   width: auto;
+  height: auto;
+  z-index: 9999;
+  background: white;
+  border: solid black 1px;
 }  
 
 button {
