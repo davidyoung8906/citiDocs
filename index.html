@@ -17,14 +17,20 @@
 	</head>
 	<body>
  		<div id="title_bar">
- 			<form id="city_form">
+ 			<form id="city_form" >
  				city<strong>Docs</strong>
  				<input 	id="city_input"
  					type="text" 
  					name="city" 
+                                        list="cities"
  					placeholder="Enter city and state"
  					title="Enter a city and state 'PORTSMOUTH NH'"
  					oninput="store.save({key:'city', value: this.value})"/>
+                                <datalist id="cities">
+                                        <option value="Portsmouth NH">
+                                        <option value="Dover NH">
+                                        <option value="Ashland OR">
+                                </datalist>
  			</form>
  			<div class="app_button" id="map_button">Location</div>
   	      	  	<div class="app_button" id="documents_button">Documents</div>
