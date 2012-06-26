@@ -88,10 +88,12 @@ var run = function(application) {
 	var stuffing = "<table>";
 	for (var i=0; i<docs.length; i++) {
 		for (k in docs[i]) {
-			stuffing += "<tr class='trow' id='"
-				+ k + "'><td>" 
-				+ "<button class='docurl' onclick='window.open(" + '"' + docpath + k + '"' + ")'>" + k + "</button></td><td>"
-				+ "<button class='doctitle' onclick='window.open(" + '"' + docpath + k + '"' + ")'>" + docs[i][k] + "</button></td></tr>"
+			stuffing += "<tr class='trow' id='"+ k 
+                                         + "'><td class='docurl' onclick='window.open(" 
+                                         + '"' + docpath + k + '"' + ")'>" + k 
+                                         + "</td><td class='doctitle' onclick='window.open(" 
+                                         + '"' + docpath + k + '"' + ")'>" + docs[i][k] 
+                                         + "</td></tr>";
 			x$("#welcome").bottom("full path: " + docpath + k);	
 		};
  	};
