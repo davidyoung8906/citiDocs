@@ -29,7 +29,7 @@
 			<div data-role="header" datatheme="a" class="ui-header ui-bar-a" role="baner">
 				<h1 class="ui-title" tabindex="0" role="heading" aria-level="1"></h1>
 				<div id="title_bar">
- 					<form id="city_form" >city<strong>Docs</strong>
+ 					<form id="city_form" >City<strong>Docs</strong>
  						<input 	id="city_input"
  								type="text" 
  								name="city" 
@@ -41,14 +41,15 @@
                                         <option value="Dover NH">
                                         <option value="Ashland OR">
                         </datalist>
- 					</form>		
+ 					</form>
+ 					<div class="app_button" id="map_button">Location</div>
+					<div class="app_button" id="documents_button">Documents</div>
+					<div class="app_button" id="pages_button">Pages</div>
+					<div class="app_button" id="people_button">People</div>		
 				</div>
 			</div>
 			<div data-role="content" class="ui-content" role="main">
-				<div class="app_button" id="map_button">Location</div>
-				<div class="app_button" id="documents_button">Documents</div>
-				<div class="app_button" id="pages_button">Pages</div>
-				<div class="app_button" id="people_button">People</div>
+				
 				
 				<div id="citylist"></div>
 
@@ -59,7 +60,7 @@
 		  			</div>	      	  
 				</div>
 						
-				<div id="documents" class="view">
+				<div id="documents">
 					<div id="docheader"></div>
 					<div id="doccrumbs"></div>
 					<div id="docdocs"></div>
