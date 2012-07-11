@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
-		<title>Training App</title>
+		<title>CityDocs</title>
 		<link rel="stylesheet" href="assets/css/master.css" type="text/css" media="screen" />
 		<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
 		
@@ -21,33 +21,40 @@
 		<script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body class="ui-mobile-viewport">
-		<div 	data-role="page"
-			class="type-interior ui-page ui-body-c" 
-			data-url="http://dev.budgetblogs.com:3000/page/pagelist.json">
+		<div data-role="page" class="type-interior ui-page ui-body-a" 
+			data-url="http://dev.budgetblogs.com:3000/page/pagelist.json"
 			tabindex="0"
 			style="min-height: 988px; ">
-		</div>
- 		<div id="title_bar">
- 			<form id="city_form" >
- 				city<strong>Docs</strong>
- 				<input 	id="city_input"
- 					type="text" 
- 					name="city" 
- 					placeholder="Enter city and state"
- 					title="Enter a city and state 'PORTSMOUTH NH'"
- 					oninput="store.save({key:'city', value: this.value});citylist([]);"/>
-                                <datalist id="cities">
+			<div data-role="header" datatheme="a" class="ui-header ui-bar-a" role="baner">
+				<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Documents</h1>
+				<div id="title_bar">
+ 					<form id="city_form" >city<strong>Docs</strong>
+ 						<input 	id="city_input"
+ 								type="text" 
+ 								name="city" 
+ 								placeholder="Enter city and state"
+ 								title="Enter a city and state 'PORTSMOUTH NH'"
+ 								oninput="store.save({key:'city', value: this.value});citylist([]);"/>
+                        <datalist id="cities">
                                         <option value="Portsmouth NH">
                                         <option value="Dover NH">
                                         <option value="Ashland OR">
-                                </datalist>
- 			</form>
- 			<div class="app_button" id="map_button">Location</div>
-			<div class="app_button" id="documents_button">Documents</div>
-			<div class="app_button" id="pages_button">Pages</div>
-			<div class="app_button" id="people_button">People</div>
+                        </datalist>
+ 					</form>
+ 					
+				</div>
+			</div>
+			<div data-role="content" class="ui-content" role="main">
+				<div class="app_button" id="map_button">Location</div>
+					<div class="app_button" id="documents_button">Documents</div>
+					<div class="app_button" id="pages_button">Pages</div>
+					<div class="app_button" id="people_button">People</div>
+			</div>
+			<div data-role="footer" class="footer-docs" data-theme="a">
+			<p>&copy; 2011-12 CityDocs - a division of BudgetBlogs LLC</p>
+	    </div>
 		</div>
- 		<div id="citylist"></div>
+  		<div id="citylist"></div>
 
 		<div id="welcome" class="view">
 		  <div id="welcome_msg">
@@ -100,8 +107,6 @@
 		  	<div class="app_button" id="welcome_button">Go Back</div>
 		  </div>
 		</div>
-	    <div data-role="footer" class="footer-docs" data-theme="a">
-			<p>&copy; 2011-12 CityDocs - a division of BudgetBlogs LLC</p>
-	    </div>
+	    
 	</body>
 </html>
