@@ -26,7 +26,7 @@
 			tabindex="0"
 			style="min-height: 988px; ">
 			<div data-role="header" datatheme="a" class="ui-header ui-bar-a" role="baner">
-				<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Documents</h1>
+				<h1 class="ui-title" tabindex="0" role="heading" aria-level="1"></h1>
 				<div id="title_bar">
  					<form id="city_form" >city<strong>Docs</strong>
  						<input 	id="city_input"
@@ -40,73 +40,35 @@
                                         <option value="Dover NH">
                                         <option value="Ashland OR">
                         </datalist>
- 					</form>
- 					
+ 					</form>		
 				</div>
 			</div>
 			<div data-role="content" class="ui-content" role="main">
 				<div class="app_button" id="map_button">Location</div>
-					<div class="app_button" id="documents_button">Documents</div>
-					<div class="app_button" id="pages_button">Pages</div>
-					<div class="app_button" id="people_button">People</div>
-			</div>
-			<div data-role="footer" class="footer-docs" data-theme="a">
-			<p>&copy; 2011-12 CityDocs - a division of BudgetBlogs LLC</p>
-	    </div>
-		</div>
-  		<div id="citylist"></div>
+				<div class="app_button" id="documents_button">Documents</div>
+				<div class="app_button" id="pages_button">Pages</div>
+				<div class="app_button" id="people_button">People</div>
+				
+				<div id="citylist"></div>
 
-		<div id="welcome" class="view">
-		  <div id="welcome_msg">
-		  	<p><h1>Welcome to CityDocs</h1>
-		  	<p><h2>Your source for city documents</h2>
-		  </div>	      	  
-		</div>
+				<div id="welcome" class="view">
+		  			<div id="welcome_msg">
+		  				<p><h1>Welcome to CityDocs</h1>
+		  				<p><h2>Your source for city documents</h2>
+		  			</div>	      	  
+				</div>
 						
-		<div id="documents" class="view">
-			<div id="docheader"></div>
-			<div id="doccrumbs"></div>
-			<div id="docdocs"></div>
-			<div id="docsubs"></div>
-			<div id="docfooter"></div>
-		</div>
-		<div id="looking" class="view"></div>
-		<div id="pages" class="view">Pages View</div>
-		<div id="people" class="view">People View</div>
-
-		<div id="map" class="view">
-		  <div class="map_image">
-              		<img id="static_map" src="assets/img/staticmap.png">
-		  </div>
-		  <p>This is where you are</p>
-		  <form id="settings_form">
-		   <table><tr>
-		    <td><fieldset>
-		      <legend>Map Type</legend>
-		      <input type="radio" name="map" value="roadmap" checked>Road Map<br/>
-		      <input type="radio" name="map" value="satellite">Satellite<br/>
-		      <input type="radio" name="map" value="terrain">Terrain<br/>
-		      <input type="radio" name="map" value="hybrid">Hybrid<br/>
-		    </fieldset></td>
-		    <td><fieldset>
-		      <legend>Zoom Level</legend>
-  		      <input type="radio" name="zoom" value="10">Super Far<br/>
-  		      <input type="radio" name="zoom" value="12">Far<br/>
-  		      <input type="radio" name="zoom" value="15" checked>Normal<br/>
-  		      <input type="radio" name="zoom" value="18">Close<br/>
-  		      <input type="radio" name="zoom" value="20">Super Close<br/>
-  		   </fieldset></td>
-  		 </table> 
-		      <button id="save_button">Save</button>
-	      	</form>
-	    </div>
-	    <div id="wrapper">
-		  <div id="content_header"></div>
-		  <div id="content"></div>
-		  <div id="content_footer">
-		  	<div class="app_button" id="welcome_button">Go Back</div>
-		  </div>
-		</div>
-	    
+				<div id="documents" class="view">
+					<div id="docheader"></div>
+					<div id="doccrumbs"></div>
+					<div id="docdocs"></div>
+					<div id="docsubs"></div>
+					<div id="docfooter"></div>
+				</div>
+			</div>
+			<div data-role="footer" class="footer-docs" data-theme="e">
+				<p>&copy; 2011-12 CityDocs - a division of BudgetBlogs LLC</p>
+	    	</div>
+		</div>		 
 	</body>
 </html>
