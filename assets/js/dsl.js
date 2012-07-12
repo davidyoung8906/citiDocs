@@ -74,6 +74,10 @@ var run = function(application) {
     	return s;
 }
 
+, makelist = function() {
+	
+}
+
 // display data in each section
 
 , docheader = function(listing) {
@@ -81,14 +85,17 @@ var run = function(application) {
 }
 
 , doccrumbs = function() {
-		$("#doccrumbs").html("<li data-role='list-divider'>Path</li>");
+		$("#doccrumbs").html(
+			"<ul data-role='listview' data-theme'b'>" 
+			+ "<li data-role='list-divider' data-theme='c'>Path</li>"
+		);
 		var crumbs = getcrumbs();
 		for (var i=0; i<crumbs.length; i++) {
 			var crumbbutton = "<li onclick='popcrumbs(" + (crumbs.length - i - 1) + ")'>"
 					+ crumbs[i] + "</li>";
-			$("#doccrumbs").bottom("" + crumbbutton);	
+			$("#doccrumbs").append("" + crumbbutton);	
 		};
-		$("#doccrumbs").bottom("");
+		$("#doccrumbs").bottom("</ul>");
 		$('#doccrumbs').listview('refresh');
 }
 
