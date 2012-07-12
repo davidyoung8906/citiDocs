@@ -81,7 +81,7 @@ var run = function(application) {
 }
 
 , doccrumbs = function() {
-		x$("#doccrumbs").html("<ul id='crumbs'><li data-role='list-divider'>Path</li>);
+		x$("#doccrumbs").html("<ul id='crumbs' data-role='listview' data-inset='true'><li data-role='list-divider'>Path</li>);
 		var crumbs = getcrumbs();
 		for (var i=0; i<crumbs.length; i++) {
 			var crumbbutton = "<li onclick='popcrumbs(" + (crumbs.length - i - 1) + ")'>"
