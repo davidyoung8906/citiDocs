@@ -93,7 +93,7 @@ var run = function(application) {
 						+ crumbs[i] + "</li>";
 			$("#doccrumbs").append("" + crumbbutton);	
 		};
-		$('#crumblist').listview('refresh');
+		$('#crumblist').trigger('create');
 }
 
 , popcrumbs = function(n) {
