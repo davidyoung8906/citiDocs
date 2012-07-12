@@ -80,7 +80,7 @@ var run = function(application) {
 		$("#crumblist").html("<li data-role='list-divider' data-theme='b'>Current Document Folder</li>");
 		var crumbs = getcrumbs();
 		for (var i=0; i<crumbs.length; i++) {
-			var crumbbutton = "<li onclick='popcrumbs(" 
+			var crumbbutton = "<li data-icon='arrow-u' onclick='popcrumbs(" 
 						+ (crumbs.length - i - 1) + ")'>"
 						+ crumbs[i] + "</li>";
 			$("#crumblist").append("" + crumbbutton);	
@@ -102,9 +102,7 @@ var run = function(application) {
 , pushcrumb = function(crumb) {
 	var crumbs = getcrumbs();
 	crumbs[crumbs.length] = crumb;
-//	x$("#welcome").bottom("pushing crumb" + crumb + crumbs);
 	store.save({key: "crumbs", crumbstore: crumbs});
-//	x$("#welcome").bottom("pushed crumb" + getcrumbs());
 }
 
 , docdocs = function(docs) {
@@ -129,11 +127,10 @@ var run = function(application) {
 , docsubs = function(subs) {  // subs is an array of subs like ["sub1", "sub2",...]
 		$("#subslist").html("<li data-role='list-divider' data-theme='b'>Search Folders</li>");
 		for (var i=0; i<subs.length; i++) {
-			var subbutton = "<li id='subbutton" + i + "'>"
+			var subbutton = "<li id='subbutton" + i + "' data-icon='forward'>"
 					+ subs[i] + "</li>";
 			$("#subslist").append(subbutton);
 		};
-//		$("#subslist").append("</span>");
 		for (var i=0; i<subs.length; i++) {
 			var ref = "#subbutton" + i;
 			var newfocus = subs[i];
@@ -143,15 +140,12 @@ var run = function(application) {
 }
 
 , resolvedown = function(newfocus) {
-//	x$("#welcome").bottom("resolve down!!:" + newfocus);
 	pushcrumb(newfocus);
 	resolve();
 }
 
 , resolve = function() {
-//	x$("#welcome").bottom("resolve: " + ne);
 	var crumbs = getcrumbs();
-//        x$("#welcome").bottom("resolve crumbs: " + crumbs);
 	var list = [getfilestore()];
 	var focus = "http://";
 	for (i=1; i<crumbs.length; i++) {
