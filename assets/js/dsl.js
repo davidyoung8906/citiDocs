@@ -85,17 +85,14 @@ var run = function(application) {
 }
 
 , doccrumbs = function() {
-		$("#doccrumbs").html(
-			"<ul id='crumblist' data-role='listview' data-theme'b'>" 
-			+ "<li data-role='list-divider' data-theme='c'>Path</li>"
-		);
+		$("#crumblist").html("<li data-role='list-divider' data-theme='c'>Path</li>");
 		var crumbs = getcrumbs();
 		for (var i=0; i<crumbs.length; i++) {
-			var crumbbutton = "<li onclick='popcrumbs(" + (crumbs.length - i - 1) + ")'>"
-					+ crumbs[i] + "</li>";
+			var crumbbutton = "<li onclick='popcrumbs(" 
+						+ (crumbs.length - i - 1) + ")'>"
+						+ crumbs[i] + "</li>";
 			$("#doccrumbs").append("" + crumbbutton);	
 		};
-		$("#doccrumbs").bottom("</ul>");
 		$('#crumblist').listview('refresh');
 }
 
