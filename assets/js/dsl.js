@@ -91,7 +91,7 @@ var run = function(application) {
 			var crumbbutton = "<li onclick='popcrumbs(" 
 						+ (crumbs.length - i - 1) + ")'>"
 						+ crumbs[i] + "</li>";
-			$("#doccrumbs").append("" + crumbbutton);	
+			$("#crumblist").append("" + crumbbutton);	
 		};
 //		$('#crumblist').trigger('create');
 }
