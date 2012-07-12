@@ -81,15 +81,15 @@ var run = function(application) {
 }
 
 , doccrumbs = function() {
-		x$("#doccrumbs").html("<ul id='crumbs' data-role='listview' data-inset='true'><li data-role='list-divider'>Path</li>");
+		$("#doccrumbs").html("<li data-role='list-divider'>Path</li>");
 		var crumbs = getcrumbs();
 		for (var i=0; i<crumbs.length; i++) {
 			var crumbbutton = "<li onclick='popcrumbs(" + (crumbs.length - i - 1) + ")'>"
 					+ crumbs[i] + "</li>";
-			x$("#doccrumbs").bottom("" + crumbbutton);	
+			$("#doccrumbs").bottom("" + crumbbutton);	
 		};
-		x$("#doccrumbs").bottom("</ul>");
-		$('#crumbs').listview('refresh');
+		$("#doccrumbs").bottom("");
+		$('#doccrumbs').listview('refresh');
 }
 
 , popcrumbs = function(n) {
