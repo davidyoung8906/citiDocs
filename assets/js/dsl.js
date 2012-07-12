@@ -16,19 +16,15 @@ var run = function(application) {
 
 , getcitylist = function(part) {
 	var listing = [];
-//	x$("#welcome").bottom("<p>get city with: " + part);
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
         else {x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json?chars=' + part,{
              		callback: function(){
-//             			x$("#welcome").bottom("<p>made it to after xhr callback ");
              			listing = eval("("+this.responseText+")");
-//             			x$("#welcome").bottom("<p>made it to after eval" + Object.keys(listing).length + "<p>");
              		}             		
         	});             	
         }; 
-//        x$("#welcome").bottom("<p>getcitylist =  " + listing);
         citylist(listing);
         return listing;
 }
@@ -52,13 +48,10 @@ var run = function(application) {
 	} 
         else {x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
              		callback: function(){
-//             			x$("#welcome").bottom("<p>made it to after xhr callback ");
              			listing = eval("("+this.responseText+")");
-//             			x$("#welcome").bottom("<p>made it to after eval" + Object.keys(listing).length + "<p>");
              		}             		
         	});             	
         }; 
-//        x$("#welcome").bottom("<p>in get file, listing =  " + Object.keys(listing).length);
         return listing;
 }
 
@@ -137,11 +130,11 @@ var run = function(application) {
 , docsubs = function(subs) {  // subs is an array of subs like ["sub1", "sub2",...]
 		$("#subslist").html("<li data-role='list-divider' data-theme='b'>Search Folders</li>");
 		for (var i=0; i<subs.length; i++) {
-			var subbutton = "<li><button id='subbutton" + i + "'>"
-					+ subs[i] + "</button></li>";
+			var subbutton = "<li id='subbutton" + i + "'>"
+					+ subs[i] + "</li>";
 			$("#subslist").append(subbutton);
 		};
-		$("#subslist").append("</span>");
+//		$("#subslist").append("</span>");
 		for (var i=0; i<subs.length; i++) {
 			var ref = "#subbutton" + i;
 			var newfocus = subs[i];
