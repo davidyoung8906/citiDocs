@@ -139,9 +139,9 @@ var run = function(application) {
 		for (var i=0; i<subs.length; i++) {
 			var subbutton = "<li><button id='subbutton" + i + "'>"
 					+ subs[i] + "</button></li>";
-			$("#docsubs").bottom(subbutton);
+			$("#subslist").append(subbutton);
 		};
-		$("#subslist").bottom("</span>");
+		$("#subslist").append("</span>");
 		for (var i=0; i<subs.length; i++) {
 			var ref = "#subbutton" + i;
 			var newfocus = subs[i];
