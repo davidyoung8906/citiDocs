@@ -135,19 +135,19 @@ var run = function(application) {
 }
 
 , docsubs = function(subs) {  // subs is an array of subs like ["sub1", "sub2",...]
-		x$("#docsubs").html("<span id='subs'>");
+		$("#subslist").html("<li data-role='list-divider' data-theme='c'>Search Folders</li>");
 		for (var i=0; i<subs.length; i++) {
 			var subbutton = "<li><button id='subbutton" + i + "'>"
 					+ subs[i] + "</button></li>";
-//			x$("#welcome").bottom("sub factory: " + i + " " + subs[i]);
-			x$("#docsubs").bottom(subbutton);
+			$("#docsubs").bottom(subbutton);
 		};
-		x$("#docsubs").bottom("</span>");
+		$("#subslist").bottom("</span>");
 		for (var i=0; i<subs.length; i++) {
 			var ref = "#subbutton" + i;
 			var newfocus = subs[i];
-			x$(ref).on('click', eval("(function() {resolvedown('" + newfocus + "')})")); 
-		}
+			$(ref).on('click', eval("(function() {resolvedown('" + newfocus + "')})")); 
+		};
+		$('#subslist').listview('refresh');
 }
 
 , resolvedown = function(newfocus) {
