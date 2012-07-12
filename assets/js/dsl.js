@@ -86,7 +86,7 @@ var run = function(application) {
 
 , doccrumbs = function() {
 		$("#doccrumbs").html(
-			"<ul data-role='listview' data-theme'b'>" 
+			"<ul id='crumblist' data-role='listview' data-theme'b'>" 
 			+ "<li data-role='list-divider' data-theme='c'>Path</li>"
 		);
 		var crumbs = getcrumbs();
@@ -96,7 +96,7 @@ var run = function(application) {
 			$("#doccrumbs").append("" + crumbbutton);	
 		};
 		$("#doccrumbs").bottom("</ul>");
-		$('#doccrumbs').listview('refresh');
+		$('#crumblist').listview('refresh');
 }
 
 , popcrumbs = function(n) {
