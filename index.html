@@ -23,43 +23,35 @@
 	</head>
 	<body class="ui-mobile-viewport">
 		<div data-role="page" class="type-interior ui-page ui-body-b" 
-			data-url="http://dev.budgetblogs.com:3000/page/pagelist.json"
 			tabindex="0"
 			style="min-height: 988px; ">
-			<div data-role="header" datatheme="a" class="ui-header ui-bar-b" role="baner">
+			<div id="title_bar" data-role="header" datatheme="b" class="ui-header ui-bar-b" role="banner">
 				<h1 class="ui-title" tabindex="0" role="heading" aria-level="1"></h1>
-				<div id="title_bar">
- 					<form id="city_form" >City<strong>Docs</strong>
- 						<input 	id="city_input"
- 								type="text" 
- 								name="city" 
- 								placeholder="Enter city and state"
- 								title="Enter a city and state 'PORTSMOUTH NH'"
- 								oninput="store.save({key:'city', value: this.value});citylist([]);"/>
-                        <datalist id="cities">
-                                        <option value="Portsmouth NH">
-                                        <option value="Dover NH">
-                                        <option value="Ashland OR">
-                        </datalist>
- 					</form>
- 					<div class="app_button" id="map_button">Location</div>
-					<div class="app_button" id="documents_button">Documents</div>
-					<div class="app_button" id="pages_button">Pages</div>
-					<div class="app_button" id="people_button">People</div>		
-				</div>
+ 				<form id="city_form" >City<strong>Docs</strong>
+ 					<input 	id="city_input"
+ 						type="text" 
+						name="city" 
+ 						placeholder="Enter city and state"
+ 						title="Enter a city and state 'PORTSMOUTH NH'"
+ 						oninput="store.save({key:'city', value: this.value});citylist([]);"/>
+                       			<datalist id="cities">
+                                       		<option value="Portsmouth NH">
+                                       		<option value="Dover NH">
+                                       		<option value="Ashland OR">
+                       			</datalist>
+ 				</form>
+				<div class="app_button" id="map_button">Location</div>
+				<div class="app_button" id="documents_button">Documents</div>
+				<div class="app_button" id="pages_button">Pages</div>
+				<div class="app_button" id="people_button">People</div>		
 			</div>
-			<div data-role="content" class="ui-content" role="main">
-				
-				
-				<div id="citylist"></div>
-
+			<div data-role="content" class="ui-content" role="main">	
 				<div id="welcome" class="view">
 		  			<div id="welcome_msg">
 		  				<p><h1>Welcome to CityDocs</h1>
 		  				<p><h2>Your source for city documents</h2>
 		  			</div>	      	  
-				</div>
-						
+				</div>				
 				<div id="documents">
 					<div id="docheader"></div>
 					<div data-role="listview" data-theme="b" id="doccrumbs"></div>
@@ -70,7 +62,7 @@
 			</div>
 			<div data-role="footer" data-position="fixed" data-theme="e">
 				<p>&copy; 2011-12 CityDocs - a division of BudgetBlogs LLC</p>
-	    	</div>
+	    		</div>
 		</div>		 
 	</body>
 </html>
