@@ -89,6 +89,7 @@ var run = function(application) {
 			x$("#doccrumbs").bottom("" + crumbbutton);	
 		};
 		x$("#doccrumbs").bottom("</ul>");
+		$('#crumbs').listview('refresh');
 }
 
 , popcrumbs = function(n) {
