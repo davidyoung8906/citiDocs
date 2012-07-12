@@ -85,7 +85,7 @@ var run = function(application) {
 }
 
 , doccrumbs = function() {
-		$("#crumblist").html("<li data-role='list-divider' data-theme='c'>Path</li>");
+		$("#crumblist").html("<li data-role='list-divider' data-theme='c'>Current Document Folder</li>");
 		var crumbs = getcrumbs();
 		for (var i=0; i<crumbs.length; i++) {
 			var crumbbutton = "<li onclick='popcrumbs(" 
@@ -93,7 +93,7 @@ var run = function(application) {
 						+ crumbs[i] + "</li>";
 			$("#doccrumbs").append("" + crumbbutton);	
 		};
-		$('#crumblist').trigger('create');
+//		$('#crumblist').trigger('create');
 }
 
 , popcrumbs = function(n) {
