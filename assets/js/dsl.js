@@ -80,7 +80,7 @@ var run = function(application) {
 		$("#crumblist").html("<li data-role='list-divider' data-theme='b'>Current Document Folder</li>");
 		var crumbs = getcrumbs();
 		for (var i=0; i<crumbs.length; i++) {
-			var crumbbutton = "<li data-icon='arrow-u' onclick='popcrumbs(" 
+			var crumbbutton = "<li data-theme='c' data-icon='arrow-u' onclick='popcrumbs(" 
 						+ (crumbs.length - i - 1) + ")'>"
 						+ crumbs[i] + "</li>";
 			$("#crumblist").append("" + crumbbutton);	
@@ -127,7 +127,7 @@ var run = function(application) {
 , docsubs = function(subs) {  // subs is an array of subs like ["sub1", "sub2",...]
 		$("#subslist").html("<li data-role='list-divider' data-theme='b'>Search Folders</li>");
 		for (var i=0; i<subs.length; i++) {
-			var subbutton = "<li id='subbutton" + i + "' data-icon='forward'>"
+			var subbutton = "<li id='subbutton" + i + "' data-icon='forward' data-theme='c'>"
 					+ subs[i] + "</li>";
 			$("#subslist").append(subbutton);
 		};
