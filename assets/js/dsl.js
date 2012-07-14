@@ -247,8 +247,9 @@ var run = function(application) {
 }
 
 , listings = function() {
+	$("#fulllist").append("<li>Made it here</li>");
 	var listing = getfilestore();
-	$("#home").append("Finished Filestore retrieve");
+	$("#fullist").append("<li>Finished Filestore retrieve<li>");
 //	var crumbs = getcrumbs();
 //    	displaylist(listing);
 }
