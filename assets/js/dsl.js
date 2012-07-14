@@ -248,7 +248,8 @@ var run = function(application) {
 
 , listings = function() {
 	var listing = getfilestore();
-	var crumbs = getcrumbs();
+	$("#home").append("Finished Filestore retrieve");
+//	var crumbs = getcrumbs();
 //    	displaylist(listing);
 }
 
