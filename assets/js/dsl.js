@@ -83,7 +83,7 @@ var run = function(application) {
 	store.get('response', function(saved) {
 		s=saved.value;
 	});
-	return s.replace(/{/g, '<li>').replace(/}/g,'</li>').replace(/:\[/g,'<ul>').replace(/\]/g,'</ul>').replace(/(\"|\,)/g,'');
+	return s.replace(/{/g, '<li>').replace(/}/g,'</li>').replace(/:\[/g,'<ul data-add-back-btn="true">').replace(/\]/g,'</ul>').replace(/(\"|\,)/g,'');
 	
 }
 
