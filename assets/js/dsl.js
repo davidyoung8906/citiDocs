@@ -78,10 +78,11 @@ var run = function(application) {
 }
 
 , makelist = function() {
-//	var r = store.get('response', function(saved) {
-//		s=saved.value;
-//	});
-	return store.get('response', function(saved) {return saved.value;}).replace('{', '<li>').replace('}','</li>').replace(':[','<ul>').replace(']','<ul>').replace('"','');
+	var s={};
+	store.get('response', function(saved) {
+		s=saved.value;
+	});
+	return s.replace('{', '<li>').replace('}','</li>').replace(':[','<ul>').replace(']','</ul>').replace('"','');
 	
 }
 
