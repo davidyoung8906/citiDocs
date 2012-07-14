@@ -139,8 +139,7 @@ var run = function(application) {
                                          + '"' + docpath + k + '"' + ")'>" + k 
                                          + "</td><td class='doctitle' onclick='window.open(" 
                                          + '"' + docpath + k + '"' + ")'>" + docs[i][k] 
-                                         + "</td></tr>";
-//			x$("#welcome").bottom("full path: " + docpath + k);	
+                                         + "</td></tr>";	
 		};
  	};
  	stuffing += "</table></div><p>";
@@ -205,7 +204,6 @@ var run = function(application) {
     		else {
     			var focus = "";
 			for (k in getfilestore()) {focus = k};
-//			x$("#welcome").bottom('getcrumbs focus: ' + focus);
     			crumblist = ["TOP", focus];
     			store.save({key: 'crumbs', crumbstore: crumblist});
     			

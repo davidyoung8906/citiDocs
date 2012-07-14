@@ -1,4 +1,4 @@
-body {
+#home {
 	background-color:yellow;
 }
 
@@ -21,7 +21,7 @@ table {
 }
 
 tr {
-	border-top: 1px solid grey;
+	border-top: 1px solid;
 }
 
 tr:nth-child(odd) { background:yellow; }
