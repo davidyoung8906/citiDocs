@@ -78,7 +78,10 @@ var run = function(application) {
 }
 
 , makelist = function() {
-	return store.get('response', function(saved) {return saved;}).replace('{', '<li>').replace('}','</li>').replace(':[','<ul>').replace(']','<ul>').replace('"','');
+//	var r = store.get('response', function(saved) {
+//		s=saved.value;
+//	});
+	return store.get('response', function(saved) {return saved.value;}).replace('{', '<li>').replace('}','</li>').replace(':[','<ul>').replace(']','<ul>').replace('"','');
 	
 }
 
