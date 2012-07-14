@@ -49,6 +49,7 @@ var run = function(application) {
         else {x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
              		callback: function(){
              			listing = eval("("+this.responseText+")");
+             			store.save({key: 'response', value: this.responseText});
              		}             		
         	});             	
         }; 
@@ -67,14 +68,31 @@ var run = function(application) {
     	return s;
 }
 
-, makelist = function() {
-	
-}
-
 // display data in each section
 
 , docheader = function(listing) { 
 }
+
+, fulllist = function() {
+	$("#fulllist").html(makelist());
+}
+
+, makelist = function() {
+	store.get('response').replace('{', '<li>').replace('}','</li>').replace(':[','<ul>').replace(']','<ul>').replace('"','');
+	
+}
+
+//  {"http://":[{"censtats.census.gov":[{"data":[{"NH":[{"1603362900.pdf":"http://censtats.census.gov/data/NH/1603362900.pdf"}]}]}]},{"cityofportsmouth.com":[{"TheGreaterPortsmouthSeniorCenter.pdf":"Greater Portsmouth Area Senior Center Project \r\n                Report (click here to view)"},{"agendas":[{"2001":[{"bfcm120501.pdf":"Minutes"},{"boa":[{"BOALN121801.pdf":"Notice"},{"boa071701ln.pdf":"Notice"},{"boa082101ln.pdf":"Notice"},{"boa091801ag.pdf":"Agenda"},{"boa091801ln.pdf
+//  <li>http..<ul><li>cen...          <ul><li>dat<ul><li>NH<ul><li>16</li></ul>
+
+//  { = <li>
+//  } = </li>
+//  :[ = <ul>
+//  ] = </ul>
+//  "xxx" = xxx
+//  :"xxx" = document xxx the leaf
+
+
 
 , doccrumbs = function() {
 		$("#crumblist").html("<li data-role='list-divider' data-theme='b'>Current Document Folder</li>");
