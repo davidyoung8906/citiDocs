@@ -7,7 +7,7 @@ run(function () {
     // immediately invoked on first run
     var init = (function () {
     	listings();
-        
+        fulllist();
         store.get('city', function(saved) {
     		if (saved) {if (saved.value) {x$('input#city_input').attr('placeholder', saved.value);};}    		
     	});
