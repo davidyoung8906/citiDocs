@@ -251,7 +251,7 @@ var run = function(application) {
 , listings = function() {
 	var listing = getfilestore();
 	var crumbs = getcrumbs();
-    	displaylist(listing);
+//    	displaylist(listing);
 }
 
 // shows id passed
