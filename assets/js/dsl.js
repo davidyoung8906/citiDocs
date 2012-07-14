@@ -75,6 +75,7 @@ var run = function(application) {
 
 , fulllist = function() {
 	$("#fulllist").html(makelist());
+	$("#fulllist").listview("refresh");
 }
 
 , makelist = function() {
@@ -82,7 +83,7 @@ var run = function(application) {
 	store.get('response', function(saved) {
 		s=saved.value;
 	});
-	return s.replace(/{/g, '<li>').replace(/}/g,'</li>').replace(/:\[/g,'<ul>').replace(/\]/g,'</ul>').replace(/\"/g,'');
+	return s.replace(/{/g, '<li>').replace(/}/g,'</li>').replace(/:\[/g,'<ul>').replace(/\]/g,'</ul>').replace(/(\"|\,)/g,'');
 	
 }
 
