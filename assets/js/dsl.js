@@ -58,6 +58,7 @@ var run = function(application) {
 
 , getfilestore = function() {
 	var s = {};
+	$("#fulllist").html("<li>Beginning of getfilestore</li>");
 	var stuff = store.get('list', function(saved) {
 				if (saved) {if (saved.value) {s=saved.value;};}
     				else {
@@ -65,6 +66,7 @@ var run = function(application) {
     					store.save({key: 'list', value: s});
     				}; 				
     	});
+    	$("#fulllist").html("<li>End of getfilestore</li>");
     	return s;
 }
 
@@ -247,7 +249,7 @@ var run = function(application) {
 }
 
 , listings = function() {
-	$("#fulllist").append("<li>Made it here</li>");
+	$("#fulllist").append("<li>Made it before getfilestore</li>");
 	var listing = getfilestore();
 	$("#fullist").append("<li>Finished Filestore retrieve<li>");
 //	var crumbs = getcrumbs();
