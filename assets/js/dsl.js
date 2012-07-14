@@ -74,7 +74,7 @@ var run = function(application) {
 }
 
 , fulllist = function() {
-	$("#fulllist").html(makelist());
+	$("#fulllist").html("<li>Made it here</li>");
 	$("#fulllist").listview("refresh");
 }
 
