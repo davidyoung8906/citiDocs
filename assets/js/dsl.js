@@ -82,7 +82,7 @@ var run = function(application) {
 	store.get('response', function(saved) {
 		s=saved.value;
 	});
-	return s.replace('{', '<li>').replace('}','</li>').replace(':[','<ul>').replace(']','</ul>').replace('"','');
+	return s.replace('{', '<li>').replace(/}/g,'</li>').replace(/:[/g,'<ul>').replace(/]/g,'</ul>').replace(/\"/,'');
 	
 }
 
