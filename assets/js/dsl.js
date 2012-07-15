@@ -80,7 +80,7 @@ var run = function(application) {
 , fulllist = function() {
 //	$("#fulllist").append("<li>Made it here</li>");
 //	$("#fulllist").listview("refresh");
-	$("#fulllist").append(makelist());
+	$("#fulllist").html(makelist());
 	$("#fulllist").listview("refresh");
 }
 
@@ -95,7 +95,7 @@ var run = function(application) {
 //	$("#fulllist").append("<li>end of makelist</li>");
 }
 
-//  {"http://":[{"censtats.census.gov":[{"data":[{"NH":[{"1603362900.pdf":"http://censtats.census.gov/data/NH/1603362900.pdf"}]}]}]},{"cityofportsmouth.com":[{"TheGreaterPortsmouthSeniorCenter.pdf":"Greater Portsmouth Area Senior Center Project \r\n                Report (click here to view)"},{"agendas":[{"2001":[{"bfcm120501.pdf":"Minutes"},{"boa":[{"BOALN121801.pdf":"Notice"},{"boa071701ln.pdf":"Notice"},{"boa082101ln.pdf":"Notice"},{"boa091801ag.pdf":"Agenda"},{"boa091801ln.pdf
+//  {"http://":[{"censta                Report (click here to view)"},{"agendas":[{"2001":[{"bfcm120501.pdf":"Minutes"},{"boa":[{"BOALN121801.pdf":"Notice"},{"boa071701ln.pdf":"Notice"},{"boa082101ln.pdf":"Notice"},{"boa091801ag.pdf":"Agenda"},{"boa091801ln.pdf
 //  <li>http..<ul><li>cen...          <ul><li>dat<ul><li>NH<ul><li>16</li></ul>
 
 //  { = <li>

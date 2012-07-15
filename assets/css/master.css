@@ -2,6 +2,10 @@
 	background-color:yellow;
 }
 
+.ui-content {
+	background-color:yellow;
+}
+
 .view {
   padding: 35px;
   display: none;
