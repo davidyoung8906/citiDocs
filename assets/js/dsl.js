@@ -91,7 +91,7 @@ var run = function(application) {
 		s=saved.value;
 	});
 	$("#fulllist").append("<li>got response</li>");
-	return s.replace(/{/g, '<li>').replace(/}/g,'</li>').replace(/:\[/g,'<ul data-role="listview" data-inset="true" data-theme="b">').replace(/\]/g,'</ul>').replace(/(\"|\,)/g,'');
+	return s.replace(/{/g, '<li>').replace(/}/g,'</li>').replace(/:\[/g,'<ul data-role="listview" data-add-back-btn="true" data-back-butn-text"head back" data-inset="true" data-theme="b">').replace(/\]/g,'</ul>').replace(/(\"|\,)/g,'');
 	$("#fulllist").append("<li>end of makelist</li>");
 }
 
