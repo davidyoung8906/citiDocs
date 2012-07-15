@@ -46,7 +46,7 @@ var run = function(application) {
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
-        else {x$('#documents').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
+        else {x$('#home').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
              		callback: function(){
              			listing = eval("("+this.responseText+")");
              			store.save({key: 'response', value: this.responseText});
