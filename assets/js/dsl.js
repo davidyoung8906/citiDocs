@@ -80,6 +80,8 @@ var run = function(application) {
 , fulllist = function() {
 	$("#fulllist").append("<li>Made it here</li>");
 	$("#fulllist").listview("refresh");
+	$("fulllist").append(makelist());
+	$("#fulllist").listview("refresh");
 }
 
 , makelist = function() {
