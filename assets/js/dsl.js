@@ -42,7 +42,7 @@ var run = function(application) {
 
 , getfile = function() {
 	var listing = {"initial":"value", "second":"another"};
-	$("#fulllist").append("<li>Beginning of getfile</li>");
+//	$("#fulllist").append("<li>Beginning of getfile</li>");
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
@@ -58,7 +58,7 @@ var run = function(application) {
 
 , getfilestore = function() {
 	var s = {};
-	$("#fulllist").append("<li>Beginning of getfilestore</li>");
+//	$("#fulllist").append("<li>Beginning of getfilestore</li>");
 	var stuff = store.get('list', function(saved) {
 				if (saved) {if (saved.value) {s=saved.value;};}
     				else {
@@ -78,20 +78,20 @@ var run = function(application) {
 }
 
 , fulllist = function() {
-	$("#fulllist").append("<li>Made it here</li>");
-	$("#fulllist").listview("refresh");
+//	$("#fulllist").append("<li>Made it here</li>");
+//	$("#fulllist").listview("refresh");
 	$("#fulllist").append(makelist());
 	$("#fulllist").listview("refresh");
 }
 
 , makelist = function() {
 	var s={};
-	$("#fulllist").append("<li>Start of makelist</li>");
+//	$("#fulllist").append("<li>Start of makelist</li>");
 	store.get('response', function(saved) {
 		s=saved.value;
 	});
 	$("#fulllist").append("<li>got response</li>");
-	return s.replace(/{/g, '<li>').replace(/}/g,'</li>').replace(/:\[/g,'<ul>').replace(/\]/g,'</ul>').replace(/(\"|\,)/g,'');
+	return s.replace(/{/g, '<li>').replace(/}/g,'</li>').replace(/:\[/g,'<ul data-role="listview" data-inset="true" data-theme="b">').replace(/\]/g,'</ul>').replace(/(\"|\,)/g,'');
 	$("#fulllist").append("<li>end of makelist</li>");
 }
 
