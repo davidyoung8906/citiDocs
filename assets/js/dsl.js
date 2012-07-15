@@ -42,7 +42,7 @@ var run = function(application) {
 
 , getfile = function() {
 	var listing = {"initial":"value", "second":"another"};
-	x$("#welcome").bottom("<p>Loading Data Complete");
+	$("#fulllist").append("<li>Beginning of getfile</li>");
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
@@ -58,15 +58,17 @@ var run = function(application) {
 
 , getfilestore = function() {
 	var s = {};
-	$("#fulllist").html("<li>Beginning of getfilestore</li>");
+	$("#fulllist").append("<li>Beginning of getfilestore</li>");
 	var stuff = store.get('list', function(saved) {
 				if (saved) {if (saved.value) {s=saved.value;};}
     				else {
+    					$("#fulllist").append("<li>in else before getfile</li>");
     					s = getfile();
+    					$("#fulllist").append("<li>in else after getfile</li>");
     					store.save({key: 'list', value: s});
     				}; 				
     	});
-    	$("#fulllist").html("<li>End of getfilestore</li>");
+    	$("#fulllist").append("<li>End of getfilestore</li>");
     	return s;
 }
 
@@ -76,7 +78,7 @@ var run = function(application) {
 }
 
 , fulllist = function() {
-	$("#fulllist").html("<li>Made it here</li>");
+	$("#fulllist").append("<li>Made it here</li>");
 	$("#fulllist").listview("refresh");
 }
 
