@@ -92,7 +92,7 @@ var run = function(application) {
 		s=saved.value;
 	});
 //	$("#fulllist").append("<li>got response</li>");
-	return s.replace(/{/g, '<li>').replace(/}/g,'</li>').replace(/(\"|\,)/g,'').replace(/:\[/g,'<ul data-role="listview" data-inset="true"><script>ulinput()</script>').replace(/\]/g,'</ul>');
+	return s.replace(/{/g, '<li>').replace(/}/g,'</li>').replace(/(\"|\,)/g,'').replace(/:\[/g,'<ul data-role="listview" data-inset="true">').replace(/\]/g,'</ul>');
 //	$("#fulllist").append("<li>end of makelist</li>");
 }
 
