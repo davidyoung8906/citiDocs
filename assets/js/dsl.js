@@ -83,7 +83,7 @@ var run = function(application) {
 	$("#fulllist").html(makelist());
 	$("#fulllist").listview("refresh");
 	ulinput();
-
+	$("#fulllist").listview("refresh");
 }
 
 , makelist = function() {
