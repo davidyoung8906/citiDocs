@@ -82,6 +82,7 @@ var run = function(application) {
 //	$("#fulllist").listview("refresh");
 	$("#fulllist").html(makelist());
 	$("#fulllist").listview("refresh");
+	ulinput();
 }
 
 , makelist = function() {
@@ -91,8 +92,12 @@ var run = function(application) {
 		s=saved.value;
 	});
 //	$("#fulllist").append("<li>got response</li>");
-	return s.replace(/{/g, '<li>').replace(/}/g,'</li>').replace(/(\"|\,)/g,'').replace(/:\[/g,'<ul data-role="listview" data-add-back-btn="true" data-back-btn-text="head back" data-inset="true" data-theme="b">').replace(/\]/g,'</ul>');
+	return s.replace(/{/g, '<li>').replace(/}/g,'</li>').replace(/(\"|\,)/g,'').replace(/:\[/g,'<ul data-role="listview" data-inset="true"><script>ulinput()</script>').replace(/\]/g,'</ul>');
 //	$("#fulllist").append("<li>end of makelist</li>");
+}
+
+, ulinput = function() {
+	$(".ui-header").css("color","red");
 }
 
 //  {"http://":[{"censta                Report (click here to view)"},{"agendas":[{"2001":[{"bfcm120501.pdf":"Minutes"},{"boa":[{"BOALN121801.pdf":"Notice"},{"boa071701ln.pdf":"Notice"},{"boa082101ln.pdf":"Notice"},{"boa091801ag.pdf":"Agenda"},{"boa091801ln.pdf
