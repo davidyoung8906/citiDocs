@@ -97,7 +97,7 @@ var run = function(application) {
 }
 
 , ulinput = function() {
-	$(".ui-header").attr("data-add-back-btn",'true').css("color","darkblue").append("<a data-role='button' href='#' data-icon='up' data-icon-text='Back it up, dude'");
+	$(".ui-header").each(this.append("<a data-role='button' href='#' data-icon='up' data-icon-text='Back it up, dude'/"));
 }
 
 //  {"http://":[{"censta                Report (click here to view)"},{"agendas":[{"2001":[{"bfcm120501.pdf":"Minutes"},{"boa":[{"BOALN121801.pdf":"Notice"},{"boa071701ln.pdf":"Notice"},{"boa082101ln.pdf":"Notice"},{"boa091801ag.pdf":"Agenda"},{"boa091801ln.pdf
