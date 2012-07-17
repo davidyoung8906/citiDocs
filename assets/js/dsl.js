@@ -99,7 +99,7 @@ var run = function(application) {
 
 , ulinput = function() {
 	$(".ui-header").each(function() { 
-		$(this).prepend('<a data-rel="back" data-icon="arrow-l">BACK</a>')
+		$(this).prepend('<a data-rel="back" data-icon="arrow-l">BACK</a>');
 	});
 }
 
