@@ -2,6 +2,10 @@
 	background-color:yellow;
 }
 
+.ui-page {
+    -webkit-backface-visibility: hidden;
+}
+
 .ui-content {
 	background-color:yellow;
 }
