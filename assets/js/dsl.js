@@ -99,7 +99,7 @@ var run = function(application) {
 		.replace(/(?:[\"\,])/g,'')
 		.replace(/\]/g,'</ul>')
 		.replace(/<li>((?:.(?!:))*.):(?!\[)((?:.(?!<))*.)/g, '<li data-theme="e"><a href="$1" >$2</a>')
-		.replace(/:\[/g,'<ul data-role="listview" data-inset="true">');
+		.replace(/:\[/g,'<ul data-role="listview" data-inset="true" data-add-back-btn="true">');
 //	$("#fulllist").append("<li>end of makelist</li>");
 }
 
