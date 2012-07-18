@@ -94,7 +94,7 @@ var run = function(application) {
 	});
 //	$("#fulllist").append("<li>got response</li>");
 	return s
-		.replace(/{/g, '<li>')
+		.replace(/{/g, '<li data-transition="slide">')
 		.replace(/}/g,'</li>')
 		.replace(/(\,)/g,'')
 		.replace(/\]/g,'</ul>')
