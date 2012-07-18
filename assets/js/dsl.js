@@ -82,18 +82,24 @@ var run = function(application) {
 //	$("#fulllist").listview("refresh");
 	$("#fulllist").html(makelist());
 	$("#fulllist").listview("refresh");
-	ulinput();
-	$("#fulllist").listview("refresh");
+//	ulinput();
+//	$("#fulllist").listview("refresh");
 }
 
 , makelist = function() {
 	var s={};
-//	$("#fulllist").append("<li>Start of makelist</li>");
+	$("#fulllist").append("<li>Start of makelist</li>");
 	store.get('response', function(saved) {
 		s=saved.value;
 	});
 //	$("#fulllist").append("<li>got response</li>");
-	return s.replace(/{/g, '<li>').replace(/}/g,'</li>').replace(/(\,)/g,'').replace(/\]/g,'</ul>').replace(/("(?:.(?!")*."):(?!\[)("(?:.(?!"))*.")/g, '<a href="$1" >$2</a>').replace(/:\[/g,'<ul data-role="listview" data-inset="true">');
+	return s
+		.replace(/{/g, '<li>')
+		.replace(/}/g,'</li>')
+		.replace(/(\,)/g,'')
+		.replace(/\]/g,'</ul>')
+		.replace(/("(?:.(?!")*."):(?!\[)("(?:.(?!"))*.")/g, '<a href="$1" >$2</a>')
+		.replace(/:\[/g,'<ul data-role="listview" data-inset="true">');
 //	$("#fulllist").append("<li>end of makelist</li>");
 }
 
