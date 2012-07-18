@@ -6,7 +6,7 @@ run(function () {
     
     // immediately invoked on first run
     var init = (function () {
-    	$(':jqmData(url^=MYPAGEID)').live('pagebeforecreate', function(event) {
+    	$(':jqmData(url^="#home")').live('pagebeforecreate', function(event) {
     		$(this).filter(':jqmData(url*=ui-page)').find(':jqmData(role=header)')
       			.prepend('<a href="#" data-rel="back" data-icon="back">Back</a>')
   	});
