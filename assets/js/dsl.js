@@ -93,7 +93,7 @@ var run = function(application) {
 		s=saved.value;
 	});
 //	$("#fulllist").append("<li>got response</li>");
-	return s.replace(/{/g, '<li>').replace(/}/g,'</li>').replace(/(\,)/g,'').replace(/:\[/g,'<ul data-role="listview" data-inset="true">').replace(/\]/g,'</ul>').replace(/<li>\"(.+)\":\"(.+)\"<\/li>/g, '<li><a href="$1" >$2</a></li>');
+	return s.replace(/{/g, '<li>').replace(/}/g,'</li>').replace(/(\,)/g,'').replace(/:\[/g,'<ul data-role="listview" data-inset="true">').replace(/\]/g,'</ul>').replace(/"(.(?!")*.":(?!\[)"(.(?!"))*."/g, '<li><a href="$1" >$2</a></li>');
 //	$("#fulllist").append("<li>end of makelist</li>");
 }
 
