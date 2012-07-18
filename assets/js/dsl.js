@@ -94,12 +94,12 @@ var run = function(application) {
 	});
 //	$("#fulllist").append("<li>got response</li>");
 	return s
-		.replace(/{/g, '<li data-transition="slide">')
+		.replace(/{/g, '<li>')
 		.replace(/}/g,'</li>')
-		.replace(/(\,)/g,'')
+		.replace(/(?:\"\,)/g,'')
 		.replace(/\]/g,'</ul>')
-		.replace(/("(?:.(?!"))*."):(?!\[)("(?:.(?!"))*.")/g, '<a href="$1" >$2</a>')
-		.replace(/:\[/g,'<ul data-role="listview" data-inset="true" data-transition="slide">');
+		.replace(/<li>((?:.(?!:)*.):(?!\[)((?:.(?!<))*.)/g, '<li data-theme="e"><a href="$1" >$2</a>')
+		.replace(/:\[/g,'<ul data-role="listview" data-inset="true">');
 //	$("#fulllist").append("<li>end of makelist</li>");
 }
 
