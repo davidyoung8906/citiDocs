@@ -94,11 +94,13 @@ var run = function(application) {
 		s=saved.value;
 	});
 //	$("#fulllist").append("<li>got response</li>");
+	var li='<li data-theme="e" >'
+		+ '<a href="$1" data-icon="star" data=iconpos="right" data-icon-text="favorite" >$2</a>'
 	return s
 		.replace(/{/g, '<li>')
 		.replace(/}/g,'</li>')
 		.replace(/\]/g,'</ul>')
-		.replace(/<li>"((?:.(?!"))*.)":(?!\[)"((?:.(?!"))*.)"/g, '<li data-theme="e" data-icon="star" data=iconpos="right" data-icon-text="favorite"><a href="$1" >$2</a>')
+		.replace(/<li>"((?:.(?!"))*.)":(?!\[)"((?:.(?!"))*.)"/g, li)
 		.replace(/:\[/g,'<ul data-role="listview" data-inset="true" data-add-back-btn="true">')
 		.replace(/(?:[\"\,])/g,'')
 		.replace(/http:\/\//, 'Top Document Folder');
