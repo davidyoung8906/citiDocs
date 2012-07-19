@@ -85,8 +85,8 @@ var run = function(application) {
 //	$("#fulllist").append("<li>Made it here</li>");
 //	$("#fulllist").listview("refresh");
 //	$.mobile.loading( 'show', { theme: "b", text: "Making Lists"});
-	$("#fulllist").html(makelist());
-	$("#fulllist").listview("refresh");
+//	$("#fulllist").html(makelist());
+//	$("#fulllist").listview("refresh");
 //	$(".ui-header").css({"position":"fixed","width":"100%","z-index":"9999"})
 //	ulinput();
 //	$("#fulllist").listview("refresh");
