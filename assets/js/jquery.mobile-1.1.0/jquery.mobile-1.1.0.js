@@ -1278,7 +1278,7 @@ $.widget( "mobile.widget", {
 		minScrollBack: 250,
 
 		// DEPRECATED: the following property is no longer in use, but defined until 2.0 to prevent conflicts
-		touchOverflowEnabled: false,
+		touchOverflowEnabled: true,
 
 		// Set default dialog transition - 'none' for no transitions
 		defaultDialogTransition: "pop",
