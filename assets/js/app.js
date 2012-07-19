@@ -12,6 +12,7 @@ run(function () {
       			.prepend('<a href="#" data-rel="back" data-icon="back">Back</a>')
       			.attr('data-position','fixed')
   	});
+  	$.mobile.loading( 'show');
     	listings();
         fulllist();
         store.get('city', function(saved) {
