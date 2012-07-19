@@ -2243,7 +2243,7 @@ var createHandler = function( sequential ){
 				$to.addClass( $.mobile.activePageClass );				
 			
 				// Send focus to page as it is now display: block
-				$.mobile.focusPage( $to );
+//				$.mobile.focusPage( $to );
 
 				// Set to page height
 				$to.height( screenHeight + toScroll );
