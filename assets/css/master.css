@@ -7,6 +7,10 @@
 	-webkit-perspective: 800;
 }
 
+.ui-mobile, .ui-mobile .ui-page, .ui-mobile [data-role="page"], .ui-mobile [data-role="dialog"], .ui-page, .ui-mobile .ui-page-active {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+}
 
 /*.slide.in {
 	    -webkit-transform: translateX(0);
