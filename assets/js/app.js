@@ -11,6 +11,7 @@ run(function () {
     			.prepend('<a href="#home" data-icon="home" data-iconpos="right">Home</a>')
       			.prepend('<a href="#" data-rel="back" data-icon="back">Back</a>')
       			.attr('data-position','fixed')
+      			.attr('data-translation','slide')
   	});
  // 	$.mobile.loading( 'show', { theme: "b", text: "Loading Data Files" });
     	listings();
