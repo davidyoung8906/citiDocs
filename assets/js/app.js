@@ -8,8 +8,10 @@ run(function () {
     var init = (function () {
     	$(':jqmData(url^="home")').live('pagebeforecreate', function(event) {
     		$(this).filter(':jqmData(url*=ui-page)').find(':jqmData(role=header)')
+    			.prepend('<a href="#home" data-icon="gear" data-iconpos="right">Home</a>')
     			.prepend('<a href="#home" data-icon="home" data-iconpos="right">Home</a>')
       			.prepend('<a href="#" data-rel="back" data-icon="back">Back</a>')
+      			.attr('data-position','fixed')
   	});
     	listings();
         fulllist();
