@@ -1,19 +1,19 @@
-#home {
+/*#home {
 	background-color:yellow;
-}
+} */
 
 .ui-page {
     -webkit-backface-visibility: hidden;
-    background-color:yellow;
+/*    background-color:yellow; */
 }
 
-.ui-mobile, .ui-mobile-viewport {
+/*.ui-mobile, .ui-mobile-viewport {
 	background-color:yellow;
 }
 
 .ui-content {
 	background-color:yellow;
-}
+} */
 
 .view {
   padding: 35px;
