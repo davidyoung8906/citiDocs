@@ -283,7 +283,7 @@ var run = function(application) {
 	var listing = getfilestore();
 //	$("#fullist").append("<li>Finished Filestore retrieve<li>");
 //	var crumbs = getcrumbs();
-//    	displaylist(listing);
+    	displaylist(listing);
 }
 
 // shows id passed
