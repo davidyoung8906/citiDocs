@@ -2,21 +2,9 @@
 	background-color:yellow;
 } */
 
-.ui-page {
-    -webkit-backface-visibility: hidden;
- /*   -webkit-transition: all 3s ease-in-out;
-    -moz-transition: all 3s ease-in-out;
-    -o-transition: all 3s ease-in-out;
-    transition: all 3s ease-in-out;
-    background-color:yellow; */
-}
 
-.ui-mobile-viewport-transitioning,
-.ui-mobile-viewport-transitioning .ui-page {
-    overflow: visible;
-}
 
-/*.slide.in {
+.slide.in {
 	    -webkit-transform: translateX(0);
 	    -webkit-animation-name: slideinfromright;
 	}
@@ -55,7 +43,7 @@
 		    to { -webkit-transform: translateX(100%); }
 		}
 		
-*/
+
 /*
 div.ui-header {
 position:fixed;
