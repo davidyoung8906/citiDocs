@@ -110,7 +110,7 @@ var run = function(application) {
 		.replace(/:\[/g,'<ul data-role="listview" data-inset="true">')
 		.replace(/(?:[\"\,])/g,'')
 		.replace(/http:\/\//, 'Top Document Folder')
-		.replace(/<li>/,'<li data-transition="pop">');
+		.replace(/<li>/,'<li><a data-transition="slide"/>');
 //	$("#fulllist").append("<li>end of makelist</li>");
 }
 
