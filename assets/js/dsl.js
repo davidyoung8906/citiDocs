@@ -82,7 +82,7 @@ var run = function(application) {
 //	$("#fulllist").listview("refresh");
 	$("#fulllist").html(makelist());
 	$("#fulllist").listview("refresh");
-	$(".ui-header").css({"position":"fixed","width":"100%"})
+	$(".ui-header").css({"position":"fixed","width":"100%","z-index":"9999"})
 //	ulinput();
 //	$("#fulllist").listview("refresh");
 }
