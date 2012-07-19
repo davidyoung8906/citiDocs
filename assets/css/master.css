@@ -1,10 +1,14 @@
 /*#home {
 	background-color:yellow;
 } */
+.ui-page {
+	-webkit-transform-style: flat;
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 800;
+}
 
 
-
-/*.slide.in {
+.slide.in {
 	    -webkit-transform: translateX(0);
 	    -webkit-animation-name: slideinfromright;
 	}
@@ -42,7 +46,7 @@
 		    from { -webkit-transform: translateX(0); }
 		    to { -webkit-transform: translateX(100%); }
 		}
-*/		
+		
 
 /*
 div.ui-header {
