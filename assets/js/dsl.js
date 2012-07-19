@@ -101,7 +101,7 @@ var run = function(application) {
 	});
 //	$("#fulllist").append("<li>got response</li>");
 	var li='<li data-theme="e" >'
-		+ '<a href="$1" data-icon="star" data-iconpos="left" data-icon-text="favorite" >Favorite</a>'
+		+ '<a href="$1" data-icon="star" data-iconpos="left" data-icon-text="favorite" ></a>'
 		+ '<a href="$1">$2</a>';
 	return s
 		.replace(/{/g, '<li>')
