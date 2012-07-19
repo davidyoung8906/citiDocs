@@ -3,11 +3,11 @@
 } */
 
 .ui-page {
-    -webkit-backface-visibility: hidden;
-    -webkit-transition: all .8s ease-in-out;
-    -moz-transition: all .8s ease-in-out;
-    -o-transition: all .8s ease-in-out;
-    transition: all .8s ease-in-out;
+/*    -webkit-backface-visibility: hidden;*/
+    -webkit-transition: all 3s ease-in-out;
+    -moz-transition: all 3s ease-in-out;
+    -o-transition: all 3s ease-in-out;
+    transition: all 3s ease-in-out;
 /*    background-color:yellow; */
 }
 
