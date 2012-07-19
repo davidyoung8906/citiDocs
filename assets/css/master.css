@@ -4,6 +4,11 @@
 
 .ui-page {
     -webkit-backface-visibility: hidden;
+    background-color:yellow;
+}
+
+.ui-mobile, ui-mobile-viewport {
+	background-color:yellow;
 }
 
 .ui-content {
