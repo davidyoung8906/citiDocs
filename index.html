@@ -6,6 +6,17 @@
 		<link rel="stylesheet"  href="assets/js/jquery.mobile-1.1.0/jquery.mobile-1.1.0.css" />
 		<link rel="stylesheet" href="assets/css/master.css" type="text/css" media="screen" />
 		<script src="assets/js/jquery.mobile-1.1.0/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript">
+        		$(document).one("mobileinit", function () {
+ 
+            		// Setting #container div as a jqm pageContainer
+            		$.mobile.pageContainer = $('#container');
+ 
+            		// Setting default page transition to slide
+            		$.mobile.defaultPageTransition = 'slide';
+ 
+        		});
+    		</script>
 		<script src="assets/js/jquery.mobile-1.1.0/jquery.mobile-1.1.0.js"></script>
 		<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
 		
@@ -22,7 +33,7 @@
 		<script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body class="ui-mobile-viewport">
-		
+		<div id="container">	
 		<div id="home" data-role="page" 
 			class="type-interior ui-page ui-body-b" 
 			tabindex="0"
@@ -93,7 +104,8 @@
 			</div>
 			<div class="ui-bar" data-role="footer" data-position="fixed" data-theme="a">
 				<p>&copy; 2012 CityDocs - a Division of BudgetBlogs LLC</p>
-	    	</div>
-		</div>		 
+	    		</div>
+		</div>
+		</div>
 	</body>
 </html>
