@@ -103,7 +103,7 @@ var run = function(application) {
 	var li='<li data-theme="e" >'
 		+ '<a href="$1">$2</a>';
 	return s
-		.replace(/{/g, '<li>')
+		.replace(/{/g,'<li>')
 		.replace(/}/g,'</li>')
 		.replace(/\]/g,'</ul>')
 		.replace(/<li>"((?:.(?!"))*.)":(?!\[)"((?:.(?!"))*.)"/g, li)
