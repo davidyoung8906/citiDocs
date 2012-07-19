@@ -103,10 +103,10 @@ var run = function(application) {
 	var li='<li data-theme="e" >'
 		+ '<a href="$1">$2</a>';
 	return s
-		.replace(/{/g, '<li>')
+		.replace(/{/g, '<li><a data-transition="slide"/>')
 		.replace(/}/g,'</li>')
 		.replace(/\]/g,'</ul>')
-		.replace(/<li>"((?:.(?!"))*.)":(?!\[)"((?:.(?!"))*.)"/g, li)
+		.replace(/<li><a data-transition="slide"\/>"((?:.(?!"))*.)":(?!\[)"((?:.(?!"))*.)"/g, li)
 		.replace(/:\[/g,'<ul data-role="listview" data-inset="true" data-add-back-btn="true" data-transition="slide">')
 		.replace(/(?:[\"\,])/g,'')
 		.replace(/http:\/\//, 'Top Document Folder');
