@@ -107,7 +107,7 @@ var run = function(application) {
 		.replace(/}/g,'</li>')
 		.replace(/\]/g,'</ul>')
 		.replace(/<li><a data-transition="slide"\/>"((?:.(?!"))*.)":(?!\[)"((?:.(?!"))*.)"/g, li)
-		.replace(/:\[/g,'<ul data-role="listview" data-inset="true" data-add-back-btn="true" data-transition="slide">')
+		.replace(/:\[/g,'<ul data-role="listview" data-inset="true" data-add-back-btn="true"')
 		.replace(/(?:[\"\,])/g,'')
 		.replace(/http:\/\//, 'Top Document Folder');
 //	$("#fulllist").append("<li>end of makelist</li>");
