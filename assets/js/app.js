@@ -10,7 +10,7 @@ run(function () {
     		$(this).filter(':jqmData(url*=ui-page)').find(':jqmData(role=header)')
     			.prepend('<a href="#home" data-icon="home" data-iconpos="right">Home</a>')
       			.prepend('<a href="#" data-rel="back" data-icon="back">Back</a>')
-      			.attr('data-position','fixed')
+//      			.attr('data-position','fixed')
   	});
  // 	$.mobile.loading( 'show', { theme: "b", text: "Loading Data Files" });
     	listings();
