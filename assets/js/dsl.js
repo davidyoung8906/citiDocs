@@ -98,7 +98,7 @@ var run = function(application) {
 		.replace(/{/g, '<li>')
 		.replace(/}/g,'</li>')
 		.replace(/\]/g,'</ul>')
-		.replace(/<li>"((?:.(?!"))*.)":(?!\[)"((?:.(?!"))*.)"/g, '<li data-theme="e"><a href="$1" >$2</a>')
+		.replace(/<li>"((?:.(?!"))*.)":(?!\[)"((?:.(?!"))*.)"/g, '<li data-theme="e" data-icon="star" data=iconpos="right" data-icon-text="favorite"><a href="$1" >$2</a>')
 		.replace(/:\[/g,'<ul data-role="listview" data-inset="true" data-add-back-btn="true">')
 		.replace(/(?:[\"\,])/g,'')
 		.replace(/http:\/\//, 'Top Document Folder');
