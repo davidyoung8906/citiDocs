@@ -3401,7 +3401,7 @@ $.mobile.transitionFallbacks = {};
 				// despite visibility: hidden addresses issue #2965
 				// https://github.com/jquery/jquery-mobile/issues/2965
 				if( !alreadyFocused ){
-					$.mobile.focusPage( toPage );
+//					$.mobile.focusPage( toPage );
 				}
 
 				releasePageTransitionLock();
