@@ -109,8 +109,7 @@ var run = function(application) {
 		.replace(/<li>"((?:.(?!"))*.)":(?!\[)"((?:.(?!"))*.)"/g, li)
 		.replace(/:\[/g,'<ul data-role="listview" data-inset="true">')
 		.replace(/(?:[\"\,])/g,'')
-		.replace(/http:\/\//, 'Top Document Folder')
-		.replace(/<li>/,'<li><a data-transition="slide"/>');
+		.replace(/http:\/\//, 'Top Document Folder');
 //	$("#fulllist").append("<li>end of makelist</li>");
 }
 
