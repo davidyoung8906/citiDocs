@@ -41,6 +41,7 @@ var run = function(application) {
 }
 
 , getfile = function() {
+	
 	var listing = {"initial":"value", "second":"another"};
 //	$("#fulllist").append("<li>Beginning of getfile</li>");
 	if (navigator.network.connection.type == Connection.NONE) {
@@ -53,11 +54,13 @@ var run = function(application) {
              		}             		
         	});             	
         }; 
+        
         return listing;
 }
 
 , getfilestore = function() {
 	var s = {};
+	$.mobile.loading( 'show', { theme: "b", text: "Loading Data Files" });
 //	$("#fulllist").append("<li>Beginning of getfilestore</li>");
 	var stuff = store.get('list', function(saved) {
 				if (saved) {if (saved.value) {s=saved.value;};}
@@ -68,6 +71,7 @@ var run = function(application) {
     					store.save({key: 'list', value: s});
     				}; 				
     	});
+    	$.mobile.loading( 'hide');
 //    	$("#fulllist").append("<li>End of getfilestore</li>");
     	return s;
 }
@@ -80,11 +84,13 @@ var run = function(application) {
 , fulllist = function() {
 //	$("#fulllist").append("<li>Made it here</li>");
 //	$("#fulllist").listview("refresh");
+	$.mobile.loading( 'show', { theme: "b", text: "Making Lists"});
 	$("#fulllist").html(makelist());
 	$("#fulllist").listview("refresh");
 //	$(".ui-header").css({"position":"fixed","width":"100%","z-index":"9999"})
 //	ulinput();
 //	$("#fulllist").listview("refresh");
+	$.mobile.loading( 'hide');
 }
 
 , makelist = function() {
