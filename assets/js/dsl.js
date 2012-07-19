@@ -95,13 +95,12 @@ var run = function(application) {
 
 , makelist = function() {
 	var s={};
-	$("#fulllist").append("<li>Start of makelist</li>");
+//	$("#fulllist").append("<li>Start of makelist</li>");
 	store.get('response', function(saved) {
 		s=saved.value;
 	});
 //	$("#fulllist").append("<li>got response</li>");
 	var li='<li data-theme="e" >'
-		+ '<a href="$1" data-icon="star" data-iconpos="left" data-icon-text="favorite" ></a>'
 		+ '<a href="$1">$2</a>';
 	return s
 		.replace(/{/g, '<li>')
