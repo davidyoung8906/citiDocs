@@ -4,7 +4,7 @@
 
 
 
-.slide.in {
+/*.slide.in {
 	    -webkit-transform: translateX(0);
 	    -webkit-animation-name: slideinfromright;
 	}
@@ -42,7 +42,7 @@
 		    from { -webkit-transform: translateX(0); }
 		    to { -webkit-transform: translateX(100%); }
 		}
-		
+*/		
 
 /*
 div.ui-header {
