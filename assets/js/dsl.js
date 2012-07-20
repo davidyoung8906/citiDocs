@@ -135,7 +135,7 @@ var run = function(application) {
 		$("#crumblist").html("<li data-role='list-divider' data-theme='e'>Current Document Folder: ");
 		var crumbs = getcrumbs();
 		for (var i=0; i<crumbs.length; i++) {
-			var crumbbutton = "<a class='ui-aside' onclick='popcrumbs(" 
+			var crumbbutton = "<a class='ui-aside' data-inline='true' onclick='popcrumbs(" 
 						+ (crumbs.length - i - 1) + ")'>"
 						+ crumbs[i] + "/</a>";
 			$("#crumblist").append("" + crumbbutton);	
