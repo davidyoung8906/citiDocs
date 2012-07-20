@@ -134,12 +134,13 @@ var run = function(application) {
 , doccrumbs = function() {
 //		$("#crumblist").html("<li data-role='list-divider' data-theme='e'>");
 		var crumbs = getcrumbs();
+		var crumbbutton = ";"
 		for (var i=0; i<crumbs.length; i++) {
-			var crumbbutton = "<li onclick='popcrumbs(" 
-						+ (crumbs.length - i - 1) + ")'>"
-						+ crumbs[i] + "/</li>";
-			$("#crumblist").append("" + crumbbutton);	
+			crumbbutton += "<li onclick='popcrumbs(" 
+					+ (crumbs.length - i - 1) + ")'>"
+					+ crumbs[i] + "/</li>";
 		};
+		$("#crumblist").html("" + crumbbutton);	
 //		$("#crumblist").append("</li>");
 		$('#crumblist').listview('refresh');
 }
