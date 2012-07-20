@@ -135,9 +135,9 @@ var run = function(application) {
 		$("#crumblist").html("<li data-role='list-divider' data-theme='b'>Current Document Folder: ");
 		var crumbs = getcrumbs();
 		for (var i=0; i<crumbs.length; i++) {
-			var crumbbutton = "<button data-theme='c' data-icon='arrow-u' onclick='popcrumbs(" 
+			var crumbbutton = "<a data-theme='c' data-icon='arrow-u' onclick='popcrumbs(" 
 						+ (crumbs.length - i - 1) + ")'>"
-						+ crumbs[i] + "/</button>";
+						+ crumbs[i] + "/</a>";
 			$("#crumblist").append("" + crumbbutton + "</li>");	
 		};
 		$('#crumblist').listview('refresh');
