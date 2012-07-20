@@ -65,9 +65,9 @@ var run = function(application) {
 	var stuff = store.get('list', function(saved) {
 				if (saved) {if (saved.value) {s=saved.value;};}
     				else {
-    					$("#fulllist").append("<li>in else before getfile</li>");
+//    					$("#fulllist").append("<li>in else before getfile</li>");
     					s = getfile();
-    					$("#fulllist").append("<li>in else after getfile</li>");
+ //   					$("#fulllist").append("<li>in else after getfile</li>");
     					store.save({key: 'list', value: s});
     				}; 				
     	});
