@@ -142,7 +142,7 @@ var run = function(application) {
 		};
 		$("#crumblist").html("" + crumbbutton + "</ul>");	
 //		$("#crumblist").append("</li>");
-		$('#crumblist').listview('refresh');
+//		$('#crumblist').listview('refresh');
 }
 
 , popcrumbs = function(n) {
