@@ -132,15 +132,15 @@ var run = function(application) {
 
 
 , doccrumbs = function() {
-		$("#crumblist").html("<li data-role='list-divider' data-theme='e'>");
+//		$("#crumblist").html("<li data-role='list-divider' data-theme='e'>");
 		var crumbs = getcrumbs();
 		for (var i=0; i<crumbs.length; i++) {
-			var crumbbutton = "<a class='ui-aside' data-inline='true' onclick='popcrumbs(" 
+			var crumbbutton = "<li onclick='popcrumbs(" 
 						+ (crumbs.length - i - 1) + ")'>"
-						+ crumbs[i] + "/</a>";
+						+ crumbs[i] + "/</li>";
 			$("#crumblist").append("" + crumbbutton);	
 		};
-		$("#crumblist").append("</li>");
+//		$("#crumblist").append("</li>");
 		$('#crumblist').listview('refresh');
 }
 
