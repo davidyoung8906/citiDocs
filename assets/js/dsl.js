@@ -138,7 +138,7 @@ var run = function(application) {
 			var crumbbutton = "<a class='ui-aside' data-theme='e' onclick='popcrumbs(" 
 						+ (crumbs.length - i - 1) + ")'>"
 						+ crumbs[i] + "/</a>";
-			$("#crumblist").append("" + crumbbutton + "</li>");	
+			$("#crumblist").append("" + crumbbutton);	
 		};
 		$("#crumblist").append("</li>");
 		$('#crumblist').listview('refresh');
