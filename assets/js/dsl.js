@@ -132,10 +132,10 @@ var run = function(application) {
 
 
 , doccrumbs = function() {
-		$("#crumblist").html("<li data-role='list-divider' data-theme='b'>Current Document Folder: ");
+		$("#crumblist").html("<li data-role='list-divider' data-theme='e'>Current Document Folder: ");
 		var crumbs = getcrumbs();
 		for (var i=0; i<crumbs.length; i++) {
-			var crumbbutton = "<a class='ui-aside' data-theme='e' onclick='popcrumbs(" 
+			var crumbbutton = "<a class='ui-aside' onclick='popcrumbs(" 
 						+ (crumbs.length - i - 1) + ")'>"
 						+ crumbs[i] + "/</a>";
 			$("#crumblist").append("" + crumbbutton);	
@@ -277,6 +277,8 @@ var run = function(application) {
 	docdocs(getdocs(listing));
 	docsubs(getsubs(listing));
 	docfooter(listing);
+    	$("#crumblist").listview("refresh");
+    	$("#subslist").listview("refresh");
 }
 
 , listings = function() {
@@ -285,8 +287,6 @@ var run = function(application) {
 //	$("#fullist").append("<li>Finished Filestore retrieve<li>");
 //	var crumbs = getcrumbs();
     	displaylist(listing);
-    	$("#crumblist").listview("refresh");
-    	$("#subslist").listview("refresh");
 }
 
 // shows id passed
