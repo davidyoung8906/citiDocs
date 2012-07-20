@@ -284,8 +284,8 @@ var run = function(application) {
 //	$("#fullist").append("<li>Finished Filestore retrieve<li>");
 //	var crumbs = getcrumbs();
     	displaylist(listing);
-    	$("#crumblist").viewlist("refresh");
-    	$("#subslist").viewlist("refresh");
+    	$("#crumblist").listview("refresh");
+    	$("#subslist").listview("refresh");
 }
 
 // shows id passed
