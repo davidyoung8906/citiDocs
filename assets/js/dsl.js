@@ -134,7 +134,7 @@ var run = function(application) {
 , doccrumbs = function() {
 //		$("#crumblist").html("<li data-role='list-divider' data-theme='e'>");
 		var crumbs = getcrumbs();
-		var crumbbutton = "<div class='nav' data-role='navbar'><ul>";
+		var crumbbutton = "<div class='nav' data-role='navbar' data-theme='a'><ul>";
 		for (var i=0; i<crumbs.length; i++) {
 			crumbbutton += "<li onclick='popcrumbs(" 
 					+ (crumbs.length - i - 1) + ")'>"
