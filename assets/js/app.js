@@ -6,12 +6,12 @@ run(function () {
     
     // immediately invoked on first run
     var init = (function () {
-   	$(':jqmData(url^="home")').live('pagebeforecreate', function(event) {
-    		$(this).filter(':jqmData(url*=ui-page)').find(':jqmData(role=header)')
-    			.prepend('<a href="#home" data-icon="home" data-iconpos="right">Home</a>')
-      			.prepend('<a href="#" data-rel="back" data-icon="back">Back</a>')
-      			.attr('data-position','fixed')
-  	});
+ //  	$(':jqmData(url^="home")').live('pagebeforecreate', function(event) {
+//    		$(this).filter(':jqmData(url*=ui-page)').find(':jqmData(role=header)')
+//    			.prepend('<a href="#home" data-icon="home" data-iconpos="right">Home</a>')
+//      			.prepend('<a href="#" data-rel="back" data-icon="back">Back</a>')
+//      			.attr('data-position','fixed')
+//  	});
  // 	$.mobile.loading( 'show', { theme: "b", text: "Loading Data Files" });
     	listings();
         fulllist();
