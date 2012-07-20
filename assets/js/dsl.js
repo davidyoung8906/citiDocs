@@ -192,7 +192,7 @@ var run = function(application) {
 			var newfocus = subs[i];
 			$(ref).on('click', eval("(function() {resolvedown('" + newfocus + "')})")); 
 		};
-//		$('#subslist').listview('refresh');
+		$('#subslist').listview('refresh');
 }
 
 , resolvedown = function(newfocus) {
