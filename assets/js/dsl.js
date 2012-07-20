@@ -140,6 +140,7 @@ var run = function(application) {
 						+ crumbs[i] + "/</a>";
 			$("#crumblist").append("" + crumbbutton + "</li>");	
 		};
+		$("#crumblist").append("</li>");
 		$('#crumblist').listview('refresh');
 }
 
