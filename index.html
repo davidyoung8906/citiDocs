@@ -15,7 +15,7 @@
                         $.mobile.touchOverflowEnabled = true;
  
             		// Setting default page transition to slide
-            		$.mobile.defaultPageTransition = 'slide';
+            		$.mobile.defaultPageTransition = 'fade';
  
         		});
     		</script>
@@ -54,7 +54,14 @@
  				<h1 role="heading">Welcome to CityDocs</h1>
  				<p>Select a city and state (i.e. Portsmouth NH)</p>
  			<div data-role="content" class="ui-content" role="main">
- 				
+ 				<form id="city_form">
+ 					<input 	id="city_input"
+ 						type="text" 
+						name="city" 
+ 						placeholder="Enter city and state"
+ 						title="Enter a city and state 'PORTSMOUTH NH'"
+ 						oninput="store.save({key:'city', value: this.value});citylist([]);"/>
+ 				</form>	
  			</div>
  			
  			<div data-role="footer" data-position="fixed" data-theme="a">
@@ -71,20 +78,12 @@
 				datatheme="b" 
 				class="ui-header ui-bar-b" 
 				data-position="fixed"
-                                
 				role="banner">
 				
 				<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">
 					City<strong>Docs</strong> - Document Handler			
 				</h1>
- 				<form id="city_form">
- 					<input 	id="city_input"
- 						type="text" 
-						name="city" 
- 						placeholder="Enter city and state"
- 						title="Enter a city and state 'PORTSMOUTH NH'"
- 						oninput="store.save({key:'city', value: this.value});citylist([]);"/>
- 				</form>		
+ 						
 			</div>
 		<div data-role="content" class="ui-content" role="main">
 			<div id="crumblist">
