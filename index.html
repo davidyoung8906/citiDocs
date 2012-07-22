@@ -36,6 +36,7 @@
 	</head>
 	<body class="ui-mobile-viewport">
 <!--		<div id="container">	-->
+		
 		<div id="home" data-role="page"
 			class="type-interior ui-page ui-body-b" 
 			tabindex="0"
@@ -50,9 +51,12 @@
 				<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">
 					City<strong>Docs</strong> - Document Handler			
 				</h1>
+				<a href="#documents" data-role="button" data-icon="gear">Documents</a>
  			</div>
- 		
+ 				<h1 role="heading">Welcome to CityDocs</h1>
+ 				<p>Select a city and state (i.e. Portsmouth NH)</p>
  			<div data-role="content" class="ui-content" role="main">
+ 				
  			</div>
  			
  			<div class="ui-bar" data-role="footer" data-position="fixed" data-theme="a">
@@ -76,16 +80,11 @@
 				</h1>
  				<form id="city_form">
  					<input 	id="city_input"
- 							type="text" 
-							name="city" 
- 							placeholder="Enter city and state"
- 							title="Enter a city and state 'PORTSMOUTH NH'"
- 							oninput="store.save({key:'city', value: this.value});citylist([]);"/>
-                       			<datalist id="cities">
-                                       		<option value="Portsmouth NH">
-                                       		<option value="Dover NH">
-                                       		<option value="Ashland OR">
-                       			</datalist>
+ 						type="text" 
+						name="city" 
+ 						placeholder="Enter city and state"
+ 						title="Enter a city and state 'PORTSMOUTH NH'"
+ 						oninput="store.save({key:'city', value: this.value});citylist([]);"/>
  				</form>		
 			</div>
 		<div data-role="content" class="ui-content" role="main">
