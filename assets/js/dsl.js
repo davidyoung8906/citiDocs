@@ -29,12 +29,15 @@ var run = function(application) {
              		}             		
         	});             	
         }; 
+        $("citylist").append("citylist:  "+listing);
         citylist(listing);
+        
+
         return listing;
 }
 , citylist = function(cities) {
 	if (cities.length == 0) {
-		$("#citylist").setStyle("display","block");
+//		$("#citylist").setStyle("display","block");
 		$("#citylist").append("city list is empty");
 
 	}
