@@ -15,7 +15,7 @@ var run = function(application) {
 // look for and get data file from server or from file store
 
 , getcitylist = function(part) {
-	var listing = [];
+	var listing = [part];
 //	$("#citylist").append("start getcitylist");
 
 	if (navigator.network.connection.type == Connection.NONE) {
