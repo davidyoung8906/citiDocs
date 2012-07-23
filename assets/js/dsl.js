@@ -53,7 +53,7 @@ var run = function(application) {
 	else {
 		$("#citylist").html("List of Cities:");
 		for (i=0; i<cities.length; i++) {$("#citylist").append(cities[i]);};
-		$("#citylist").setStyle("display","block");
+//		$("#citylist").setStyle("display","block");
 	};
 }
 
