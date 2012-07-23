@@ -19,7 +19,7 @@ var run = function(application) {
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
-        else {x$('#home').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json?chars=' + part,{
+        else {x$('#citylist').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json?chars=' + part,{
              		callback: function(){
              			listing = eval("("+this.responseText+")");
              		}             		
@@ -30,10 +30,10 @@ var run = function(application) {
 }
 , citylist = function(cities) {
 	if (cities.length == 0) {
-		x$("#citylist").setStyle("display","none");
+		x$("#citylist").setStyle("display","block");
 	}
 	else {
-		x$("#citylist").html("");
+		x$("#citylist").html("List of Cities:");
 		for (i=0; i<cities.length; i++) {x$("#citylist").bottom(cities[i]);}
 		x$("#citylist").setStyle("display","block");
 	};
