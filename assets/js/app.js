@@ -13,13 +13,13 @@ run(function () {
 //      			.attr('data-position','fixed')
 //  	});
  // 	$.mobile.loading( 'show', { theme: "b", text: "Loading Data Files" });
-    	x$("input#city_input").on("keyup", function() {
+    	$("input#city_input").on("keyup", function() {
     		getcitylist(this.value);	
     	});
     	listings();
         fulllist();
         store.get('city', function(saved) {
-    		if (saved) {if (saved.value) {x$('input#city_input').attr('placeholder', saved.value);};}    		
+    		if (saved) {if (saved.value) {$('input#city_input').attr('placeholder', saved.value);};}    		
     	});
     	
     })();
