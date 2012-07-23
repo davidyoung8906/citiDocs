@@ -56,12 +56,12 @@
  			<div data-role="content" class="ui-content" role="main">
  				<h1 role="banner">Welcome to CityDocs</h1>
  				<p>Select a city and state (i.e. Portsmouth NH)</p>
- 				<input 	id="city_input"
+ 				<form></form><input 	id="city_input"
  					type="text" 
 					name="city" 
  					placeholder="Enter city and state"
  					title="Enter a city and state 'PORTSMOUTH NH'"
- 					oninput="store.save({key:'city', value: this.value});citylist([]);"/>
+ 					oninput="store.save({key:'city', value: this.value});citylist([]);"/></form>
  				<div id="citylist"></div>
  			</div>
  			
