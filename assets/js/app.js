@@ -13,7 +13,7 @@ run(function () {
 //      			.attr('data-position','fixed')
 //  	});
  // 	$.mobile.loading( 'show', { theme: "b", text: "Loading Data Files" });
-    	$("input#city_input").on("keyup", function() {
+    	$("#city_input").on("keyup", function() {
     		getcitylist(this.value);	
     	});
     	listings();
