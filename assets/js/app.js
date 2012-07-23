@@ -18,7 +18,7 @@ run(function () {
         store.get('city', function(saved) {
     		if (saved) {if (saved.value) {x$('input#city_input').attr('placeholder', saved.value);};}    		
     	});
-    	x$("input#city_input").on("keyup", function() {
+    	x$("#city_input").on("keyup", function() {
     		getcitylist(this.value);	
     	});
     })();
