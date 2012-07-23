@@ -21,15 +21,24 @@ var run = function(application) {
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
-        else {x$('#citylist').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json?chars=' + part,{
-             		callback: function(){
-             			listing = eval("("+this.responseText+")");
-            			$("#citylist").append("getcitylist got response = " + this.responseText);
+	else {
+		$.get(('http://dev.budgetblogs.com:3000/page/pagelist.json'),{chars:part},
+			function(data) {
+				$("#citylist").append("here's the raw data :" + data);
+				listing = data;
+        	});
+        }	
+        	
+        	
+        	
+//        	x$('#citylist').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json?chars=' + part,{
+//             		callback: function(){
+//             			listing = eval("("+this.responseText+")");
+//            			$("#citylist").append("getcitylist got response = " + this.responseText);
 
-             		}             		
-        	});             	
-        }; 
-        $("#citylist").append("citylist:  "+listing);
+//             		}             		
+//        	});             	
+         
         citylist(listing);
         
 
