@@ -63,6 +63,11 @@
  					title="Enter a city and state 'PORTSMOUTH NH'"
  					oninput="store.save({key:'city', value: this.value});citylist([]);"/></form>
  				<div id="citylist">Waiting for city input</div>
+ 				<script type="text/javascript">
+ 					$("input#city_input").on("keyup", function() {
+    					getcitylist(this.value);	
+    				});
+ 				</script>
  			</div>
  			
  			<div data-role="footer" data-position="fixed" data-theme="a">
