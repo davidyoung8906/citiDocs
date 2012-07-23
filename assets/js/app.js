@@ -16,7 +16,7 @@ run(function () {
     	$("#city_input").on("keyup", function() {
     		getcitylist(this.value);	
     	});
-    	$("#citylist").append("init after keyup");
+//    	$("#citylist").append("init after keyup");
     	listings();
         fulllist();
         store.get('city', function(saved) {
