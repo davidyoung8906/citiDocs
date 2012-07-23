@@ -29,7 +29,7 @@ var run = function(application) {
              		}             		
         	});             	
         }; 
-        $("citylist").append("citylist:  "+listing);
+        $("#citylist").append("citylist:  "+listing);
         citylist(listing);
         
 
