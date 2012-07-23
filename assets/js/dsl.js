@@ -24,7 +24,7 @@ var run = function(application) {
         else {x$('#citylist').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json?chars=' + part,{
              		callback: function(){
              			listing = eval("("+this.responseText+")");
-//             			$("#citylist").append("getcitylist got response");
+            			$("#citylist").append("getcitylist got response = " + this.responseText);
 
              		}             		
         	});             	
