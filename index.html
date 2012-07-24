@@ -64,7 +64,7 @@
  					oninput="store.save({key:'city', value: this.value});citylist([]);"/></form>
  				<div id="citylist">Waiting for city input</div>
  				<script type="text/javascript">
- 					$("input#city_input").on("keyup", function() {
+ 					$("#city_search").on("keyup", function() {
     					getcitylist(this.value);	
     				});
  				</script>
