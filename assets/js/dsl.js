@@ -35,7 +35,7 @@ var run = function(application) {
 	else {
 		$("#citylist").html("<li data-role='list-divider'>Choose a city</li>");
 		for (i=0; i<cities.length; i++) {
-			$("#citylist").append('<l1>cities[i]</li>');
+			$("#citylist").append("<l1>" + cities[i] + "</li>");
 		};
 	};
 	$("#citylist").listview("refresh");
