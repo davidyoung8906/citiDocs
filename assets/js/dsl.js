@@ -16,13 +16,13 @@ var run = function(application) {
 
 , getcitylist = function(part) {
 	var listing = [];
-	$("#logs").append("start getcitylist");
+//	$("#logs").append("start getcitylist");
 
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} else {
 		$.get('http://dev.budgetblogs.com:3000/page/pagelist.json',{chars:part}, function(data) {
-				$("#logs").append("here's the raw data :" + data);
+//				$("#logs").append("here's the raw data :" + data);
 				citylist(data);
 		});
 	};
@@ -31,7 +31,7 @@ var run = function(application) {
 , citylist = function(cities) {
 	var html="";
 	if (cities.length == 0) {
-		$("#logs").append("<li>city list is empty</li>");
+//		$("#logs").append("<li>city list is empty</li>");
 	}
 	else {
 		html="<li data-role='list-divider'>City choices</li>";
@@ -45,7 +45,7 @@ var run = function(application) {
 }
 
 , getfile = function() {
-	$("#logs").append("<li>Beginning of getfile</li>");
+//	$("#logs").append("<li>Beginning of getfile</li>");
 	var listing = {"test":"data"};
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents"); 
@@ -55,7 +55,7 @@ var run = function(application) {
 		callback: function(){
              			listing = eval("("+this.responseText+")");
              			store.save({key: 'response', value: this.responseText});
-             			$("#logs").append("<li>Inside json callback</li>");
+//             			$("#logs").append("<li>Inside json callback</li>");
              		}             		
         	});             	
         }; 
@@ -72,7 +72,7 @@ var run = function(application) {
     				store.save({key: 'list', value: s});
     			}; 				
     	});
-    	$("#logs").append("<li>End of getfilestore</li>");
+//    	$("#logs").append("<li>End of getfilestore</li>");
     	return s;
 }
 
@@ -266,14 +266,14 @@ var run = function(application) {
 	docdocs(getdocs(listing));
 	docsubs(getsubs(listing));
 	docfooter(listing);
-    	$("#crumblist").listview("refresh");
-    	$("#subslist").listview("refresh");
+   	$("#crumblist").listview("refresh");
+   	$("#subslist").listview("refresh");
 }
 
 , listings = function() {
-	$("#logs").append("<li>Made it before getfilestore</li>");
+//	$("#logs").append("<li>Made it before getfilestore</li>");
 	var listing = getfilestore();
-	$("#logs").append("<li>Finished Filestore retrieve<li>");
+//	$("#logs").append("<li>Finished Filestore retrieve<li>");
 //	var crumbs = getcrumbs();
     	displaylist(listing);
 }
