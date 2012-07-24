@@ -41,7 +41,7 @@ var run = function(application) {
 }
 
 , getfile = function() {
-	
+	$("#log").append("<li>Beginning of getfile</li>");
 	var listing = {"initial":"value", "second":"another"};
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
@@ -50,6 +50,7 @@ var run = function(application) {
              		callback: function(){
              			listing = eval("("+this.responseText+")");
              			store.save({key: 'response', value: this.responseText});
+             			$("#log").append("<li>Inside json callback</li>");
              		}             		
         	});             	
         }; 
