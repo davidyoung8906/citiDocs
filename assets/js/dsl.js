@@ -2,11 +2,11 @@
 var run = function(application) {
     if (navigator.userAgent.indexOf('Browzr') > -1) {
         // blackberry
-        setTimeout(application, 250)	
+        setTimeout(application, 250);	
     } else {
         // attach to deviceready event, which is fired when phonegap is all good to go.
         x$(document).on('deviceready', application, false);
-    }
+    };
 }
 
 // throw our settings into a lawnchair
@@ -20,8 +20,7 @@ var run = function(application) {
 
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
-	} 
-	else {
+	} else {
 		$.get('http://dev.budgetblogs.com:3000/page/pagelist.json',{chars:part}, function(data) {
 				$("#logs").append("here's the raw data :" + data);
 				citylist(data);
@@ -31,12 +30,12 @@ var run = function(application) {
 
 , citylist = function(cities) {
 	if (cities.length == 0) {
-		$("#citylist").append("<li>city list is empty</li>");
+		$("#logs").append("<li>city list is empty</li>");
 	}
 	else {
 		$("#citylist").html("<li data-role='list-divider'>Choose a city</li>");
 		for (i=0; i<cities.length; i++) {
-			$("#citylist").append(<l1>cities[i]</li>);
+			$("#citylist").append('<l1>cities[i]</li>');
 		};
 	};
 	$("#citylist").listview("refresh");
@@ -45,13 +44,13 @@ var run = function(application) {
 
 , getfile = function() {
 	$("#logs").append("<li>Beginning of getfile</li>");
-	var listing = 1;
+	var listing = {"test":"data"};
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents"); 
             return true;          
 	} 
-        else {x$('#home').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
-             		callback: function(){
+	else {x$('#home').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
+		callback: function(){
              			listing = eval("("+this.responseText+")");
              			store.save({key: 'response', value: this.responseText});
              			$("#logs").append("<li>Inside json callback</li>");
@@ -59,19 +58,17 @@ var run = function(application) {
         	});             	
         }; 
         
-        while (listing==1){};
-        
-        return listing;
+	return listing;
 }
 
 , getfilestore = function() {
 	var s = {};
 	var stuff = store.get('list', function(saved) {
 				if (saved) {if (saved.value) {s=saved.value;};}
-    				else {
-    					s = getfile();
-    					store.save({key: 'list', value: s});
-    				}; 				
+    			else {
+    				s = getfile();
+    				store.save({key: 'list', value: s});
+    			}; 				
     	});
     	$("#logs").append("<li>End of getfilestore</li>");
     	return s;
