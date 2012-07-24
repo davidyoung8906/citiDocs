@@ -25,7 +25,7 @@ var run = function(application) {
 		$.get('http://dev.budgetblogs.com:3000/page/pagelist.json',{chars:part},
 			function(data) {
 				$("#citylist").append("here's the raw data :" + data);
-				listing = data;
+				citylist(data);
         	});
         }	
         	
@@ -39,10 +39,7 @@ var run = function(application) {
 //             		}             		
 //        	});             	
          
-        citylist(listing);
         
-
-        return listing;
 }
 , citylist = function(cities) {
 	if (cities.length == 0) {
