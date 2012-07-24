@@ -43,15 +43,17 @@ var run = function(application) {
 , citylist = function(cities) {
 	if (cities.length == 0) {
 //		$("#citylist").setStyle("display","block");
-		$("#citylist").append("city list is empty");
+		$("#citylist").append("<li>city list is empty</li>");
+		
 
 	}
 	else {
 		$("#citylist").html("<li data-role='list-divider'>Choose a city</li>");
 		for (i=0; i<cities.length; i++) {$("#citylist").append(<l1>cities[i]</li>);};
-		$("#citylist").listview("refresh");
+		
 //		$("#citylist").setStyle("display","block");
 	};
+	$("#citylist").listview("refresh");
 }
 
 , getfile = function() {

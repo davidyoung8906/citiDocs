@@ -62,7 +62,7 @@
  					placeholder="Enter city and state"
  					title="Enter a city and state 'PORTSMOUTH NH'"
  					oninput="store.save({key:'city', value: this.value});citylist(['something']);"/></form>
- 				<ul id="citylist" data-role="listview" data-inset="true"></ul>
+ 				<ul id="citylist" data-role="listview" data-inset="true"><li data-role="list-divider"></li></ul>
  				<script type="text/javascript">
  					$("#city_search").on("keyup", function() {
     					getcitylist(this.value);	
