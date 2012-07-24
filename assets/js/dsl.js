@@ -26,32 +26,16 @@ var run = function(application) {
 //				$("#citylist").append("here's the raw data :" + data);
 				citylist(data);
 		});
-	}	
-        	
-        	
-        	
-//        	x$('#citylist').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json?chars=' + part,{
-//             		callback: function(){
-//             			listing = eval("("+this.responseText+")");
-//            			$("#citylist").append("getcitylist got response = " + this.responseText);
-
-//             		}             		
-//        	});             	
-         
-        
+	};
 }
+
 , citylist = function(cities) {
 	if (cities.length == 0) {
-//		$("#citylist").setStyle("display","block");
 		$("#citylist").append("<li>city list is empty</li>");
-		
-
 	}
 	else {
 		$("#citylist").html("<li data-role='list-divider'>Choose a city</li>");
 		for (i=0; i<cities.length; i++) {$("#citylist").append(<l1>cities[i]</li>);};
-		
-//		$("#citylist").setStyle("display","block");
 	};
 	$("#citylist").listview("refresh");
 }
@@ -59,7 +43,6 @@ var run = function(application) {
 , getfile = function() {
 	
 	var listing = {"initial":"value", "second":"another"};
-//	$("#fulllist").append("<li>Beginning of getfile</li>");
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} 
@@ -76,19 +59,14 @@ var run = function(application) {
 
 , getfilestore = function() {
 	var s = {};
-//	$.mobile.loading( 'show', { theme: "b", text: "Loading Data Files" });
-//	$("#fulllist").append("<li>Beginning of getfilestore</li>");
 	var stuff = store.get('list', function(saved) {
 				if (saved) {if (saved.value) {s=saved.value;};}
     				else {
-//    					$("#fulllist").append("<li>in else before getfile</li>");
     					s = getfile();
- //   					$("#fulllist").append("<li>in else after getfile</li>");
     					store.save({key: 'list', value: s});
     				}; 				
     	});
-//    	$.mobile.loading('hide');
-//    	$("#fulllist").append("<li>End of getfilestore</li>");
+    	$("#log").append("<li>End of getfilestore</li>");
     	return s;
 }
 
@@ -134,18 +112,6 @@ var run = function(application) {
 		$(this).prepend('<a data-rel="back" data-icon="arrow-l">BACK</a>');
 	});
 }
-
-//  {"http://":[{"censta                Report (click here to view)"},{"agendas":[{"2001":[{"bfcm120501.pdf":"Minutes"},{"boa":[{"BOALN121801.pdf":"Notice"},{"boa071701ln.pdf":"Notice"},{"boa082101ln.pdf":"Notice"},{"boa091801ag.pdf":"Agenda"},{"boa091801ln.pdf
-//  <li>http..<ul><li>cen...          <ul><li>dat<ul><li>NH<ul><li>16</li></ul>
-
-//  { = <li>
-//  } = </li>
-//  :[ = <ul>
-//  ] = </ul>
-//  "xxx" = xxx
-//  :"xxx" = document xxx the leaf
-
-
 
 , doccrumbs = function() {
 //		$("#crumblist").html("<li data-role='list-divider' data-theme='e'>");
