@@ -22,12 +22,11 @@ var run = function(application) {
             alert("No internet connection - cannot access remote documents");           
 	} 
 	else {
-		$.get('http://dev.budgetblogs.com:3000/page/pagelist.json',{chars:part},
-			function(data) {
+		$.get('http://dev.budgetblogs.com:3000/page/pagelist.json',{chars:part}, function(data) {
 				$("#citylist").append("here's the raw data :" + data);
 				citylist(data);
-        	});
-        }	
+		});
+	}	
         	
         	
         	
