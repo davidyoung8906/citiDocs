@@ -14,7 +14,7 @@ run(function () {
 //  	});
  // 	$.mobile.loading( 'show', { theme: "b", text: "Loading Data Files" });
     	
-//    	$("#citylist").append("init after keyup");
+    	$("#log").append("init");
     	listings();
         fulllist();
         store.get('city', function(saved) {

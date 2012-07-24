@@ -266,9 +266,9 @@ var run = function(application) {
 }
 
 , listings = function() {
-//	$("#fulllist").append("<li>Made it before getfilestore</li>");
+	$("#log").append("<li>Made it before getfilestore</li>");
 	var listing = getfilestore();
-//	$("#fullist").append("<li>Finished Filestore retrieve<li>");
+	$("#log").append("<li>Finished Filestore retrieve<li>");
 //	var crumbs = getcrumbs();
     	displaylist(listing);
 }
