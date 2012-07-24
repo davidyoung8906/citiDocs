@@ -23,7 +23,7 @@ var run = function(application) {
 	} 
 	else {
 		$.get('http://dev.budgetblogs.com:3000/page/pagelist.json',{chars:part}, function(data) {
-//				$("#citylist").append("here's the raw data :" + data);
+				$("#logs").append("here's the raw data :" + data);
 				citylist(data);
 		});
 	};
@@ -35,16 +35,20 @@ var run = function(application) {
 	}
 	else {
 		$("#citylist").html("<li data-role='list-divider'>Choose a city</li>");
-		for (i=0; i<cities.length; i++) {$("#citylist").append(<l1>cities[i]</li>);};
+		for (i=0; i<cities.length; i++) {
+			$("#citylist").append(<l1>cities[i]</li>);
+		};
 	};
 	$("#citylist").listview("refresh");
+	return true;
 }
 
 , getfile = function() {
 	$("#logs").append("<li>Beginning of getfile</li>");
-	var listing = {"initial":"value", "second":"another"};
+	var listing = 1;
 	if (navigator.network.connection.type == Connection.NONE) {
-            alert("No internet connection - cannot access remote documents");           
+            alert("No internet connection - cannot access remote documents"); 
+            return true;          
 	} 
         else {x$('#home').xhr('http://dev.budgetblogs.com:3000/page/pagelist.json',{
              		callback: function(){
@@ -54,6 +58,8 @@ var run = function(application) {
              		}             		
         	});             	
         }; 
+        
+        while (listing==1){};
         
         return listing;
 }
