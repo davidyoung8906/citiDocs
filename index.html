@@ -37,6 +37,7 @@
 	<body class="ui-mobile-viewport">
 		<div id="container">	
 		
+<!-- HOME PAGE ------------------------------------------------------------->		
 		<div id="home" data-role="page"
 			class="type-interior ui-page ui-body-b" 
 			tabindex="0"
@@ -56,26 +57,24 @@
  			<div data-role="content" class="ui-content" role="main">
  				<h1 role="banner">Welcome to CityDocs</h1>
  				<p>Select a city and state (i.e. Portsmouth NH)</p>
- 				<form id="city_input"><input 	id="city_search"
- 					type="search" 
-					name="city" 
- 					placeholder="Enter city and state"
- 					title="Enter a city and state 'PORTSMOUTH NH'"
- 					oninput="store.save({key:'city', value: this.value});citylist([]);"/></form>
+ 				<form id="city_input">
+ 					<input 	id="city_search"
+ 						type="search" 
+						name="city" 
+ 						placeholder="Enter city and state"
+ 						title="Enter a city and state 'PORTSMOUTH NH'"
+ 						oninput="store.save({key:'city', value: this.value});citylist([]);"/>
+ 				</form>
  				<ul id="citylist" data-role="listview" data-inset="true"></ul>
  				<div id="logs">Log List</div>
- 				<script type="text/javascript">
- 					$("#city_search").on("keyup", function() {
-    					getcitylist(this.value);	
-    				});
- 				</script>
  			</div>
  			
  			<div data-role="footer" data-position="fixed" data-theme="a">
 				<p>&copy; 2012 CityDocs - a Division of BudgetBlogs LLC</p>
 	    	</div>
 	    </div>
-	    
+
+<!-- SETTINGS PAGE ------------------------------------------------------------->	    
 	    <div id="settings" data-role="page"
 			class="type-interior ui-page ui-body-b" 
 			tabindex="0"
@@ -101,7 +100,7 @@
 	    	</div>
 	    </div>
  		
- 			
+<!-- DOCUMENTS PAGE -------------------------------------------------------------> 			
 		<div id="documents" data-role="page" 
 			class="type-interior ui-page ui-body-b" 
 			tabindex="0"
