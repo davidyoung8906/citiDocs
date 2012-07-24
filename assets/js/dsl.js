@@ -29,14 +29,16 @@ var run = function(application) {
 }
 
 , citylist = function(cities) {
+	var html="";
 	if (cities.length == 0) {
 		$("#logs").append("<li>city list is empty</li>");
 	}
 	else {
-		$("#citylist").html("<li data-role='list-divider'>Choose a city</li>");
+		html="<li data-role='list-divider'>City choices</li>";
 		for (i=0; i<cities.length; i++) {
-			$("#citylist").append("<l1>" + cities[i] + "</li>");
+			html+="<l1>" + cities[i] + "</li>";
 		};
+		$("#citylist").html(html);
 	};
 	$("#citylist").listview("refresh");
 	return true;

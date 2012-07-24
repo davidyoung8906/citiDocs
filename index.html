@@ -57,12 +57,14 @@
  				<h1 role="banner">Welcome to CityDocs</h1>
  				<p>Select a city and state (i.e. Portsmouth NH)</p>
  				<form id="city_input"><input 	id="city_search"
- 					type="text" 
+ 					type="search" 
 					name="city" 
  					placeholder="Enter city and state"
  					title="Enter a city and state 'PORTSMOUTH NH'"
  					oninput="store.save({key:'city', value: this.value});citylist(['something']);"/></form>
- 				<ul id="citylist" data-role="listview" data-inset="true"><li data-role="list-divider">WAITING FOR INPUT</li></ul>
+ 				<ul id="citylist" data-role="listview" data-inset="true">
+ 					<li data-role="list-divider">WAITING FOR INPUT</li>
+ 				</ul>
  				<div id="logs">Log List</div>
  				<script type="text/javascript">
  					$("#city_search").on("keyup", function() {
