@@ -31,7 +31,7 @@ var run = function(application) {
 , citylist = function(cities) {
 	var html="";
 	if (cities.length == 0) {
-//		$("#logs").append("<li>city list is empty</li>");
+		$("#logs").append("<li>city list is empty</li>");
 		$("#citylist").html("");
 	}
 	else {
@@ -40,6 +40,7 @@ var run = function(application) {
 			html+="<li>" + cities[i] + "</li>";
 		};
 		$("#citylist").html(html);
+		$("#logs").append("<li>city list has: " + cities + "</li>");
 	};
 	$("#citylist").listview("refresh");
 	return true;
