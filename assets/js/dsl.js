@@ -36,7 +36,7 @@ var run = function(application) {
 	else {
 		html="<li data-role='list-divider'>City choices</li>";
 		for (i=0; i<cities.length; i++) {
-			html+="<l1>" + cities[i] + "</li>";
+			html+="<li>" + cities[i] + "</li>";
 		};
 		$("#citylist").html(html);
 	};
