@@ -33,7 +33,7 @@ var run = function(application) {
 	var html="";
 	if (cities.length == 0) {
 //		$("#logs").append("<li>city list is empty</li>");
-		$("#citylist").stop().fadeTo(5000,0);
+		$("#citylist").stop().fadeTo(400,0);
 	}
 	else {
 		html="<li data-role='list-divider'>City choices</li>";
@@ -41,7 +41,7 @@ var run = function(application) {
 			html+="<li>" + cities[i] + "</li>";
 		};
 		$("#citylist").html(html);
-		$("#citylist").listview("refresh").stop().fadeTo(5000,1);
+		$("#citylist").listview("refresh").stop().fadeTo(400,1);
 //		$("#logs").append("<li>city list has: " + cities + "</li>");
 	};
 	
