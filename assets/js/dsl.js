@@ -44,7 +44,7 @@ var run = function(application) {
 	};
 	$("#citylist").listview("refresh").animate({
     										opacity: 0.25,
-    										height: 'toggle'
+    										height: auto
   											}, 5000, function() {
     												// Animation complete.
   										});
