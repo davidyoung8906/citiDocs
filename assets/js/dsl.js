@@ -33,7 +33,7 @@ var run = function(application) {
 	var html="";
 	if (cities.length == 0) {
 //		$("#logs").append("<li>city list is empty</li>");
-		$("#citylist").html("");
+		$("#citylist").fadeTo("slow",0).html("");
 	}
 	else {
 		html="<li data-role='list-divider'>City choices</li>";
