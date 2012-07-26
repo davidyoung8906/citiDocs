@@ -33,12 +33,12 @@ var run = function(application) {
 	var html="";
 	if (cities.length == 0) {
 //		$("#logs").append("<li>city list is empty</li>");
-		$("#citylist").html("hello");
+		$("#citylist").html("");
 	}
 	else {
 		html="<li data-role='list-divider'>City choices</li>";
 		for (i=0; i<cities.length; i++) {
-			html+="<li>" + cities[i] + "</li>";
+			html+="<li style='opacity:0.5'>" + cities[i] + "</li>";
 		};
 		$("#citylist").html(html);
 //		$("#logs").append("<li>city list has: " + cities + "</li>");
