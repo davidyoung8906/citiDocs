@@ -48,7 +48,6 @@ var run = function(application) {
   											}, 5000, function() {
     												// Animation complete.
   										});
-});;
 	return true;
 }
 
