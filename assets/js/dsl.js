@@ -38,7 +38,7 @@ var run = function(application) {
 	else {
 		html="<li data-role='list-divider'>City choices</li>";
 		for (i=0; i<cities.length; i++) {
-			html+="<li style='opacity:0.5'>" + cities[i] + "</li>";
+			html+="<li>" + cities[i] + "</li>";
 		};
 		$("#citylist").html(html);
 //		$("#logs").append("<li>city list has: " + cities + "</li>");
