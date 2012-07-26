@@ -21,7 +21,7 @@ var run = function(application) {
 	if (navigator.network.connection.type == Connection.NONE) {
             alert("No internet connection - cannot access remote documents");           
 	} else {
-		$("#citylist").fadeTo('slow',0.5);
+//		$("#citylist").fadeTo('slow',0.5);
 		$.get('http://dev.budgetblogs.com:3000/page/pagelist.json',{chars:part}, function(data) {
 //				$("#logs").append("here's the raw data :" + data);
 				citylist(data);
@@ -43,7 +43,7 @@ var run = function(application) {
 		$("#citylist").html(html);
 //		$("#logs").append("<li>city list has: " + cities + "</li>");
 	};
-	$("#citylist").listview("refresh").fadeTo('slow',1);
+	$("#citylist").listview("refresh");//.fadeTo('slow',1);
 }
 
 , getfile = function() {
