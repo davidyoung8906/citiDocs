@@ -42,7 +42,7 @@ var run = function(application) {
 		$("#citylist").css('height','0px').html(html);
 //		$("#logs").append("<li>city list has: " + cities + "</li>");
 	};
-	$("#citylist").listview("refresh").animate({
+	$("#citylist").listview("refresh").css('height','0').animate({
     										height: '100%'
   											}, 5000, function() {
     												// Animation complete.
