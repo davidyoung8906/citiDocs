@@ -32,7 +32,7 @@ var run = function(application) {
 , citylist = function(cities) {
 	var html="";
 	if (cities.length == 0) {
-		$("#logs").append("<li>city list is empty</li>");
+//		$("#logs").append("<li>city list is empty</li>");
 		$("#citylist").html("");
 	}
 	else {
