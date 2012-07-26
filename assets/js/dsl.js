@@ -39,12 +39,11 @@ var run = function(application) {
 		for (i=0; i<cities.length; i++) {
 			html+="<li>" + cities[i] + "</li>";
 		};
-		$("#citylist").css({height:0, opacity:0}).html(html);
+		$("#citylist").css('height','0px').html(html);
 //		$("#logs").append("<li>city list has: " + cities + "</li>");
 	};
 	$("#citylist").listview("refresh").animate({
-    										opacity: 0.25,
-    										height: auto
+    										height: 'auto'
   											}, 5000, function() {
     												// Animation complete.
   										});
