@@ -41,9 +41,10 @@ var run = function(application) {
 			html+="<li>" + cities[i] + "</li>";
 		};
 		$("#citylist").html(html);
+		$("#citylist").listview("refresh").stop().fadeTo(5000,1);
 //		$("#logs").append("<li>city list has: " + cities + "</li>");
 	};
-	$("#citylist").listview("refresh").stop().fadeTo(5000,1);
+	
 }
 
 , getfile = function() {
