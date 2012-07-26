@@ -23,6 +23,7 @@ var run = function(application) {
 	} else {
 		$.get('http://dev.budgetblogs.com:3000/page/pagelist.json',{chars:part}, function(data) {
 //				$("#logs").append("here's the raw data :" + data);
+				$("#citylist").fadeto('fast',0.5);
 				citylist(data);
 		});
 	};
@@ -42,12 +43,8 @@ var run = function(application) {
 		$("#citylist").css('height','0px').html(html);
 //		$("#logs").append("<li>city list has: " + cities + "</li>");
 	};
-	$("#citylist").listview("refresh").css('height','0').animate({
-    										height: '100%'
-  											}, 5000, function() {
-    												// Animation complete.
-  										});
-	return true;
+	$("#citylist").listview("refresh");
+	$("#citylist").fadeto('fast',1);
 }
 
 , getfile = function() {
