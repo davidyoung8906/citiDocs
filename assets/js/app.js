@@ -15,9 +15,9 @@ run(function () {
  // 	$.mobile.loading( 'show', { theme: "b", text: "Loading Data Files" });
     	
 //    	$("#logs").append("init");
-		$("#city_search").on("keyup", function() {
-    					getcitylist(this.value);	
-    				});
+//		$("#city_search").on("keyup", function() {
+//    					getcitylist(this.value);	
+//    				});
     	listings();
         fulllist();
         store.get('city', function(saved) {
