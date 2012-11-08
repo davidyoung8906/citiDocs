@@ -268,7 +268,7 @@ var run = function(application) {
 	docdocs(getdocs(listing));
 	docsubs(getsubs(listing));
 	docfooter(listing);
-   	$("#crumblist").listview("refresh");
+//   	$("#crumblist").listview("refresh");
 //   	$("#subslist").listview("refresh");
 }
 
