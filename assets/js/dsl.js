@@ -125,7 +125,7 @@ var run = function(application) {
 , doccrumbs = function() {
 //		$("#crumblist").html("<li data-role='list-divider' data-theme='e'>");
 		var crumbs = getcrumbs();
-		var crumbbutton = "<div class='nav' data-role='navbar' data-theme='a'><ul>";
+		var crumbbutton = "<div class='nav' data-role='navbar' data-theme='a'><ul><li data-role='list-divider' data-theme='b'>Current Folders</li>";
 		for (var i=0; i<crumbs.length; i++) {
 			crumbbutton += "<li onclick='popcrumbs(" 
 					+ (crumbs.length - i - 1) + ")'>"
@@ -155,7 +155,6 @@ var run = function(application) {
 
 , docdocs = function(docs) {
 	var docpath = getpath();
-//	x$("#welcome").bottom("docpath: " + docpath);
 	var stuffing = "<table>";
 	for (var i=0; i<docs.length; i++) {
 		for (k in docs[i]) {
