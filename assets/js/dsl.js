@@ -125,7 +125,7 @@ var run = function(application) {
 , doccrumbs = function() {
 //		$("#crumblist").html("<li data-role='list-divider' data-theme='e'>");
 		var crumbs = getcrumbs();
-		var crumbbutton = "Document Folder:  ";
+		var crumbbutton = "";
 		for (var i=0; i<crumbs.length; i++) {
 			crumbbutton += "<a onclick='popcrumbs(" 
 					+ (crumbs.length - i - 1) + ")'>"
