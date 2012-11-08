@@ -133,7 +133,7 @@ var run = function(application) {
 		};
 		$("#crumblist").html("<ul data-role='listview' ><li data-role='list-divider' data-theme='b'>" 
                                         + crumbbutton + "</li></ul>");	
-//		$("#crumblist").listview('refresh');
+		$("#crumblist").listview('refresh');
 }
 
 , popcrumbs = function(n) {
@@ -182,7 +182,7 @@ var run = function(application) {
 			var newfocus = subs[i];
 			$(ref).on('click', eval("(function() {resolvedown('" + newfocus + "')})")); 
 		};
-		$('#subslist').listview('refresh');
+//		$('#subslist').listview('refresh');
 }
 
 , resolvedown = function(newfocus) {
