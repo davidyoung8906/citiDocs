@@ -132,7 +132,7 @@ var run = function(application) {
 					+ crumbs[i] + "/</a>" + " > ";
 		};
 		$("#crumblist").html("<li data-role='list-divider' data-theme='b'>" + crumbbutton + "</li>");	
-		$('.nav').navbar();
+		$('#crumblist').listview('refresh');
 }
 
 , popcrumbs = function(n) {
