@@ -269,7 +269,7 @@ var run = function(application) {
 	docsubs(getsubs(listing));
 	docfooter(listing);
    	$("#crumblist").listview("refresh");
-   	$("#subslist").listview("refresh");
+//   	$("#subslist").listview("refresh");
 }
 
 , listings = function() {
