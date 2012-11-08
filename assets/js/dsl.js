@@ -127,9 +127,9 @@ var run = function(application) {
 		var crumbs = getcrumbs();
 		var crumbbutton = "";
 		for (var i=0; i<crumbs.length; i++) {
-			crumbbutton += "<a onclick='popcrumbs(" 
+			crumbbutton += "<button onclick='popcrumbs(" 
 					+ (crumbs.length - i - 1) + ")'>"
-					+ crumbs[i] + "</a>  ";
+					+ crumbs[i] + "</button>  ";
 		};
 		$("#crumblist").html("<li data-role='list-divider' data-theme='b'>" 
                                         + crumbbutton + "</li>");	
