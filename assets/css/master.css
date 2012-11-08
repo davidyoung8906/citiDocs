@@ -126,7 +126,7 @@ tr:nth-child(even) { background:white; }
 td {
 	color:black;
 	font: 18px Helvetica;
-	padding: 10px 15px;
+	padding: 5px 15px;
 	margin: 0px 0px;
 	text-align:left;
 }
