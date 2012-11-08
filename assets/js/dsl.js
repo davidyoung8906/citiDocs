@@ -131,8 +131,8 @@ var run = function(application) {
 					+ (crumbs.length - i - 1) + ")'>"
 					+ crumbs[i] + "</a>  ";
 		};
-		$("#crumblist").html("<ul data-role='listview' ><li data-role='list-divider' data-theme='b'>" 
-                                        + crumbbutton + "</li></ul>");	
+		$("#crumblist").html("<li data-role='list-divider' data-theme='b'>" 
+                                        + crumbbutton + "</li>");	
 //		$("#crumblist").listview();
 }
 
