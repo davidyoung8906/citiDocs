@@ -131,8 +131,9 @@ var run = function(application) {
 					+ (crumbs.length - i - 1) + ")'>"
 					+ crumbs[i] + "</button>  ";
 		};
-		$("#crumblist").html("<li data-role='list-divider' data-theme='b'>" + "Crumb List" + "</li>");	
-//		$("#crumblist").listview('refresh');
+		$("#crumblist").html("<ul data-role='listview' ><li data-role='list-divider' data-theme='b'>" 
+                                        + "Crumb List" + "</li></ul>");	
+		$("#crumblist").listview('refresh');
 }
 
 , popcrumbs = function(n) {
