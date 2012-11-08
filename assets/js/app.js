@@ -19,7 +19,7 @@ run(function () {
 //		$("#city_search").on("keyup", function() {
 //    					getcitylist(this.value);	
 //    				});
-		$("citylist").fadeTo('fast',0)
+	$("citylist").fadeTo('fast',0);
     	listings();
         fulllist();
         $("#city_search").focus();
