@@ -125,14 +125,13 @@ var run = function(application) {
 , doccrumbs = function() {
 //		$("#crumblist").html("<li data-role='list-divider' data-theme='e'>");
 		var crumbs = getcrumbs();
-		var crumbbutton = "<div class='nav' data-role='navbar' data-theme='a'><ul><li data-role='list-divider' data-theme='b'>Current Folders</li>";
+		var crumbbutton = "";
 		for (var i=0; i<crumbs.length; i++) {
-			crumbbutton += "<li onclick='popcrumbs(" 
+			crumbbutton += "<a onclick='popcrumbs(" 
 					+ (crumbs.length - i - 1) + ")'>"
-					+ crumbs[i] + "/</li>";
+					+ crumbs[i] + "/</a>";
 		};
-		$("#crumblist").html("" + crumbbutton + "</ul></div>");	
-//		$("#crumblist").append("</li>");
+		$("#crumblist").html("<li data-role='list-divider' data-theme='b'>" + crumbbutton + "</li>");	
 		$('.nav').navbar();
 }
 
