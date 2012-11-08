@@ -19,6 +19,8 @@
 
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
+      
+        <preference preference name="phonegap-version" value="2.1.0" />
 
 	<preference name="orientation" value="default" />
 </widget>
