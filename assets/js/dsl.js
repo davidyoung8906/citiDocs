@@ -1,3 +1,6 @@
+//  CityDocs Mobile App Function List
+//  Copyright Jack Thorsen 2-11-2012
+
 // the app method accepts a fn to invoke on init unobtrusively 
 var run = function(application) {
     if (navigator.userAgent.indexOf('Browzr') > -1) {
