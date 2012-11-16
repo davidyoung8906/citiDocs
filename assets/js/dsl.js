@@ -84,7 +84,7 @@ var run = function(application) {
 , docheader = function(listing) { 
 }
 
-, fulllist = function() {
+, fulllist = function() {  //Deprecated
 //	$("#fulllist").append("<li>Made it here</li>");
 //	$("#fulllist").listview("refresh");
 //	$.mobile.loading( 'show', { theme: "b", text: "Making Lists"});
@@ -122,6 +122,7 @@ var run = function(application) {
 	});
 }
 
+// Create list of Document Location Crumbs for display as buttons
 , doccrumbs = function() {
 //		$("#crumblist").html("<li data-role='list-divider' data-theme='e'>");
 		var crumbs = getcrumbs();
@@ -136,6 +137,7 @@ var run = function(application) {
 //		$("#crumblist").listview();
 }
 
+// Go up crumb list
 , popcrumbs = function(n) {
 	var crumbs = getcrumbs();
 	while(n > 0) {
@@ -147,12 +149,14 @@ var run = function(application) {
 	resolve();
 }
 
+// Add to crumb list
 , pushcrumb = function(crumb) {
 	var crumbs = getcrumbs();
 	crumbs[crumbs.length] = crumb;
 	store.save({key: "crumbs", crumbstore: crumbs});
 }
 
+// Create and display list of documents at current node
 , docdocs = function(docs) {
 	var docpath = getpath();
 	var stuffing = "<table>";
@@ -170,6 +174,7 @@ var run = function(application) {
  	x$('#docdocs').html(stuffing);
 }
 
+// Create and display sub-folders of current node
 , docsubs = function(subs) {  // subs is an array of subs like ["sub1", "sub2",...]
 		$("#subslist").html("<li data-role='list-divider' data-theme='b'>Search Folders</li>");
 		for (var i=0; i<subs.length; i++) {
@@ -208,9 +213,10 @@ var run = function(application) {
 	displaylist({focus:list});	
 }
 
+// Not used
 , docfooter = function(list) {}
 
-// analyze data and create data structures for display
+// Analyze data and create data structures for display
 
 , getpath = function() {
 	var crumbs = getcrumbs();
@@ -308,6 +314,7 @@ var run = function(application) {
     }
 }
 
+// Auto-complete turned off:
 // gets the value of the city input field from the ui
 //, city_ui = function() {
 //    return "city: " + x$('input#city_form').attr('city');
